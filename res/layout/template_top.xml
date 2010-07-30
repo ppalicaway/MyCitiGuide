@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- ########## [ start header bar ] ############	-->
+<LinearLayout 
+	android:id="@+id/templateTopLayout"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	
+	<LinearLayout
+		android:id="@+id/widget33"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/head_main_page2" 
+		android:gravity="right|center_vertical">
+		
+		<Button
+			android:id="@+id/homeButton"
+			android:background="@drawable/homeicon"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginRight="17px"/>
+	</LinearLayout>
+	
+	<LinearLayout
+		android:id="@+id/widget35"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:background="@drawable/bluenav" 
+		android:gravity="right|center_vertical">
+		
+		<TextView 
+			android:id="@+id/templateTopTitleTView"
+			android:textStyle="bold" 
+			android:layout_height="wrap_content"
+			android:text=""
+			android:background="@drawable/bluenav" 
+			android:singleLine="true"
+			android:textColor="@color/WHITE" 
+			android:gravity="center_vertical|center_horizontal" 
+			android:layout_width="200px" 
+			android:layout_marginRight="7px">
+		</TextView>
+		
+		<Button
+			android:id="@+id/mapButton"
+			android:background="@drawable/mapicon"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="0px"/>
+			
+		<Button
+			android:id="@+id/arButton"
+			android:background="@drawable/aricon"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="17px"/>
+	</LinearLayout>
+	
+	<!-- <TextView 
+		android:id="@+id/templateTopTitleTView"
+		android:textStyle="bold" 
+		android:paddingLeft="@dimen/scroll_padding_right"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:text=""
+		android:background="@drawable/bluenav" 
+		android:singleLine="true"
+		android:textColor="@color/WHITE" 
+		android:gravity="center_vertical|center_horizontal">
+	</TextView> -->
+</LinearLayout>
+	<!-- ########## [ end header bar ] ############	-->

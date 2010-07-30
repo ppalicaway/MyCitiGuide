@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/bg"
+	android:padding="0px"
+	android:id="@+id/bankView">
+	
+	<include 
+		layout="@layout/template_top" 
+		android:layout_alignParentTop="true"
+		android:id="@+id/headerImageLayout"/> 
+	
+	<!-- <RelativeLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:id="@+id/footerImageLayout"
+		android:layout_alignParentBottom="true">
+		
+		<include layout="@layout/footer_template" />
+	</RelativeLayout> -->
+	
+	<WebView 
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/myWebView"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@id/headerImageLayout"/>
+		<!-- android:layout_above="@id/footerImageLayout"/> -->
+</RelativeLayout>

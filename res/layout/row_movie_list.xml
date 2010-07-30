@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="?android:attr/listPreferredItemHeight"
+	android:paddingBottom="5px" android:gravity="top" android:orientation="vertical"
+	android:background="@color/LIGHT_CYGAN">
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:gravity="center_vertical">
+		<TextView android:layout_width="fill_parent" android:text="Movie Address:"
+			android:id="@+id/theatreName" android:singleLine="true"
+			android:paddingLeft="10px" android:textColor="@color/WHITE"
+			android:ellipsize="marquee" android:gravity="center_vertical"
+			android:textStyle="bold" android:layout_height="wrap_content" android:background="@drawable/bluenav"/>
+		<TextView android:id="@+id/theatreAddress"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:text="Address : " android:padding="10px" android:ellipsize="marquee"
+			android:textColor="@color/BLACK" android:textStyle="normal" />
+		<TextView android:layout_width="fill_parent"
+			android:paddingLeft="10px" android:paddingBottom="2px"
+			android:paddingTop="10px" android:layout_height="wrap_content"
+			android:text="Showtimes :" android:ellipsize="marquee"
+			android:textColor="@color/BLACK" android:textStyle="bold" />
+		<TextView android:id="@+id/theatreShowtime"
+			android:layout_width="wrap_content" android:paddingLeft="10px"
+			android:paddingRight="10px" android:layout_height="wrap_content"
+			android:text="00:00 am" android:ellipsize="marquee"
+			android:textColor="@color/BLACK" android:textStyle="normal" />
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/bg"
+	android:padding="0px">
+	
+	<include 
+		layout="@layout/template_top" 
+		android:layout_alignParentTop="true"
+		android:id="@+id/headerImageLayout"/> 
+	
+	<!-- <RelativeLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:id="@+id/footerImageLayout"
+		android:layout_alignParentBottom="true">
+		
+		<include layout="@layout/footer_template" />
+	</RelativeLayout> -->
+	
+	<RelativeLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:id="@+id/searchArea"
+		android:layout_below="@id/headerImageLayout">
+		<!-- android:layout_above="@id/footerImageLayout" -->
+		
+		<LinearLayout 
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical" 
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent" 
+			android:background="@drawable/bg">
+	
+			<LinearLayout
+				android:id="@+id/telDesc"
+				android:layout_width="fill_parent"
+				android:orientation="vertical"
+				android:layout_height="wrap_content" 
+				android:background="@drawable/descbg" 
+				android:layout_marginLeft="10px" 
+				android:layout_marginRight="10px" 
+				android:layout_marginTop="10px">
+		
+				<TextView 
+					android:id="@+id/telNumber"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:singleLine="true" 
+					android:text="Telephone" 
+					android:layout_marginTop="10px" 
+					android:layout_marginLeft="65px" 
+					android:layout_marginBottom="5px" android:textColor="@color/BLUE"/>
+		
+				<TextView 
+					android:id="@+id/address"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="Address" 
+					android:layout_marginLeft="65px" android:textColor="@color/BLACK"/>
+			</LinearLayout>
+	
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:orientation="vertical"
+				android:layout_height="wrap_content">
+			
+				<TextView 
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="Offers"
+					android:textColor="#ffff00"
+					android:textStyle="bold"
+					android:typeface="sans"
+					android:textSize="16px"
+					android:singleLine="true" 
+					android:layout_marginTop="20px" 
+					android:layout_marginLeft="25px"/>
+		
+				<TextView 
+					android:id="@+id/offerDesc"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:textColor="#ffff00"
+					android:textStyle="bold"
+					android:typeface="sans"
+					android:textSize="14px" 
+					android:layout_marginLeft="25px"/>
+			</LinearLayout>
+	
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content" 
+				android:gravity="center_vertical|center_horizontal" 
+				android:layout_marginTop="20px" android:layout_marginLeft="10px" android:layout_marginRight="10px">
+		
+				<Button
+					android:id="@+id/coupon"
+					android:text="Coupon"
+					android:layout_height="wrap_content"
+					android:textColor="@color/WHITE"
+					android:textStyle="bold"
+					android:typeface="sans"
+					android:background="@drawable/button" android:layout_width="90px"/>
+			
+				<Button
+					android:id="@+id/mapButt"
+					android:text="Map"
+					android:layout_height="wrap_content"
+					android:textColor="@color/WHITE"
+					android:textStyle="bold"
+					android:typeface="sans"
+					android:background="@drawable/button" 
+					android:layout_marginLeft="5px" android:layout_marginRight="5px" android:layout_width="90px"/>
+			
+				<Button
+					android:id="@+id/navigate"
+					android:text="Navigate"
+					android:layout_height="wrap_content"
+					android:textColor="@color/WHITE"
+					android:textStyle="bold"
+					android:typeface="sans"
+					android:background="@drawable/button" android:layout_width="90px"/>
+			</LinearLayout>
+		</LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>

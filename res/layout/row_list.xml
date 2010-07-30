@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="?android:attr/listPreferredItemHeight"
+	android:paddingTop="10px" 
+	android:paddingBottom="10px" 
+	android:gravity="center_vertical"
+	android:id="@+id/widget34" android:background="@drawable/merchantlistbg1">
+
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_height="fill_parent"
+		android:gravity="center_vertical" 
+		android:paddingLeft="30px" 
+		android:layout_width="fill_parent">
+		
+		<TextView 
+			android:id="@+id/topTView" 
+			android:layout_height="wrap_content" 
+			android:text="Top : "
+			android:singleLine="true"
+			android:textStyle="bold" 
+			android:textSize="18px" 
+			android:textColor="@color/BLACK" android:layout_width="220px"/>
+		
+		<TextView 
+			android:layout_width="wrap_content" 
+			android:text="Middle : "
+			android:id="@+id/middleTView" 
+			android:singleLine="true"
+			android:ellipsize="marquee"
+			android:gravity="top" 
+			android:layout_height="wrap_content" 
+			android:textColor="@color/BLACK"/>
+		
+		<TextView 
+			android:layout_width="wrap_content" 
+			android:text="Bottom : "
+			android:id="@+id/bottomTView" 
+			android:singleLine="true"
+			android:ellipsize="marquee"
+			android:gravity="top" 
+			android:layout_height="wrap_content" 
+			android:textColor="@color/BLACK"/>
+	</LinearLayout>
+</LinearLayout>

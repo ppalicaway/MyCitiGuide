@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:background="@drawable/bg2"> -->
+
+	<!-- ################ [ TEMPLATE TOP ] ################### -->
+	<!-- <include layout="@layout/template_top" /> -->
+	<!-- ################ [ TEMPLATE TOP ] ################### -->
+
+
+	<!-- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="@drawable/bg2">
+		<LinearLayout android:id="@+id/widget30"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:orientation="vertical"
+			xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bg2"> -->
+			<!-- ##### [1st row] ##### -->
+			<!-- <LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="vertical"
+				android:gravity="center" android:paddingTop="20px">
+
+				<LinearLayout android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:orientation="vertical"
+					android:layout_gravity="left" android:paddingLeft="20px">
+
+					<LinearLayout android:layout_width="fill_parent"
+						android:layout_height="wrap_content" android:orientation="horizontal"
+						android:layout_gravity="left">
+						<ImageView android:layout_width="wrap_content"
+							android:layout_height="wrap_content" android:src="@drawable/pin_red"></ImageView>
+						<TextView android:id="@+id/text1" android:layout_width="fill_parent"
+							android:layout_gravity="center_vertical" android:layout_height="wrap_content"
+							android:textColor="@color/BLACK" android:textStyle="bold"
+							android:textSize="16sp" android:gravity="left"
+							android:paddingTop="5px" android:paddingBottom="5px"
+							android:text="From Location"></TextView>
+					</LinearLayout>
+					<LinearLayout android:layout_width="fill_parent"
+						android:layout_height="wrap_content" android:orientation="vertical"
+						android:layout_gravity="center_horizontal">
+						<EditText android:id="@+id/yourPositionET"
+							android:gravity="center" android:inputType="text"
+							android:singleLine="true" android:layout_width="280px"
+							android:layout_gravity="center" android:layout_height="wrap_content"></EditText>
+						<TextView android:id="@+id/yourPositionTV"
+							android:layout_width="fill_parent" android:layout_gravity="center_vertical|left"
+							android:layout_height="wrap_content" android:textColor="@color/BLACK"
+							android:textSize="16sp" android:gravity="left"
+							android:paddingTop="5px" android:paddingBottom="5px"
+							android:text=""></TextView>
+					</LinearLayout>
+				</LinearLayout>
+
+				<LinearLayout android:id="@+id/widget31"
+					android:paddingLeft="10px" android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:orientation="horizontal"
+					android:gravity="center_horizontal|center_vertical"
+					android:layout_gravity="center_vertical">
+					<Button android:id="@+id/buttonChange" android:text="Change"
+						android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@drawable/button" android:textColor="@color/WHITE"/>
+					<Button android:id="@+id/buttonOK" android:text="OK"
+						android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@drawable/button" android:textColor="@color/WHITE"/>
+					<Button android:id="@+id/buttonCancel" android:text="Cancel"
+						android:layout_height="wrap_content" android:layout_width="wrap_content"
+						android:width="70px" android:background="@drawable/button" android:textColor="@color/WHITE"/>
+				</LinearLayout>
+
+			</LinearLayout> -->
+
+
+			<!-- ##### [2nd row] ##### -->
+			<!-- <LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="vertical"
+				android:layout_gravity="left" android:paddingLeft="20px"
+				android:paddingTop="20px">
+				<LinearLayout android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:orientation="horizontal"
+					android:layout_gravity="left">
+					<ImageView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:src="@drawable/pin_green"></ImageView>
+					<TextView android:id="@+id/text1" android:layout_width="fill_parent"
+						android:layout_gravity="center_vertical" android:layout_height="wrap_content"
+						android:textColor="@color/BLACK" android:textStyle="bold"
+						android:textSize="16sp" android:gravity="left" android:paddingTop="5px"
+						android:paddingBottom="5px" android:text="To Location"></TextView>
+				</LinearLayout>
+				<TextView android:id="@+id/toPositionTV"
+					android:layout_width="fill_parent" android:layout_gravity="center_vertical"
+					android:layout_height="wrap_content" android:textColor="@color/BLACK"
+					android:textSize="16sp" android:gravity="left" android:paddingTop="5px"
+					android:paddingBottom="5px" android:text=""></TextView>
+			</LinearLayout>
+
+			<LinearLayout android:layout_width="fill_parent"
+				android:paddingTop="20px" android:paddingLeft="20px"
+				android:layout_height="wrap_content" android:orientation="vertical"
+				android:gravity="center">
+				<Button android:id="@+id/buttonSearch" android:text="Get Direction"
+					android:textStyle="bold" android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:width="150px" android:background="@drawable/button" android:textColor="@color/WHITE"/>
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout> -->
+
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/bg"
+	android:padding="0px">
+	
+	<include 
+		layout="@layout/template_top" 
+		android:layout_alignParentTop="true"
+		android:id="@+id/headerImageLayout"/> 
+	
+	<!-- <RelativeLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:id="@+id/footerImageLayout"
+		android:layout_alignParentBottom="true">
+		
+		<include layout="@layout/footer_template" />
+	</RelativeLayout> -->
+	
+	<RelativeLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:id="@+id/searchArea"
+		android:layout_below="@id/headerImageLayout">
+		<!-- android:layout_above="@id/footerImageLayout" -->
+		
+		<LinearLayout 
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:orientation="vertical" 
+			android:background="@drawable/bg">
+
+			<ScrollView 
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content" 
+				android:background="@drawable/bg"
+				android:scrollbars="none"
+				android:fadingEdge="none">
+		
+				<LinearLayout 
+					android:id="@+id/widget30"
+					android:layout_width="fill_parent" 
+					android:layout_height="fill_parent"
+					android:orientation="vertical"
+					xmlns:android="http://schemas.android.com/apk/res/android"
+					android:background="@drawable/bg">
+
+					<LinearLayout 
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical"
+						android:gravity="center"
+						android:paddingTop="20px">
+
+						<LinearLayout 
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_gravity="left"
+							android:paddingLeft="20px">
+
+							<LinearLayout 
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal"
+								android:layout_gravity="left">
+		
+								<ImageView 
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:src="@drawable/pin_red">
+								</ImageView>
+
+								<TextView 
+									android:id="@+id/text1"
+									android:layout_width="fill_parent"
+									android:layout_gravity="center_vertical"
+									android:layout_height="wrap_content"
+									android:textColor="@color/BLACK"
+									android:textStyle="bold"
+									android:textSize="16sp"
+									android:gravity="left"
+									android:paddingTop="5px"
+									android:paddingBottom="5px"
+									android:text="From Location">
+								</TextView>
+							</LinearLayout>
+						
+							<LinearLayout 
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content"
+								android:orientation="vertical"
+								android:layout_gravity="center_horizontal">
+
+								<EditText 
+									android:id="@+id/yourPositionET"
+									android:gravity="center"
+									android:inputType="text"
+									android:singleLine="true"
+									android:layout_width="280px"
+									android:layout_gravity="center"
+									android:layout_height="wrap_content">
+								</EditText>
+						
+								<TextView 
+									android:id="@+id/yourPositionTV"
+									android:layout_width="fill_parent" 
+									android:layout_gravity="center_vertical|left"
+									android:layout_height="wrap_content"
+									android:textColor="@color/BLACK"
+									android:textSize="16sp"
+									android:gravity="left"
+									android:paddingTop="5px"
+									android:paddingBottom="5px"
+									android:text="">
+								</TextView>
+							</LinearLayout>
+						</LinearLayout>
+
+						<LinearLayout 
+							android:id="@+id/widget31"
+							android:paddingLeft="10px"
+							android:layout_width="fill_parent"
+							android:layout_height="fill_parent"
+							android:orientation="horizontal"
+							android:gravity="center_horizontal|center_vertical"
+							android:layout_gravity="center_vertical">
+
+							<Button 
+								android:id="@+id/buttonChange"
+								android:text="Change"
+								android:layout_height="wrap_content"
+								android:layout_width="wrap_content"
+								android:background="@drawable/button"
+								android:textColor="@color/WHITE"/>
+
+							<Button 
+								android:id="@+id/buttonOK"
+								android:text="OK"
+								android:layout_height="wrap_content"
+								android:layout_width="wrap_content"
+								android:background="@drawable/button"
+								android:textColor="@color/WHITE"/>
+
+							<Button 
+								android:id="@+id/buttonCancel"
+								android:text="Cancel"
+								android:layout_height="wrap_content"
+								android:layout_width="wrap_content"
+								android:width="70px"
+								android:background="@drawable/button"
+								android:textColor="@color/WHITE"/>
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<LinearLayout 
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical"
+						android:layout_gravity="left"
+						android:paddingLeft="20px"
+						android:paddingTop="20px">
+				
+						<LinearLayout 
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal"
+							android:layout_gravity="left">
+					
+							<ImageView 
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:src="@drawable/pin_green">
+							</ImageView>
+		
+							<TextView 
+								android:id="@+id/text1"
+								android:layout_width="fill_parent"
+								android:layout_gravity="center_vertical"
+								android:layout_height="wrap_content"
+								android:textColor="@color/BLACK"
+								android:textStyle="bold"
+								android:textSize="16sp"
+								android:gravity="left"
+								android:paddingTop="5px"
+								android:paddingBottom="5px"
+								android:text="To Location">
+							</TextView>
+						</LinearLayout>
+				
+						<TextView 
+							android:id="@+id/toPositionTV"
+							android:layout_width="fill_parent"
+							android:layout_gravity="center_vertical"
+							android:layout_height="wrap_content"
+							android:textColor="@color/BLACK"
+							android:textSize="16sp"
+							android:gravity="left"
+							android:paddingTop="5px"
+							android:paddingBottom="5px"
+							android:text="">
+						</TextView>
+					</LinearLayout>
+
+					<LinearLayout 
+						android:layout_width="fill_parent"
+						android:paddingTop="20px"
+						android:paddingLeft="20px"
+						android:layout_height="wrap_content"
+						android:orientation="vertical"
+						android:gravity="center">
+	
+						<Button 
+							android:id="@+id/buttonSearch"
+							android:text="Get Direction"
+							android:textStyle="bold" 
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content" 
+							android:width="150px"
+							android:background="@drawable/button"
+							android:textColor="@color/WHITE"/>
+					</LinearLayout>
+				</LinearLayout>
+			</ScrollView>
+		</LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/bg"> -->
+	
+	<!-- ################ [ TEMPLATE TOP ] ################### -->
+	<!-- <include layout="@layout/template_top" /> -->
+	<!-- ################ [ TEMPLATE TOP ] ################### -->
+	
+	<!-- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<LinearLayout android:id="@+id/widget30"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:background="@drawable/bg" android:orientation="vertical"
+			xmlns:android="http://schemas.android.com/apk/res/android"> -->
+
+			<!-- ########## [ start address bar ] ############	-->
+			<!-- <LinearLayout android:orientation="horizontal"
+				android:paddingLeft="5px" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:paddingTop="5px"
+				android:background="@color/LIGHT_CYGAN" android:paddingBottom="5px">
+				<ImageView android:id="@+id/typeIconIView"
+					android:layout_width="wrap_content" android:layout_height="fill_parent"
+					android:layout_marginRight="6dip" android:src="@drawable/icon_call"
+					android:paddingLeft="10px" android:layout_gravity="top" />
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="wrap_content" android:layout_height="fill_parent"
+					android:layout_gravity="center_vertical">
+					<LinearLayout android:orientation="vertical"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:paddingLeft="10px" android:gravity="center_vertical">
+						<TextView android:id="@+id/descAddrTView"
+							android:textColor="@color/BLACK" android:layout_width="fill_parent"
+							android:layout_height="wrap_content" android:text="Address : "
+							android:layout_gravity="top" />
+						<TextView android:text="Tel : " android:textColor="@color/COLOR_ORANGE"
+							android:id="@+id/descTelTView" android:layout_height="wrap_content"
+							android:layout_width="fill_parent" android:gravity="top" />
+					</LinearLayout>
+
+				</LinearLayout>
+			</LinearLayout>  -->
+			<!-- ########## [ end address bar ] ############	-->
+			
+			<!-- ########## [ start Offer bar ] ############	-->			
+			<!-- <LinearLayout android:id="@+id/widget31"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:orientation="horizontal" android:paddingTop="10px"
+				android:background="@color/LIGHT_BLUE" android:paddingBottom="10px">
+				<TextView android:id="@+id/offerView"
+					android:textColor="@color/GREEN" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="Offer : "
+					android:paddingLeft="20px" android:layout_gravity="center_vertical">
+				</TextView>				
+			</LinearLayout> -->
+			<!-- ########## [ end Offer bar ] ############	-->			
+
+			<!-- ########## [ start Rating bar ] ############	-->
+			<!-- <LinearLayout android:id="@+id/widget31"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:orientation="horizontal" android:paddingTop="10px"
+				android:background="@color/BLUE" android:paddingBottom="10px">
+				<TextView android:id="@+id/descRatingTView"
+					android:textColor="@color/GREEN" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="Rating : "
+					android:paddingLeft="10px" android:layout_gravity="center_vertical">
+				</TextView>
+				<RatingBar android:id="@+id/indicator_ratingbar"
+					android:layout_gravity="center_vertical" style="?android:attr/ratingBarStyleSmall"
+					android:layout_marginLeft="5dip" android:paddingTop="2px"
+					android:layout_width="wrap_content" android:numStars="5"
+					android:layout_height="wrap_content" />
+			</LinearLayout> -->
+			<!-- ########## [ end Rating bar ] ############	-->
+
+			<!-- ########## [ start icon bar ] ############	-->			
+			<!-- <LinearLayout android:id="@+id/widget49"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:gravity="center" android:background="@color/LIGHT_CYGAN"  
+				android:layout_gravity="center">
+				<ImageView android:id="@+id/lefticon"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:background="@drawable/left_icon" />				
+				<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+					android:id="@+id/descIconGrid" android:layout_width="280px"
+					android:layout_height="90px" android:numColumns="4"
+					android:paddingTop="20px" android:paddingBottom="5px"
+					android:verticalSpacing="5px" android:stretchMode="columnWidth"
+					android:gravity="center" android:layout_gravity="center" />
+				<ImageView android:id="@+id/righticon"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:background="@drawable/right_icon" />
+			</LinearLayout> -->
+			<!-- ########## [ end icon bar ] ############	-->
+
+			<!-- ########## [ start icon bar ] ############	-->			
+			<!-- <LinearLayout android:orientation="horizontal"
+				android:paddingTop="5px" android:paddingBottom="5px"
+				android:paddingLeft="10px" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:background="@color/WHITE" 
+				android:gravity="center_vertical">
+				<TextView android:id="@+id/descDetailTView"
+					android:paddingRight="@dimen/scroll_padding_right"
+					android:textColor="@color/BLACK" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:paddingBottom="20px"
+					android:layout_gravity="top" />
+			</LinearLayout> -->
+			<!--  ########## [ end icon bar ] ############	-->
+			
+		<!-- </LinearLayout>
+	</ScrollView>
+
+</LinearLayout> -->
+
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/bg"
+	android:padding="0px">
+	
+	<include 
+		layout="@layout/template_top" 
+		android:layout_alignParentTop="true"
+		android:id="@+id/headerImageLayout"/> 
+	
+	<!-- <RelativeLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:id="@+id/footerImageLayout"
+		android:layout_alignParentBottom="true">
+		
+		<include layout="@layout/footer_template" />
+	</RelativeLayout> -->
+	
+	<RelativeLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:id="@+id/searchArea"
+		android:layout_below="@id/headerImageLayout">
+		<!-- android:layout_above="@id/footerImageLayout" -->
+		
+		<LinearLayout 
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical" 
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent" 
+			android:background="@drawable/bg">
+	
+			<ScrollView 
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content">
+
+				<LinearLayout 
+					android:id="@+id/widget30"
+					android:layout_width="fill_parent" 
+					android:layout_height="fill_parent"
+					android:background="@drawable/bg" 
+					android:orientation="vertical"
+					xmlns:android="http://schemas.android.com/apk/res/android">
+
+					<LinearLayout 
+						android:orientation="horizontal"
+						android:paddingLeft="5px" 
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content" 
+						android:paddingTop="5px"
+						android:background="@color/LIGHT_CYGAN" 
+						android:paddingBottom="5px">
+		
+						<ImageView 
+							android:id="@+id/typeIconIView"
+							android:layout_width="wrap_content" 
+							android:layout_height="fill_parent"
+							android:layout_marginRight="6dip" 
+							android:src="@drawable/icon_call"
+							android:paddingLeft="10px" 
+							android:layout_gravity="top" />
+
+						<LinearLayout 
+							android:orientation="vertical"
+							android:layout_width="wrap_content" 
+							android:layout_height="fill_parent"
+							android:layout_gravity="center_vertical">
+
+							<LinearLayout 
+								android:orientation="vertical"
+								android:layout_width="wrap_content" 
+								android:layout_height="wrap_content"
+								android:paddingLeft="10px" 
+								android:gravity="center_vertical">
+		
+								<TextView 
+									android:id="@+id/descAddrTView"
+									android:textColor="@color/BLACK" 
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content" 
+									android:text="Address : "
+									android:layout_gravity="top" />
+						
+								<TextView 
+									android:text="Tel : " 
+									android:textColor="@color/COLOR_ORANGE"
+									android:id="@+id/descTelTView" 
+									android:layout_height="wrap_content"
+									android:layout_width="fill_parent" 
+									android:gravity="top" />
+							</LinearLayout>
+
+						</LinearLayout>
+					</LinearLayout>
+						
+					<LinearLayout 
+						android:id="@+id/widget31"
+						android:layout_width="fill_parent" 
+						android:layout_height="wrap_content"
+						android:orientation="horizontal" 
+						android:paddingTop="10px"
+						android:background="@color/LIGHT_BLUE" 
+						android:paddingBottom="10px">
+
+						<TextView 
+							android:id="@+id/offerView"
+							android:textColor="@color/GREEN" 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 
+							android:text="Offer : "
+							android:paddingLeft="20px" 
+							android:layout_gravity="center_vertical">
+						</TextView>				
+					</LinearLayout>
+
+					<LinearLayout 
+						android:id="@+id/widget31"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:paddingTop="10px"
+						android:background="@color/BLUE"
+						android:paddingBottom="10px">
+
+						<TextView 
+							android:id="@+id/descRatingTView"
+							android:textColor="@color/GREEN"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Rating : "
+							android:paddingLeft="10px" 
+							android:layout_gravity="center_vertical">
+						</TextView>
+
+						<RatingBar 
+							android:id="@+id/indicator_ratingbar"
+							android:layout_gravity="center_vertical"
+							style="?android:attr/ratingBarStyleSmall"
+							android:layout_marginLeft="5dip"
+							android:paddingTop="2px"
+							android:layout_width="wrap_content"
+							android:numStars="5"
+							android:layout_height="wrap_content" />
+					</LinearLayout>
+
+					<LinearLayout 
+						android:id="@+id/widget49"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center"
+						android:background="@color/LIGHT_CYGAN"  
+						android:layout_gravity="center">
+				
+						<ImageView 
+							android:id="@+id/lefticon"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:background="@drawable/left_icon" />				
+				
+						<GridView 
+							xmlns:android="http://schemas.android.com/apk/res/android"
+							android:id="@+id/descIconGrid"
+							android:layout_width="280px"
+							android:layout_height="90px"
+							android:numColumns="4"
+							android:paddingTop="20px"
+							android:paddingBottom="5px"
+							android:verticalSpacing="5px"
+							android:stretchMode="columnWidth"
+							android:gravity="center"
+							android:layout_gravity="center" />
+
+						<ImageView 
+							android:id="@+id/righticon"
+							android:layout_width="wrap_content" 
+							android:layout_height="wrap_content"
+							android:background="@drawable/right_icon" />
+					</LinearLayout>
+
+					<LinearLayout 
+						android:orientation="horizontal"
+						android:paddingTop="5px"
+						android:paddingBottom="5px"
+						android:paddingLeft="10px"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:background="@color/WHITE" 
+						android:gravity="center_vertical">
+				
+						<TextView 
+							android:id="@+id/descDetailTView"
+							android:paddingRight="@dimen/scroll_padding_right"
+							android:textColor="@color/BLACK" 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:paddingBottom="20px"
+							android:layout_gravity="top" />
+					</LinearLayout>
+				</LinearLayout>
+			</ScrollView>
+		</LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>

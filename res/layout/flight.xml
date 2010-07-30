@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:background="@color/COLOR_BG">
+
+	<!-- ################ [ TEMPLATE TOP ] ################### -->
+	<include layout="@layout/template_top" />
+	<!-- ################ [ TEMPLATE TOP ] ################### -->
+
+
+	<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<LinearLayout android:id="@+id/widget30"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:background="@color/COLOR_BG" android:orientation="vertical"
+			xmlns:android="http://schemas.android.com/apk/res/android">
+
+			<!-- ##### [1st row] ##### -->
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal"
+				android:gravity="center" android:paddingTop="20px">
+
+				<LinearLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:orientation="vertical"
+					android:layout_gravity="center">
+					<TextView android:id="@+id/text1" android:layout_width="fill_parent"
+						android:layout_height="40px" android:textColor="@color/BLACK"
+						android:textStyle="bold" android:textSize="16sp" android:gravity="center"
+						android:text="Airline Code"></TextView>
+					<EditText android:id="@+id/airlineCodeET" android:gravity="center"
+						android:inputType="text" android:singleLine="true"
+						android:layout_width="120px" android:layout_gravity="center"
+						android:layout_height="wrap_content"></EditText>
+				</LinearLayout>
+
+				<TextView android:id="@+id/text1" android:layout_width="20px"
+					android:layout_height="wrap_content" android:textColor="@color/BLACK"
+					android:textStyle="bold" android:textSize="16sp" android:gravity="center"></TextView>
+
+				<LinearLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:orientation="vertical"
+					android:layout_gravity="center">
+					<TextView android:id="@+id/text1" android:layout_width="fill_parent"
+						android:layout_height="40px" android:textColor="@color/BLACK"
+						android:textStyle="bold" android:textSize="16sp" android:gravity="center"
+						android:text="Flight Number"></TextView>
+					<EditText android:id="@+id/flightNoET" android:gravity="center"
+						android:inputType="text" android:singleLine="true"
+						android:layout_width="120px" android:layout_gravity="center"
+						android:layout_height="wrap_content"></EditText>
+				</LinearLayout>
+
+			</LinearLayout>
+
+
+			<!-- ##### [2nd row] ##### -->
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="210px" android:orientation="vertical"
+				android:gravity="center">
+				<TextView android:id="@+id/text1" android:layout_width="fill_parent"
+					android:layout_height="40px" android:textColor="@color/BLACK"
+					android:textStyle="bold" android:textSize="16sp" android:gravity="center"
+					android:text="Departure Date"></TextView>
+				<DatePicker android:id="@+id/DatePicker01"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"></DatePicker>
+			</LinearLayout>
+
+			<LinearLayout android:layout_width="fill_parent"
+				android:paddingTop="20px" android:layout_height="wrap_content"
+				android:orientation="vertical" android:gravity="center">
+				<Button android:id="@+id/buttonSearch" android:text="Search"
+					android:layout_height="wrap_content" android:layout_width="wrap_content"
+					android:width="100px" android:background="@drawable/button_cust1" />
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

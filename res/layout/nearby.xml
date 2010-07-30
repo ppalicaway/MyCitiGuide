@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<!-- ################ [ TEMPLATE TOP ] ################### -->
+	<include layout="@layout/template_top" />
+	<!-- ################ [ TEMPLATE TOP ] ################### -->
+
+
+<!--	<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--		android:layout_width="fill_parent" android:layout_height="fill_parent"-->
+<!--		android:layout_marginBottom="@dimen/menuoption_height_margin_bottom">-->
+
+	<ScrollView 
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:fadingEdge="none"
+		android:scrollbars="none">
+		     
+		<LinearLayout 
+			android:id="@+id/widget30"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:background="@drawable/bg1" 
+			android:orientation="vertical"
+			xmlns:android="http://schemas.android.com/apk/res/android">
+
+			<!-- ########## [ start header bar ] ############	-->
+			<LinearLayout 
+				android:id="@+id/widget31"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:orientation="horizontal" 
+				android:background="@color/BLUE">
+				
+				<ImageView 
+					android:id="@+id/widget33"
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"
+					android:src="@drawable/icon_down" 
+					android:layout_gravity="center_vertical"
+					android:paddingLeft="5px">
+				</ImageView>
+				
+				<TextView 
+					android:id="@+id/descTitleTView"
+					android:paddingLeft="5px" 
+					android:layout_gravity="center_vertical"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:text="Show me" 
+					android:textStyle="bold" 
+					android:textColor="@color/BLACK">
+				</TextView>
+			</LinearLayout>
+			<!-- ########## [ end header bar ] ############	-->
+
+			<!-- ########## [ start list bar ] ############	-->
+			<LinearLayout 
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+				
+				<LinearLayout 
+					android:id="@+id/widget31"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+					
+					<ListView 
+						android:id="@+id/android:list" 
+						android:divider="@drawable/transparent" 
+						android:dividerHeight="0px"
+						android:scrollbars="none" 
+						android:layout_width="fill_parent"
+						android:layout_height="269px"
+						android:background="#00000000" 
+						android:cacheColorHint="#00000000"
+						android:fadingEdge="none"
+						android:paddingTop="5px"
+						android:paddingBottom="5px">
+					</ListView>
+				</LinearLayout>
+
+				<!-- ################# [ Search Change Dialog ] ################### -->
+				<LinearLayout 
+					android:id="@+id/widget31"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:orientation="horizontal" 
+					android:background="@color/BLUE">
+					
+					<ImageView 
+						android:id="@+id/widget33"
+						android:layout_width="wrap_content" 
+						android:layout_height="wrap_content"
+						android:src="@drawable/icon_down" 
+						android:layout_gravity="center_vertical"
+						android:paddingLeft="5px">
+					</ImageView>
+					
+					<TextView 
+						android:id="@+id/descTitleTView"
+						android:paddingLeft="5px" 
+						android:layout_gravity="center_vertical"
+						android:layout_width="fill_parent" 
+						android:layout_height="wrap_content"
+						android:text="Nearby" 
+						android:textStyle="bold" 
+						android:textColor="@color/BLACK">
+					</TextView>
+				</LinearLayout>
+				
+				<LinearLayout 
+					android:id="@+id/widget31"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content" 
+					android:gravity="center"
+					android:orientation="vertical" 
+					android:textColor="@color/COLOR_FONT_DESC">
+					
+					<TextView 
+						android:id="@+id/nearbyDesc"
+						android:paddingLeft="20px" 
+						android:paddingRight="20px"
+						android:layout_width="fill_parent" 
+						android:layout_height="wrap_content"
+						android:text="Your E-mail and More On-the-Go. Get Windows Live Hotmail Free. Sign up now. " android:paddingTop="15px" android:paddingBottom="15px">
+					</TextView>
+					<EditText 
+						android:id="@+id/searchEText" 
+						android:gravity="center"
+						android:layout_gravity="center"
+						android:singleLine="true" 
+						android:layout_width="250px"
+						android:layout_height="wrap_content" android:paddingBottom="14px" android:paddingTop="14px">
+					</EditText>
+				</LinearLayout>
+				
+				<LinearLayout 
+					android:id="@+id/widget31"
+					android:layout_width="fill_parent" 
+					android:layout_height="fill_parent"
+					android:orientation="horizontal" 
+					android:background="@color/BLUE"
+					android:gravity="center_horizontal|center_vertical"
+					android:layout_gravity="center_vertical" 
+					android:paddingTop="10px"
+					android:paddingBottom="10px">
+					
+					<Button 
+						android:id="@+id/buttonChange" 
+						android:text="Change"
+						android:layout_height="wrap_content" 
+						android:layout_width="wrap_content"
+						android:width="100px" 
+						android:background="@drawable/button_cust1" />
+					
+					<Button 
+						android:id="@+id/buttonSearch" 
+						android:text="Search"
+						android:layout_height="wrap_content" 
+						android:layout_width="wrap_content"
+						android:width="100px" 
+						android:background="@drawable/button_cust1" />
+					
+					<Button 
+						android:id="@+id/buttonCancel" 
+						android:text="Cancel"
+						android:layout_height="wrap_content" 
+						android:layout_width="wrap_content"
+						android:width="100px" 
+						android:background="@drawable/button_cust1" />
+				</LinearLayout>
+			</LinearLayout>
+			<!-- ################# [ Search Change Dialog ] ################### -->
+
+			<!-- ########## [ end list bar ] ############	-->
+		</LinearLayout>
+	</ScrollView>
+
+	<!-- ################ [ TEMPLATE BOTTOM ] ################### -->
+	<!--	<include layout="@layout/template_bottom" />-->
+	<!-- ################ [ TEMPLATE BOTTOM ] ################### -->
+</LinearLayout>

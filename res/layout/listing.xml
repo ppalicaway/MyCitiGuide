@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="vertical" 
+	android:background="@drawable/bg2">-->
+	
+	<!-- ################ [ TEMPLATE TOP ] ################### -->
+	<!-- <include layout="@layout/template_top" /> -->
+	<!-- ################ [ TEMPLATE TOP ] ################### -->
+	
+	<!--<LinearLayout 
+		android:id="@+id/widget30"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:orientation="vertical">
+		
+		<ListView 
+			android:id="@+id/android:list"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:fadingEdge="none">
+		</ListView>
+	</LinearLayout>
+</LinearLayout>-->
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/bg"
+	android:padding="0px">
+	
+	<include 
+		layout="@layout/template_top" 
+		android:layout_alignParentTop="true"
+		android:id="@+id/headerImageLayout"/> 
+	
+	<!-- <RelativeLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:id="@+id/footerImageLayout"
+		android:layout_alignParentBottom="true">
+		
+		<include layout="@layout/footer_template" />
+	</RelativeLayout> -->
+	
+	<RelativeLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:id="@+id/searchArea"
+		android:layout_below="@id/headerImageLayout">
+		<!-- android:layout_above="@id/footerImageLayout" -->
+		
+		<LinearLayout 
+			android:id="@+id/widget30"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:orientation="vertical">
+			
+			<ImageView
+				android:id="@+id/topmovie"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:src="@drawable/topmovies" 
+				android:paddingTop="0px" 
+				android:paddingBottom="0px"/>
+		
+			<ListView 
+				android:id="@+id/android:list"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent"
+				android:fadingEdge="none"
+				android:scrollbars="none"
+				android:layout_marginLeft="0px"
+				android:layout_marginRight="0px"
+				android:layout_marginTop="0px"
+				android:layout_marginBottom="0px"
+				android:divider="@drawable/transparent"
+				android:background="#00000000" 
+				android:cacheColorHint="#00000000">
+			</ListView>
+		</LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>

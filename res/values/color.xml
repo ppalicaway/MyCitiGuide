@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="BLACK">#000</color>
+	<color name="WHITE">#fff</color>
+	<color name="GREEN">#347C17</color>
+	<color name="BLUE">#82CAFF</color>
+	<color name="LIGHT_BLUE">#AFDCEC</color>
+	<color name="LIGHT_CYGAN">#CFECEC</color>
+	<color name="transparent_background">#a0000000</color>
+	<color name="COLOR_FONT_DESC">#5CB3FF</color>
+	<color name="COLOR_FONT_BUTTON">#660066</color>
+	<color name="COLOR_FONT_LINK">#009999</color>
+	<color name="COLOR_BG">#BDEDFF</color>
+	<color name="COLOR_BG_BUTTON">#CD99C7</color>
+	<color name="COLOR_BG_MAIN">#5CB3FF</color>
+	<color name="COLOR_TEXT_WEATHER">#FFFF5A</color>
+	<color name="COLOR_BLUE">#0000FF</color>
+	<color name="COLOR_ORANGE">#F88017</color>
+	<color name="COLOR_FONT_DESC_ROLVER">#6698FF</color>
+</resources>
+

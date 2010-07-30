@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.cellcity.citiguide.screen" android:versionCode="1"
+	android:versionName="1.0">
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+		<uses-library android:name="com.google.android.maps"></uses-library>
+		<activity android:name=".MyCitiGuide" android:label="@string/app_name" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>		
+		<activity android:name="MainCitiGuideScreen" android:label="MainCitiGuideScreen" android:screenOrientation="portrait" />
+		<activity android:name="SearchScreen" android:label="SearchScreen" android:screenOrientation="portrait" />
+		<activity android:name="NearbyScreen" android:label="NearbyScreen" android:screenOrientation="portrait" />		
+		<activity android:name="WeatherScreen" android:label="WeatherScreen" android:screenOrientation="portrait" />
+		<activity android:name="ListingWeatherScreen" android:label="ListingWeatherScreen" android:screenOrientation="portrait" />
+		<activity android:name="ListingScreen" android:label="ListingScreen" android:screenOrientation="portrait" />
+		<activity android:name="ListingMerchantScreen" android:label="ListingMerchantScreen" android:screenOrientation="portrait" />
+		<activity android:name="DescriptionScreen" android:label="DescriptionScreen" android:screenOrientation="portrait" />
+		<activity android:name="FlightScreen" android:label="FlightScreen" android:screenOrientation="portrait" />
+		<activity android:name="FlightResultScreen" android:label="FlightResultScreen" android:screenOrientation="portrait" />
+		<activity android:name="MovieScreen" android:label="MovieScreen" android:screenOrientation="portrait" />	
+		<activity android:name="MovieResultScreen" android:label="MovieResultScreen" android:screenOrientation="portrait" />
+		<activity android:name="DirectionInputScreen" android:label="DirectionInputScreen" android:screenOrientation="portrait" />
+		<activity android:name="CategoryListScreen" android:label="CategoryListScreen" android:screenOrientation="portrait" />
+		<activity android:name="DescriptionCategoryScreen" android:label ="DescriptionCategoryScreen" android:screenOrientation="portrait" />
+		<activity android:name="MapScreen" android:label="MapScreen" android:screenOrientation="portrait" />
+		<activity android:name="TwitterScreen" android:label="TwitterScreen" android:screenOrientation="portrait" />
+		<activity android:name="CommentScreen" android:label="CommentScreen" android:screenOrientation="portrait" />
+		<activity android:name="ARScreen" android:label="ARScreen" android:screenOrientation="portrait"/>
+		<activity android:name="WebScreen" android:label="WebScreen" android:screenOrientation="portrait" />
+		<activity android:name="Compass" android:label="Compass" android:screenOrientation="portrait">\
+			
+		</activity>
+	</application>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_GPS" />
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.LOCATION" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-sdk android:minSdkVersion="3" />
+</manifest> 

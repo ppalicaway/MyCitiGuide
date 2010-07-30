@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="vertical" 
+	android:background="@color/COLOR_BG">
+
+	<ImageView 
+		android:id="@+id/headerIView" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:layout_gravity="top" 
+		android:background="@drawable/head_main_page">
+	</ImageView>
+
+	<com.cellcity.citiguide.map.MapLocationViewer
+		android:id="@+id/map_location_viewer" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" />
+</LinearLayout> -->
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/bg"
+	android:padding="0px">
+	
+	<include 
+		layout="@layout/template_top" 
+		android:layout_alignParentTop="true"
+		android:id="@+id/headerImageLayout"/> 
+	
+	<!-- <RelativeLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:id="@+id/footerImageLayout"
+		android:layout_alignParentBottom="true">
+		
+		<include layout="@layout/footer_template" />
+	</RelativeLayout> -->
+	
+	<RelativeLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:id="@+id/searchArea"
+		android:layout_below="@id/headerImageLayout">
+		<!-- android:layout_above="@id/footerImageLayout" -->
+		
+		<com.cellcity.citiguide.map.MapLocationViewer
+			android:id="@+id/map_location_viewer" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" />
+	</RelativeLayout>
+</RelativeLayout>

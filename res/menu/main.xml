@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/menu_search" 
+		android:icon="@drawable/search" />
+	<item android:id="@+id/menu_nearby" 
+		android:icon="@drawable/nearby" />
+	<item android:id="@+id/menu_share" 
+		android:icon="@drawable/share" />
+	<item android:id="@+id/menu_ar" 
+		android:icon="@drawable/ar" />
+	<item android:id="@+id/menu_map" 
+		android:icon="@drawable/map" />
+</menu>

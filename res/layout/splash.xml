@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	android:id="@+id/widget28"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="vertical" 
+	android:background="#fbfae6"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:gravity="center_vertical|center_horizontal">
+	
+	<ScrollView
+		android:layout_height="fill_parent"
+		android:layout_width="fill_parent"
+		android:scrollbars="none"
+		android:fadingEdge="none"
+		android:layout_gravity="center_vertical|center_horizontal">
+		<LinearLayout 
+			android:id="@+id/widget30"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:orientation="vertical" 
+			android:layout_gravity="bottom">
+		
+			<ImageView 
+				android:id="@+id/splashImgView"
+				android:layout_height="wrap_content"
+				android:src="@drawable/splash" 
+				android:layout_gravity="bottom" 
+				android:layout_width="fill_parent">
+			</ImageView>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

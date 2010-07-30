@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MyCitiGuide!</string>
+    <string name="app_name">f.y.i. Singapore</string>
+    <string name="retrieving_data">Retrieving data ...</string>
+    <string name="no_item_found">No items found.</string>
+    <string name="telTitle">Tel : </string>
+    <string name="ratingTitle">Rating : </string>
+    <string name="searchTitle">Search</string>
+    <string name="map_text">You are here</string>    
+    <string name="sharTitle">Share this page by</string>
+    <string name="pls_insert_location">Please insert location.</string>
+    <string name="can_not_get_gps">Can not get address from GPS. Please insert your location.</string>
+    
+	 <!-- [ BUTTON ] -->
+	<string name="ok">OK</string>
+	<string name="sms">SMS</string>
+	<string name="email">EMAIL</string>
+	
+	<!-- CAT ICON -->
+	<string name="gourmetIcon">Gourmet Pleasure</string>
+	<string name="promotionIcon">Citi Promotions</string>	
+	<string name="shoppingIcon">Shop A’holics</string>
+	<string name="barsIcon">Bars,Pubs,Clubs</string>
+	<string name="atmIcon">ATM Finder</string>
+	<string name="movieIcon">Latest Movies</string>
+	<string name="hotelIcon">My Citi\'s Best Hotels</string>
+	<string name="flightIcon">Flight Schedules</string>
+	<string name="weatherIcon">Weather Forecast</string>
+	
+    <!-- [ MENU ] -->	
+	<string name="search">Search</string>
+	<string name="nearby">Nearby</string>
+	<string name="share">Share</string>
+	<string name="map">Map</string>
+	<string name="comment">Comment</string>
+	<string name="twitter">Twitter</string>
+	<string name="submit">Submit</string>
+<string name="menu_ar">AR</string>
+<string name="can_not_get_location">Can not get current location. Make sure you enable GPS.‎</string>
+<string name="pubs">Pubs \'n Clubs</string>
+<string name="dining">Dining</string>
+<string name="shopping">Shopping</string>
+<string name="promo">Promotions</string>
+<string name="movies">Movies</string>
+<string name="hotels">Hotels</string>
+<string name="bank">Bank</string>
+</resources>
