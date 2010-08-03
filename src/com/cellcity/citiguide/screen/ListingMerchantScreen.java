@@ -80,7 +80,12 @@ public class ListingMerchantScreen extends CitiGuideListActivity {
 		settingLayout();
 
 		// display progress dialog
-		progressDialog = ProgressDialog.show(this, "", getString(R.string.retrieving_data), true);
+		try {
+			progressDialog = ProgressDialog.show(this, "", getString(R.string.retrieving_data), true);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 
 		// start thread
 		initR = new Runnable() {
@@ -445,7 +450,6 @@ public class ListingMerchantScreen extends CitiGuideListActivity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				if (page <= totalPage) {
 					page--;
 					init();
@@ -458,7 +462,6 @@ public class ListingMerchantScreen extends CitiGuideListActivity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				if (page < totalPage) {
 					page++;
 					init();

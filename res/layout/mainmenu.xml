@@ -17,7 +17,7 @@
 	<GridView xmlns:android="http://schemas.android.com/apk/res/android"
 		android:id="@+id/myGrid"
 		android:fitsSystemWindows="true" android:layout_width="fill_parent"
-		android:layout_height="wrap_content" android:verticalSpacing="-20px"
+		android:layout_height="wrap_content" android:verticalSpacing="-20dip"
 		android:stretchMode="columnWidth" android:scrollbars="none"
 		android:numColumns="3" />  -->		
 		
@@ -30,7 +30,7 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:background="@drawable/bg"
-	android:padding="0px">
+	android:padding="0dip">
 	
 	<include 
 		layout="@layout/header_template" 
@@ -54,8 +54,8 @@
 		android:layout_height="wrap_content"
 		android:stretchMode="columnWidth" 
 		android:scrollbars="none"
-		android:verticalSpacing="0px"
-		android:horizontalSpacing="0px"
+		android:verticalSpacing="0dip"
+		android:horizontalSpacing="0dip"
 		android:numColumns="5"
 		android:layout_below="@id/headerImageLayout"/>
 		<!-- android:layout_above="@id/footerImageLayout" -->

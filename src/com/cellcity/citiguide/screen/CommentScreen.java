@@ -60,8 +60,13 @@ public  class CommentScreen extends CitiGuideListActivity implements OnClickList
 	public void init(){
 		settingLayout();
 		
-		progressDialog = ProgressDialog.show(this, "",
+		try {
+			progressDialog = ProgressDialog.show(this, "",
 				getString(R.string.retrieving_data), true);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 		
 		// start thread
 		initR = new Runnable() {

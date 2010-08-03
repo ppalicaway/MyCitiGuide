@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<dimen name="menuoption_height_margin_top">-67px</dimen>
-	<dimen name="menuoption_height_margin_bottom">66px</dimen>
-	<dimen name="scroll_padding_right">5px</dimen>
-	<dimen name="list_padding_left">10px</dimen>
+	<dimen name="menuoption_height_margin_top">-67dp</dimen>
+	<dimen name="menuoption_height_margin_bottom">66dp</dimen>
+	<dimen name="scroll_padding_right">5dp</dimen>
+	<dimen name="list_padding_left">10dp</dimen>
 </resources>

@@ -90,7 +90,12 @@ public class SeekBarLayout extends FrameLayout implements SeekBar.OnSeekBarChang
 	@Override
 	public void onStopTrackingTouch(SeekBar seekBar) {
 		ARScreen.radius = (float) prog;
-		ARScreen.progressDialog = ProgressDialog.show(context, "", context.getResources().getString(R.string.retrieving_data), true);
+		try {
+			ARScreen.progressDialog = ProgressDialog.show(context, "", context.getResources().getString(R.string.retrieving_data), true);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 		Thread t = new Thread(null, new GetJSON(), "initR");
 		t.start();
 	}

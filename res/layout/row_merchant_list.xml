@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent" android:layout_height="?android:attr/listPreferredItemHeight"
-	android:paddingTop="10px" android:paddingBottom="10px" android:gravity="center_vertical" android:background="@drawable/merchantlistbg1">
+	android:paddingTop="10dip" android:paddingBottom="10dip" android:gravity="center_vertical" android:background="@drawable/merchantlistbg1">
 	<ImageView android:id="@+id/rowlistIconIView"
 		android:layout_width="wrap_content" android:layout_height="fill_parent"
-		android:layout_marginRight="5px" android:src="@drawable/icon"
+		android:layout_marginRight="5dip" android:src="@drawable/icon"
 		android:layout_gravity="center_vertical" android:paddingLeft="@dimen/list_padding_left" />
 	<LinearLayout android:orientation="vertical"
 		android:layout_width="fill_parent" android:layout_height="fill_parent"
-		android:gravity="center_vertical" android:paddingLeft="10px" android:layout_marginRight="35px" >
+		android:gravity="center_vertical" android:paddingLeft="10dip" android:layout_marginRight="35dip" >
 		<TextView android:id="@+id/topTView" android:layout_width="wrap_content"
 			android:layout_height="wrap_content" android:text="Top : " android:ellipsize="marquee"
 			android:textColor="@color/BLACK" android:singleLine="true"
-			android:textStyle="bold" android:textSize="18px" />
+			android:textStyle="bold" android:textSize="18dip" />
 		<TextView android:layout_width="wrap_content" android:text="Middle : "
 			android:id="@+id/middleTView" android:singleLine="true"
 			android:textColor="@color/BLACK" android:ellipsize="marquee"
@@ -25,6 +25,6 @@
 	</LinearLayout>
 <!--	<ImageView android:id="@+id/rowlistPinView"-->
 <!--		android:layout_width="wrap_content" android:layout_height="fill_parent"-->
-<!--		android:layout_marginLeft="-35px" android:src="@drawable/pin_1"-->
+<!--		android:layout_marginLeft="-35dip" android:src="@drawable/pin_1"-->
 <!--		android:layout_gravity="center_vertical" android:paddingLeft="@dimen/list_padding_left" />-->
 </LinearLayout>

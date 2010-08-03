@@ -97,8 +97,13 @@ public class MovieResultScreen extends CitiGuideListActivity{
 	}
 	public void init() {
 		// display progress dialog
-		progressDialog = ProgressDialog.show(this, "",
+		try {
+			progressDialog = ProgressDialog.show(this, "",
 				getString(R.string.retrieving_data), true);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 
 		// start thread
 		initR = new Runnable() {

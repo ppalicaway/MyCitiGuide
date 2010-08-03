@@ -60,8 +60,13 @@ public  class NearbyScreen extends CitiGuideListActivity implements OnClickListe
 		getAddress();
 		settingLayout();
 		
-		progressDialog = ProgressDialog.show(NearbyScreen.this,
+		try {
+			progressDialog = ProgressDialog.show(NearbyScreen.this,
 				"", getText(R.string.retrieving_data), true);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 		
 		m_orders = new ArrayList<ContentInfo>();
 		m_adapter = new ListViewAdapter(this, R.layout.choice_list, m_orders);

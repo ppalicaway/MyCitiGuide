@@ -16,19 +16,19 @@
 
 			<!-- ########## [ start address bar ] ############	-->
 			<!-- <LinearLayout android:orientation="horizontal"
-				android:paddingLeft="5px" android:layout_width="fill_parent"
-				android:layout_height="wrap_content" android:paddingTop="5px"
-				android:background="@color/LIGHT_CYGAN" android:paddingBottom="5px">
+				android:paddingLeft="5dip" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:paddingTop="5dip"
+				android:background="@color/LIGHT_CYGAN" android:paddingBottom="5dip">
 				<ImageView android:id="@+id/typeIconIView"
 					android:layout_width="wrap_content" android:layout_height="fill_parent"
 					android:layout_marginRight="6dip" android:src="@drawable/icon_call"
-					android:paddingLeft="10px" android:layout_gravity="top" />
+					android:paddingLeft="10dip" android:layout_gravity="top" />
 				<LinearLayout android:orientation="vertical"
 					android:layout_width="wrap_content" android:layout_height="fill_parent"
 					android:layout_gravity="center_vertical">
 					<LinearLayout android:orientation="vertical"
 						android:layout_width="wrap_content" android:layout_height="wrap_content"
-						android:paddingLeft="10px" android:gravity="center_vertical">
+						android:paddingLeft="10dip" android:gravity="center_vertical">
 						<TextView android:id="@+id/descAddrTView"
 							android:textColor="@color/BLACK" android:layout_width="fill_parent"
 							android:layout_height="wrap_content" android:text="Address : "
@@ -45,12 +45,12 @@
 			<!-- ########## [ start Offer bar ] ############	-->			
 			<!-- <LinearLayout android:id="@+id/widget31"
 				android:layout_width="fill_parent" android:layout_height="wrap_content"
-				android:orientation="horizontal" android:paddingTop="10px"
-				android:background="@color/LIGHT_BLUE" android:paddingBottom="10px">
+				android:orientation="horizontal" android:paddingTop="10dip"
+				android:background="@color/LIGHT_BLUE" android:paddingBottom="10dip">
 				<TextView android:id="@+id/offerView"
 					android:textColor="@color/GREEN" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" android:text="Offer : "
-					android:paddingLeft="20px" android:layout_gravity="center_vertical">
+					android:paddingLeft="20dip" android:layout_gravity="center_vertical">
 				</TextView>				
 			</LinearLayout> -->
 			<!-- ########## [ end Offer bar ] ############	-->			
@@ -58,16 +58,16 @@
 			<!-- ########## [ start Rating bar ] ############	-->
 			<!-- <LinearLayout android:id="@+id/widget31"
 				android:layout_width="fill_parent" android:layout_height="wrap_content"
-				android:orientation="horizontal" android:paddingTop="10px"
-				android:background="@color/BLUE" android:paddingBottom="10px">
+				android:orientation="horizontal" android:paddingTop="10dip"
+				android:background="@color/BLUE" android:paddingBottom="10dip">
 				<TextView android:id="@+id/descRatingTView"
 					android:textColor="@color/GREEN" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" android:text="Rating : "
-					android:paddingLeft="10px" android:layout_gravity="center_vertical">
+					android:paddingLeft="10dip" android:layout_gravity="center_vertical">
 				</TextView>
 				<RatingBar android:id="@+id/indicator_ratingbar"
 					android:layout_gravity="center_vertical" style="?android:attr/ratingBarStyleSmall"
-					android:layout_marginLeft="5dip" android:paddingTop="2px"
+					android:layout_marginLeft="5dip" android:paddingTop="2dip"
 					android:layout_width="wrap_content" android:numStars="5"
 					android:layout_height="wrap_content" />
 			</LinearLayout> -->
@@ -82,10 +82,10 @@
 					android:layout_width="wrap_content" android:layout_height="wrap_content"
 					android:background="@drawable/left_icon" />				
 				<GridView xmlns:android="http://schemas.android.com/apk/res/android"
-					android:id="@+id/descIconGrid" android:layout_width="280px"
-					android:layout_height="90px" android:numColumns="4"
-					android:paddingTop="20px" android:paddingBottom="5px"
-					android:verticalSpacing="5px" android:stretchMode="columnWidth"
+					android:id="@+id/descIconGrid" android:layout_width="280dip"
+					android:layout_height="90dip" android:numColumns="4"
+					android:paddingTop="20dip" android:paddingBottom="5dip"
+					android:verticalSpacing="5dip" android:stretchMode="columnWidth"
 					android:gravity="center" android:layout_gravity="center" />
 				<ImageView android:id="@+id/righticon"
 					android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -95,14 +95,14 @@
 
 			<!-- ########## [ start icon bar ] ############	-->			
 			<!-- <LinearLayout android:orientation="horizontal"
-				android:paddingTop="5px" android:paddingBottom="5px"
-				android:paddingLeft="10px" android:layout_width="fill_parent"
+				android:paddingTop="5dip" android:paddingBottom="5dip"
+				android:paddingLeft="10dip" android:layout_width="fill_parent"
 				android:layout_height="wrap_content" android:background="@color/WHITE" 
 				android:gravity="center_vertical">
 				<TextView android:id="@+id/descDetailTView"
 					android:paddingRight="@dimen/scroll_padding_right"
 					android:textColor="@color/BLACK" android:layout_width="wrap_content"
-					android:layout_height="wrap_content" android:paddingBottom="20px"
+					android:layout_height="wrap_content" android:paddingBottom="20dip"
 					android:layout_gravity="top" />
 			</LinearLayout> -->
 			<!--  ########## [ end icon bar ] ############	-->
@@ -117,7 +117,7 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:background="@drawable/bg"
-	android:padding="0px">
+	android:padding="0dip">
 	
 	<include 
 		layout="@layout/template_top" 
@@ -162,12 +162,12 @@
 
 					<LinearLayout 
 						android:orientation="horizontal"
-						android:paddingLeft="5px" 
+						android:paddingLeft="5dip" 
 						android:layout_width="fill_parent"
 						android:layout_height="wrap_content" 
-						android:paddingTop="5px"
+						android:paddingTop="5dip"
 						android:background="@color/LIGHT_CYGAN" 
-						android:paddingBottom="5px">
+						android:paddingBottom="5dip">
 		
 						<ImageView 
 							android:id="@+id/typeIconIView"
@@ -175,7 +175,7 @@
 							android:layout_height="fill_parent"
 							android:layout_marginRight="6dip" 
 							android:src="@drawable/icon_call"
-							android:paddingLeft="10px" 
+							android:paddingLeft="10dip" 
 							android:layout_gravity="top" />
 
 						<LinearLayout 
@@ -188,7 +188,7 @@
 								android:orientation="vertical"
 								android:layout_width="wrap_content" 
 								android:layout_height="wrap_content"
-								android:paddingLeft="10px" 
+								android:paddingLeft="10dip" 
 								android:gravity="center_vertical">
 		
 								<TextView 
@@ -216,9 +216,9 @@
 						android:layout_width="fill_parent" 
 						android:layout_height="wrap_content"
 						android:orientation="horizontal" 
-						android:paddingTop="10px"
+						android:paddingTop="10dip"
 						android:background="@color/LIGHT_BLUE" 
-						android:paddingBottom="10px">
+						android:paddingBottom="10dip">
 
 						<TextView 
 							android:id="@+id/offerView"
@@ -226,7 +226,7 @@
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content" 
 							android:text="Offer : "
-							android:paddingLeft="20px" 
+							android:paddingLeft="20dip" 
 							android:layout_gravity="center_vertical">
 						</TextView>				
 					</LinearLayout>
@@ -236,9 +236,9 @@
 						android:layout_width="fill_parent"
 						android:layout_height="wrap_content"
 						android:orientation="horizontal"
-						android:paddingTop="10px"
+						android:paddingTop="10dip"
 						android:background="@color/BLUE"
-						android:paddingBottom="10px">
+						android:paddingBottom="10dip">
 
 						<TextView 
 							android:id="@+id/descRatingTView"
@@ -246,7 +246,7 @@
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:text="Rating : "
-							android:paddingLeft="10px" 
+							android:paddingLeft="10dip" 
 							android:layout_gravity="center_vertical">
 						</TextView>
 
@@ -255,7 +255,7 @@
 							android:layout_gravity="center_vertical"
 							style="?android:attr/ratingBarStyleSmall"
 							android:layout_marginLeft="5dip"
-							android:paddingTop="2px"
+							android:paddingTop="2dip"
 							android:layout_width="wrap_content"
 							android:numStars="5"
 							android:layout_height="wrap_content" />
@@ -278,12 +278,12 @@
 						<GridView 
 							xmlns:android="http://schemas.android.com/apk/res/android"
 							android:id="@+id/descIconGrid"
-							android:layout_width="280px"
-							android:layout_height="90px"
+							android:layout_width="280dip"
+							android:layout_height="90dip"
 							android:numColumns="4"
-							android:paddingTop="20px"
-							android:paddingBottom="5px"
-							android:verticalSpacing="5px"
+							android:paddingTop="20dip"
+							android:paddingBottom="5dip"
+							android:verticalSpacing="5dip"
 							android:stretchMode="columnWidth"
 							android:gravity="center"
 							android:layout_gravity="center" />
@@ -297,9 +297,9 @@
 
 					<LinearLayout 
 						android:orientation="horizontal"
-						android:paddingTop="5px"
-						android:paddingBottom="5px"
-						android:paddingLeft="10px"
+						android:paddingTop="5dip"
+						android:paddingBottom="5dip"
+						android:paddingLeft="10dip"
 						android:layout_width="fill_parent"
 						android:layout_height="wrap_content"
 						android:background="@color/WHITE" 
@@ -311,7 +311,7 @@
 							android:textColor="@color/BLACK" 
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:paddingBottom="20px"
+							android:paddingBottom="20dip"
 							android:layout_gravity="top" />
 					</LinearLayout>
 				</LinearLayout>

@@ -8,13 +8,11 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.Display;
-import android.view.KeyEvent;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
@@ -126,7 +124,12 @@ public class ARScreen extends CitiGuideActivity {
 		}
 		else {
 			// display progress dialog
-			progressDialog = ProgressDialog.show(this, "", getString(R.string.retrieving_data), true);
+			try {
+				progressDialog = ProgressDialog.show(this, "", getString(R.string.retrieving_data), true);
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
 			
 			Thread thread = new Thread(null, new GetJSON(), "initR");
 			thread.start();
