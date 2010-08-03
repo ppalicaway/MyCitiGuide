@@ -70,14 +70,14 @@ public  class SearchScreen extends CitiGuideActivity implements OnClickListener 
 		Button bSearch = (Button)findViewById(R.id.buttonSearch);
 		bSearch.setOnClickListener(this);
 		
-		//Button footerSearch = (Button)findViewById(R.id.search_Button);
-		//footerSearch.setOnClickListener(new MenuListener());
-		//Button footerNearby = (Button)findViewById(R.id.nearbyButton);
-		//footerNearby.setOnClickListener(new MenuListener());
-		//Button footerShare = (Button)findViewById(R.id.shareButton);
-		//footerShare.setOnClickListener(new MenuListener());
-		//Button footerMap = (Button)findViewById(R.id.map_Button);
-		//footerMap.setOnClickListener(new MenuListener());
+		Button footerSearch = (Button)findViewById(R.id.search_Button);
+		footerSearch.setOnClickListener(new MenuListener());
+		Button footerNearby = (Button)findViewById(R.id.nearbyButton);
+		footerNearby.setOnClickListener(new MenuListener());
+		Button footerShare = (Button)findViewById(R.id.shareButton);
+		footerShare.setOnClickListener(new MenuListener());
+		Button footerMap = (Button)findViewById(R.id.map_Button);
+		footerMap.setOnClickListener(new MenuListener());
 		Button homeButton = (Button)findViewById(R.id.homeButton);
 		homeButton.setOnClickListener(new MenuListener());
 	}

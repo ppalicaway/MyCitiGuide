@@ -43,12 +43,12 @@
 					android:layout_height="wrap_content"
 					android:src="@drawable/icon_down" 
 					android:layout_gravity="center_vertical"
-					android:paddingLeft="5dip">
+					android:paddingLeft="5dp">
 				</ImageView>
 				
 				<TextView 
 					android:id="@+id/descTitleTView"
-					android:paddingLeft="5dip" 
+					android:paddingLeft="5dp" 
 					android:layout_gravity="center_vertical"
 					android:layout_width="fill_parent" 
 					android:layout_height="wrap_content"
@@ -75,15 +75,15 @@
 					<ListView 
 						android:id="@+id/android:list" 
 						android:divider="@drawable/transparent" 
-						android:dividerHeight="0dip"
+						android:dividerHeight="0dp"
 						android:scrollbars="none" 
 						android:layout_width="fill_parent"
-						android:layout_height="269dip"
+						android:layout_height="269dp"
 						android:background="#00000000" 
 						android:cacheColorHint="#00000000"
 						android:fadingEdge="none"
-						android:paddingTop="5dip"
-						android:paddingBottom="5dip">
+						android:paddingTop="5dp"
+						android:paddingBottom="5dp">
 					</ListView>
 				</LinearLayout>
 
@@ -101,12 +101,12 @@
 						android:layout_height="wrap_content"
 						android:src="@drawable/icon_down" 
 						android:layout_gravity="center_vertical"
-						android:paddingLeft="5dip">
+						android:paddingLeft="5dp">
 					</ImageView>
 					
 					<TextView 
 						android:id="@+id/descTitleTView"
-						android:paddingLeft="5dip" 
+						android:paddingLeft="5dp" 
 						android:layout_gravity="center_vertical"
 						android:layout_width="fill_parent" 
 						android:layout_height="wrap_content"
@@ -126,19 +126,19 @@
 					
 					<TextView 
 						android:id="@+id/nearbyDesc"
-						android:paddingLeft="20dip" 
-						android:paddingRight="20dip"
+						android:paddingLeft="20dp" 
+						android:paddingRight="20dp"
 						android:layout_width="fill_parent" 
 						android:layout_height="wrap_content"
-						android:text="Your E-mail and More On-the-Go. Get Windows Live Hotmail Free. Sign up now. " android:paddingTop="15dip" android:paddingBottom="15dip">
+						android:text="Your E-mail and More On-the-Go. Get Windows Live Hotmail Free. Sign up now. " android:paddingTop="15dp" android:paddingBottom="15dp">
 					</TextView>
 					<EditText 
 						android:id="@+id/searchEText" 
 						android:gravity="center"
 						android:layout_gravity="center"
 						android:singleLine="true" 
-						android:layout_width="250dip"
-						android:layout_height="wrap_content" android:paddingBottom="14dip" android:paddingTop="14dip">
+						android:layout_width="250dp"
+						android:layout_height="wrap_content" android:paddingBottom="14dp" android:paddingTop="14dp">
 					</EditText>
 				</LinearLayout>
 				
@@ -150,15 +150,15 @@
 					android:background="@color/BLUE"
 					android:gravity="center_horizontal|center_vertical"
 					android:layout_gravity="center_vertical" 
-					android:paddingTop="10dip"
-					android:paddingBottom="10dip">
+					android:paddingTop="10dp"
+					android:paddingBottom="10dp">
 					
 					<Button 
 						android:id="@+id/buttonChange" 
 						android:text="Change"
 						android:layout_height="wrap_content" 
 						android:layout_width="wrap_content"
-						android:width="100dip" 
+						android:width="100dp" 
 						android:background="@drawable/button_cust1" />
 					
 					<Button 
@@ -166,7 +166,7 @@
 						android:text="Search"
 						android:layout_height="wrap_content" 
 						android:layout_width="wrap_content"
-						android:width="100dip" 
+						android:width="100dp" 
 						android:background="@drawable/button_cust1" />
 					
 					<Button 
@@ -174,7 +174,7 @@
 						android:text="Cancel"
 						android:layout_height="wrap_content" 
 						android:layout_width="wrap_content"
-						android:width="100dip" 
+						android:width="100dp" 
 						android:background="@drawable/button_cust1" />
 				</LinearLayout>
 			</LinearLayout>

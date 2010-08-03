@@ -18,7 +18,7 @@
 			android:id="@+id/homeButton"
 			android:background="@drawable/homeicon"
 			android:layout_width="wrap_content"
-			android:layout_height="wrap_content" android:layout_marginRight="17dip"/>
+			android:layout_height="wrap_content" android:layout_marginRight="17dp"/>
 	</LinearLayout>
 	
 	<LinearLayout
@@ -38,8 +38,8 @@
 			android:singleLine="true"
 			android:textColor="@color/WHITE" 
 			android:gravity="center_vertical|center_horizontal" 
-			android:layout_width="200dip" 
-			android:layout_marginRight="7dip">
+			android:layout_width="200dp" 
+			android:layout_marginRight="7dp">
 		</TextView>
 		
 		<Button
@@ -47,14 +47,14 @@
 			android:background="@drawable/mapicon"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_marginRight="0dip"/>
+			android:layout_marginRight="0dp"/>
 			
 		<Button
 			android:id="@+id/arButton"
 			android:background="@drawable/aricon"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_marginRight="17dip"/>
+			android:layout_marginRight="17dp"/>
 	</LinearLayout>
 	
 	<!-- <TextView 

@@ -4,12 +4,8 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.view.ContextMenu;
 import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.view.View.OnClickListener;
 
 import com.cellcity.citiguide.adapter.Controller;
@@ -31,59 +27,59 @@ public class CitiGuideActivity extends Activity{
 	
 	// new menu
 	private Menu mMenu;
-	public boolean onCreateOptionsMenu(Menu menu) {
-		this.mMenu = menu;
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.main, menu);
-		return true;
-	}
+	//public boolean onCreateOptionsMenu(Menu menu) {
+	//	this.mMenu = menu;
+	//	MenuInflater inflater = getMenuInflater();
+	//	inflater.inflate(R.menu.main, menu);
+	//	return true;
+	//}
 	
-	@Override
-	public boolean onPrepareOptionsMenu(Menu menu) {
-		return super.onPrepareOptionsMenu(menu);
-	}
+	//@Override
+	//public boolean onPrepareOptionsMenu(Menu menu) {
+	//	return super.onPrepareOptionsMenu(menu);
+	//}
 	
-	@Override
-	public boolean onMenuItemSelected(int featureId, MenuItem item) {
-		switch (item.getItemId()) {
-			case R.id.menu_search:
-				//act.finish();
-				Intent search = new Intent(act, SearchScreen.class);
-				startActivity(search);
-				return true;			
-			case R.id.menu_share:
-				new AlertDialog.Builder(act)
-		   		//.setIcon(R.drawable.alert_dialog_icon)
-			    		.setTitle(R.string.sharTitle)
-			            .setPositiveButton(R.string.sms, new DialogInterface.OnClickListener() {
-			                public void onClick(DialogInterface dialog, int whichButton) {
-								Util.sendMessage(act, "", message);
-			                }
-			            })
-			            .setNegativeButton(R.string.email, new DialogInterface.OnClickListener() {
-			                public void onClick(DialogInterface dialog, int whichButton) {
-								Util.sendEmail(act, "", "", subject, message);
-			                }
-			            })
-			            .create().show();
-				return true;
-			case R.id.menu_nearby:
-//				act.finish();
-				Intent nearby = new Intent(act,NearbyScreen.class);
-				startActivity(nearby);
-				return true;			
-			case R.id.menu_ar:
-				if(ARScreen.instance != null)
-					ARScreen.instance.finish();				
-				Intent ar = new Intent(act, ARScreen.class);
-				startActivity(ar);
-				return true;
-			case R.id.menu_map:
-				Controller.displayMapScreen(act);
-				return true;
-			}			
-		return super.onMenuItemSelected(featureId, item);
-	}
+	//@Override
+	//public boolean onMenuItemSelected(int featureId, MenuItem item) {
+	//	switch (item.getItemId()) {
+	//		case R.id.menu_search:
+	//			//act.finish();
+	//			Intent search = new Intent(act, SearchScreen.class);
+	//			startActivity(search);
+	//			return true;			
+	//		case R.id.menu_share:
+	//			new AlertDialog.Builder(act)
+	//	   		//.setIcon(R.drawable.alert_dialog_icon)
+	//		    		.setTitle(R.string.sharTitle)
+	//		            .setPositiveButton(R.string.sms, new DialogInterface.OnClickListener() {
+	//		                public void onClick(DialogInterface dialog, int whichButton) {
+	//							Util.sendMessage(act, "", message);
+	//		                }
+	//		            })
+	//		            .setNegativeButton(R.string.email, new DialogInterface.OnClickListener() {
+	//		                public void onClick(DialogInterface dialog, int whichButton) {
+	//							Util.sendEmail(act, "", "", subject, message);
+	//		                }
+	//		            })
+	//		            .create().show();
+	//			return true;
+	//		case R.id.menu_nearby:
+//	//			act.finish();
+	//			Intent nearby = new Intent(act,NearbyScreen.class);
+	//			startActivity(nearby);
+	//			return true;			
+	//		case R.id.menu_ar:
+	//			if(ARScreen.instance != null)
+	//				ARScreen.instance.finish();				
+	//			Intent ar = new Intent(act, ARScreen.class);
+	//			startActivity(ar);
+	//			return true;
+	//		case R.id.menu_map:
+	//			Controller.displayMapScreen(act);
+	//			return true;
+	//		}			
+	//	return super.onMenuItemSelected(featureId, item);
+	//}
 	
 	//public boolean onMenuItemSelected(int featureId, MenuItem item) {
 	//	switch (item.getItemId()) {
@@ -140,35 +136,35 @@ public class CitiGuideActivity extends Activity{
 				Intent main = new Intent(act, MainCitiGuideScreen.class);
 				startActivity(main);
 				break;
-	//		case R.id.search_Button:
-	//			Intent search = new Intent(act, SearchScreen.class);
-	//			startActivity(search);
-	//			break;
-	//		case R.id.nearbyButton:
-	//			Intent nearby = new Intent(act,NearbyScreen.class);
-	//			startActivity(nearby);
-	//			break;
-	//		case R.id.shareButton:
-	//			new AlertDialog.Builder(act)
-	//		    		//.setIcon(R.drawable.alert_dialog_icon)
-	//		    		.setTitle(R.string.sharTitle)
-	//		            .setPositiveButton(R.string.sms, new DialogInterface.OnClickListener() {
-	//		                public void onClick(DialogInterface dialog, int whichButton) {
-	//							Util.sendMessage(act, "", message);
-	//		                }
-	//		            })
-	//		            .setNegativeButton(R.string.email, new DialogInterface.OnClickListener() {
-	//		                public void onClick(DialogInterface dialog, int whichButton) {
-	//							Util.sendEmail(act, "", "", subject, message);
-	//		                }
-	//		            })
-	//		            .create().show();
-	//			break;
-	//		case R.id.map_Button:
-	//			//Intent navigation = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:" + longi + "," + lat)); 
-	//			//startActivity(navigation);
-	//			Controller.displayMapScreen(act);
-	//			break;
+			case R.id.search_Button:
+				Intent search = new Intent(act, SearchScreen.class);
+				startActivity(search);
+				break;
+			case R.id.nearbyButton:
+				Intent nearby = new Intent(act,NearbyScreen.class);
+				startActivity(nearby);
+				break;
+			case R.id.shareButton:
+				new AlertDialog.Builder(act)
+			    		//.setIcon(R.drawable.alert_dialog_icon)
+			    		.setTitle(R.string.sharTitle)
+			            .setPositiveButton(R.string.sms, new DialogInterface.OnClickListener() {
+			                public void onClick(DialogInterface dialog, int whichButton) {
+								Util.sendMessage(act, "", message);
+			                }
+			            })
+			            .setNegativeButton(R.string.email, new DialogInterface.OnClickListener() {
+			                public void onClick(DialogInterface dialog, int whichButton) {
+								Util.sendEmail(act, "", "", subject, message);
+			                }
+			            })
+			            .create().show();
+				break;
+			case R.id.map_Button:
+				//Intent navigation = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:" + longi + "," + lat)); 
+				//startActivity(navigation);
+				Controller.displayMapScreen(act);
+				break;
 			}
 		}		
 	}

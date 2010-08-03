@@ -143,6 +143,7 @@ public class GetJSON implements Runnable {
 			String URL = Constants.URL_ARSEARCH + lat + 
 						 "&current_long=" + lng + 
 						 "&radius=" + ARScreen.radius;
+			//String URL = "http://www.citiworldprivileges.com/mobile/?country=Singapore&city=Singapore&offer_type=Dining&keywords=bar&sort_by=distance&sort_order=desc&num_offers=10&current_lat=1.3369238666666667&current_long=103.84865956666665&radius=10";
 			merchants = Util.getMerchants(URL);
 			
 			if(merchants != null) {

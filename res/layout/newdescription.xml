@@ -4,28 +4,28 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:background="@drawable/bg"
-	android:padding="0dip">
+	android:padding="0dp">
 	
 	<include 
 		layout="@layout/template_top" 
 		android:layout_alignParentTop="true"
 		android:id="@+id/headerImageLayout"/> 
 	
-	<!-- <RelativeLayout 
+	<RelativeLayout 
 		android:layout_width="fill_parent" 
 		android:layout_height="wrap_content"
 		android:id="@+id/footerImageLayout"
 		android:layout_alignParentBottom="true">
 		
 		<include layout="@layout/footer_template" />
-	</RelativeLayout> -->
+	</RelativeLayout>
 	
 	<RelativeLayout 
 		android:layout_width="fill_parent" 
 		android:layout_height="wrap_content"
 		android:id="@+id/searchArea"
-		android:layout_below="@id/headerImageLayout">
-		<!-- android:layout_above="@id/footerImageLayout" -->
+		android:layout_below="@id/headerImageLayout"
+		android:layout_above="@id/footerImageLayout">
 		
 		<LinearLayout 
 			xmlns:android="http://schemas.android.com/apk/res/android"
@@ -40,9 +40,9 @@
 				android:orientation="vertical"
 				android:layout_height="wrap_content" 
 				android:background="@drawable/descbg" 
-				android:layout_marginLeft="10dip" 
-				android:layout_marginRight="10dip" 
-				android:layout_marginTop="10dip">
+				android:layout_marginLeft="10dp" 
+				android:layout_marginRight="10dp" 
+				android:layout_marginTop="10dp">
 		
 				<TextView 
 					android:id="@+id/telNumber"
@@ -50,16 +50,16 @@
 					android:layout_height="wrap_content"
 					android:singleLine="true" 
 					android:text="Telephone" 
-					android:layout_marginTop="10dip" 
-					android:layout_marginLeft="65dip" 
-					android:layout_marginBottom="5dip" android:textColor="@color/BLUE"/>
+					android:layout_marginTop="10dp" 
+					android:layout_marginLeft="65dp" 
+					android:layout_marginBottom="5dp" android:textColor="@color/BLUE"/>
 		
 				<TextView 
 					android:id="@+id/address"
 					android:layout_width="fill_parent"
 					android:layout_height="wrap_content"
 					android:text="Address" 
-					android:layout_marginLeft="65dip" android:textColor="@color/BLACK"/>
+					android:layout_marginLeft="65dp" android:textColor="@color/BLACK"/>
 			</LinearLayout>
 	
 			<LinearLayout
@@ -74,10 +74,10 @@
 					android:textColor="#ffff00"
 					android:textStyle="bold"
 					android:typeface="sans"
-					android:textSize="16dip"
+					android:textSize="16dp"
 					android:singleLine="true" 
-					android:layout_marginTop="20dip" 
-					android:layout_marginLeft="25dip"/>
+					android:layout_marginTop="20dp" 
+					android:layout_marginLeft="25dp"/>
 		
 				<TextView 
 					android:id="@+id/offerDesc"
@@ -86,8 +86,8 @@
 					android:textColor="#ffff00"
 					android:textStyle="bold"
 					android:typeface="sans"
-					android:textSize="14dip" 
-					android:layout_marginLeft="25dip"/>
+					android:textSize="14dp" 
+					android:layout_marginLeft="25dp"/>
 			</LinearLayout>
 	
 			<LinearLayout
@@ -95,7 +95,7 @@
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content" 
 				android:gravity="center_vertical|center_horizontal" 
-				android:layout_marginTop="20dip" android:layout_marginLeft="10dip" android:layout_marginRight="10dip">
+				android:layout_marginTop="20dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
 		
 				<Button
 					android:id="@+id/coupon"
@@ -104,7 +104,7 @@
 					android:textColor="@color/WHITE"
 					android:textStyle="bold"
 					android:typeface="sans"
-					android:background="@drawable/button" android:layout_width="90dip"/>
+					android:background="@drawable/button" android:layout_width="90dp"/>
 			
 				<Button
 					android:id="@+id/mapButt"
@@ -114,7 +114,7 @@
 					android:textStyle="bold"
 					android:typeface="sans"
 					android:background="@drawable/button" 
-					android:layout_marginLeft="5dip" android:layout_marginRight="5dip" android:layout_width="90dip"/>
+					android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_width="90dp"/>
 			
 				<Button
 					android:id="@+id/navigate"
@@ -123,7 +123,7 @@
 					android:textColor="@color/WHITE"
 					android:textStyle="bold"
 					android:typeface="sans"
-					android:background="@drawable/button" android:layout_width="90dip"/>
+					android:background="@drawable/button" android:layout_width="90dp"/>
 			</LinearLayout>
 		</LinearLayout>
 	</RelativeLayout>

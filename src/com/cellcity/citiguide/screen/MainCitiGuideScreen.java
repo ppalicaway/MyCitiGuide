@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
 
@@ -117,22 +118,22 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 		IconButtonInfo none9 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic30, R.drawable.pic30, "");*/
 		
 		IconButtonInfo none1 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic1, R.drawable.pic1, "");
-		IconButtonInfo none2 = new IconButtonInfo(Constants.TYPE_BARS, R.drawable.pic2, R.drawable.pic2, getString(R.string.pubs));
-		IconButtonInfo pub1 = new IconButtonInfo(Constants.TYPE_BARS, R.drawable.pic3, R.drawable.pic3, getString(R.string.pubs));
-		IconButtonInfo none3 = new IconButtonInfo(Constants.TYPE_BARS, R.drawable.pic4, R.drawable.pic4, getString(R.string.pubs));		
-		IconButtonInfo none4 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic5, R.drawable.pic5, "");
+		IconButtonInfo none2 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic2, R.drawable.pic2, getString(R.string.dining));
+		IconButtonInfo pub1 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic3, R.drawable.pic3, getString(R.string.dining));
+		IconButtonInfo none3 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic4, R.drawable.pic4, getString(R.string.shopping));		
+		IconButtonInfo none4 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic5, R.drawable.pic5, getString(R.string.shopping));
 		
-		IconButtonInfo dine1 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic6, R.drawable.pic6, getString(R.string.dining));
+		IconButtonInfo dine1 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic6, R.drawable.pic6, "");
 		IconButtonInfo dine2 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic7, R.drawable.pic7, getString(R.string.dining));
-		IconButtonInfo pub2 = new IconButtonInfo(Constants.TYPE_BARS, R.drawable.pic8, R.drawable.pic8, getString(R.string.pubs));
+		IconButtonInfo pub2 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic8, R.drawable.pic8, getString(R.string.dining));
 		IconButtonInfo shop1 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic9, R.drawable.pic9, getString(R.string.shopping));
 		IconButtonInfo shop2 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic10, R.drawable.pic10, getString(R.string.shopping));
 		
-		IconButtonInfo dine3 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic11, R.drawable.pic11, getString(R.string.dining));
-		IconButtonInfo dine4 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic12, R.drawable.pic12, getString(R.string.dining));
+		IconButtonInfo dine3 = new IconButtonInfo(Constants.TYPE_PROMOTION, R.drawable.pic11, R.drawable.pic11, getString(R.string.promo));
+		IconButtonInfo dine4 = new IconButtonInfo(Constants.TYPE_PROMOTION, R.drawable.pic12, R.drawable.pic12, getString(R.string.promo));
 		IconButtonInfo none5 = new IconButtonInfo(Constants.TYPE_AR, R.drawable.pic13, R.drawable.pic13, "");
-		IconButtonInfo shop3 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic14, R.drawable.pic14, getString(R.string.shopping));
-		IconButtonInfo shop4 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic15, R.drawable.pic15, getString(R.string.shopping));
+		IconButtonInfo shop3 = new IconButtonInfo(Constants.TYPE_MOVIE, R.drawable.pic14, R.drawable.pic14, getString(R.string.movies));
+		IconButtonInfo shop4 = new IconButtonInfo(Constants.TYPE_MOVIE, R.drawable.pic15, R.drawable.pic15, getString(R.string.movies));
 		
 		IconButtonInfo promo1 = new IconButtonInfo(Constants.TYPE_PROMOTION, R.drawable.pic16, R.drawable.pic16, getString(R.string.promo));
 		IconButtonInfo promo2 = new IconButtonInfo(Constants.TYPE_PROMOTION, R.drawable.pic17, R.drawable.pic17, getString(R.string.promo));
@@ -140,13 +141,13 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 		IconButtonInfo movie1 = new IconButtonInfo(Constants.TYPE_MOVIE, R.drawable.pic19, R.drawable.pic19, getString(R.string.movies));
 		IconButtonInfo movie2 = new IconButtonInfo(Constants.TYPE_MOVIE, R.drawable.pic20, R.drawable.pic20, getString(R.string.movies));
 		
-		IconButtonInfo promo3 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic21, R.drawable.pic21, "");
+		IconButtonInfo promo3 = new IconButtonInfo(Constants.TYPE_HOTEL, R.drawable.pic21, R.drawable.pic21, getString(R.string.hotels));
 		IconButtonInfo hotel1 = new IconButtonInfo(Constants.TYPE_HOTEL, R.drawable.pic22, R.drawable.pic22, getString(R.string.hotels));
 		IconButtonInfo none6 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic23, R.drawable.pic23, "");
 		IconButtonInfo bank1 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic24, R.drawable.pic24, getString(R.string.bank));
 		IconButtonInfo movie3 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic25, R.drawable.pic25, "");
 		
-		IconButtonInfo none7 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic26, R.drawable.pic26, "");
+		IconButtonInfo none7 = new IconButtonInfo(Constants.TYPE_HOTEL, R.drawable.pic26, R.drawable.pic26, getString(R.string.hotels));
 		IconButtonInfo hotel2 = new IconButtonInfo(Constants.TYPE_HOTEL, R.drawable.pic27, R.drawable.pic27, getString(R.string.hotels));
 		IconButtonInfo none8 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic28, R.drawable.pic28, "");
 		IconButtonInfo bank2 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic29, R.drawable.pic29, getString(R.string.bank));
@@ -195,14 +196,14 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 		g.setFocusable(false);
 		g.setAdapter(new IconAdapter(this, iconList));
 
-		//Button search = (Button)findViewById(R.id.search_Button);
-		//search.setOnClickListener(new MenuListener());
-		//Button nearby = (Button)findViewById(R.id.nearbyButton);
-		//nearby.setOnClickListener(new MenuListener());
-		//Button share = (Button)findViewById(R.id.shareButton);
-		//share.setOnClickListener(new MenuListener());
-		//Button map = (Button)findViewById(R.id.map_Button);
-		//map.setOnClickListener(new MenuListener());
+		Button search = (Button)findViewById(R.id.search_Button);
+		search.setOnClickListener(new MenuListener());
+		Button nearby = (Button)findViewById(R.id.nearbyButton);
+		nearby.setOnClickListener(new MenuListener());
+		Button share = (Button)findViewById(R.id.shareButton);
+		share.setOnClickListener(new MenuListener());
+		Button map = (Button)findViewById(R.id.map_Button);
+		map.setOnClickListener(new MenuListener());
 	}
 	private class IconAdapter extends BaseAdapter {
 		private Context mContext;

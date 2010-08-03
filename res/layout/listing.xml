@@ -29,28 +29,28 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:background="@drawable/bg"
-	android:padding="0dip">
+	android:padding="0dp">
 	
 	<include 
 		layout="@layout/template_top" 
 		android:layout_alignParentTop="true"
 		android:id="@+id/headerImageLayout"/> 
 	
-	<!-- <RelativeLayout 
+	<RelativeLayout 
 		android:layout_width="fill_parent" 
 		android:layout_height="wrap_content"
 		android:id="@+id/footerImageLayout"
 		android:layout_alignParentBottom="true">
 		
 		<include layout="@layout/footer_template" />
-	</RelativeLayout> -->
+	</RelativeLayout>
 	
 	<RelativeLayout 
 		android:layout_width="fill_parent" 
 		android:layout_height="wrap_content"
 		android:id="@+id/searchArea"
-		android:layout_below="@id/headerImageLayout">
-		<!-- android:layout_above="@id/footerImageLayout" -->
+		android:layout_below="@id/headerImageLayout"
+		android:layout_above="@id/footerImageLayout">
 		
 		<LinearLayout 
 			android:id="@+id/widget30"
@@ -63,8 +63,8 @@
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:src="@drawable/topmovies" 
-				android:paddingTop="0dip" 
-				android:paddingBottom="0dip"/>
+				android:paddingTop="0dp" 
+				android:paddingBottom="0dp"/>
 		
 			<ListView 
 				android:id="@+id/android:list"
@@ -72,10 +72,10 @@
 				android:layout_height="fill_parent"
 				android:fadingEdge="none"
 				android:scrollbars="none"
-				android:layout_marginLeft="0dip"
-				android:layout_marginRight="0dip"
-				android:layout_marginTop="0dip"
-				android:layout_marginBottom="0dip"
+				android:layout_marginLeft="0dp"
+				android:layout_marginRight="0dp"
+				android:layout_marginTop="0dp"
+				android:layout_marginBottom="0dp"
 				android:divider="@drawable/transparent"
 				android:background="#00000000" 
 				android:cacheColorHint="#00000000">

@@ -82,14 +82,14 @@ public class MovieResultScreen extends CitiGuideListActivity{
 		
 		Button home = (Button)findViewById(R.id.homeButton);
 		home.setOnClickListener(new MenuListener());
-		//Button search = (Button)findViewById(R.id.search_Button);
-		//search.setOnClickListener(new MenuListener());
-		//Button nearby = (Button)findViewById(R.id.nearbyButton);
-		//nearby.setOnClickListener(new MenuListener());
-		//Button share = (Button)findViewById(R.id.shareButton);
-		//share.setOnClickListener(new MenuListener());
-		//Button mapB = (Button)findViewById(R.id.map_Button);
-		//mapB.setOnClickListener(new MenuListener());
+		Button search = (Button)findViewById(R.id.search_Button);
+		search.setOnClickListener(new MenuListener());
+		Button nearby = (Button)findViewById(R.id.nearbyButton);
+		nearby.setOnClickListener(new MenuListener());
+		Button share = (Button)findViewById(R.id.shareButton);
+		share.setOnClickListener(new MenuListener());
+		Button mapB = (Button)findViewById(R.id.map_Button);
+		mapB.setOnClickListener(new MenuListener());
 
 		m_orders = new ArrayList<TheatreInfo>();
 		m_adapter = new ListViewAdapter(this, R.layout.row_movie_list, m_orders);
