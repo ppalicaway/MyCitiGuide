@@ -1,15 +1,8 @@
 package com.cellcity.citiguide.screen;
 
-import java.io.IOException;
-import java.text.DecimalFormat;
-import java.util.List;
-import java.util.Locale;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.location.Address;
-import android.location.Geocoder;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,12 +14,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.cellcity.citiguide.info.MerchantInfo;
 import com.cellcity.citiguide.info.MerchantInfo1;
 import com.cellcity.citiguide.map.GPSLocationListener;
 import com.cellcity.citiguide.util.Constants;
 import com.cellcity.citiguide.util.Util;
-import com.cellcity.citiguide.info.CategoryInfo;
 
 public class DirectionInputScreen extends CitiGuideActivity  {
 	public static DirectionInputScreen instance;

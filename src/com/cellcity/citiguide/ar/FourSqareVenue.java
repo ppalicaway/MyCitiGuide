@@ -10,7 +10,6 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.graphics.Paint.Style;
 
-import com.cellcity.citiguide.info.MerchantInfo;
 import com.cellcity.citiguide.info.MerchantInfo1;
 import com.cellcity.citiguide.screen.R;
 

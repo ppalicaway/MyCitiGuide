@@ -24,12 +24,8 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import com.cellcity.citiguide.adapter.Controller;
-import com.cellcity.citiguide.info.IconButtonInfo;
-import com.cellcity.citiguide.info.MerchantInfo;
 import com.cellcity.citiguide.info.CategoryInfo;
-import com.cellcity.citiguide.map.MapLocationInfo;
-import com.cellcity.citiguide.map.MapLocationViewer;
+import com.cellcity.citiguide.info.IconButtonInfo;
 import com.cellcity.citiguide.util.Constants;
 import com.cellcity.citiguide.util.Util;
 

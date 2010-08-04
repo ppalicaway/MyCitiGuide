@@ -14,8 +14,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
-import com.cellcity.citiguide.screen.ListingMerchantScreen;
-import com.cellcity.citiguide.screen.R;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -29,10 +27,9 @@ import android.widget.LinearLayout;
 import android.widget.ZoomControls;
 
 import com.cellcity.citiguide.adapter.Controller;
-import com.cellcity.citiguide.info.ContentInfo;
-import com.cellcity.citiguide.info.MerchantInfo;
 import com.cellcity.citiguide.info.MerchantInfo1;
 import com.cellcity.citiguide.screen.MainCitiGuideScreen;
+import com.cellcity.citiguide.screen.R;
 import com.cellcity.citiguide.util.Constants;
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapView;

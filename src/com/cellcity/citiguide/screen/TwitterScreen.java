@@ -12,7 +12,6 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +21,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cellcity.citiguide.adapter.BitmapLoader;
-import com.cellcity.citiguide.info.MerchantInfo;
 import com.cellcity.citiguide.info.TwitterInfo;
 import com.cellcity.citiguide.util.Constants;
 import com.cellcity.citiguide.util.Util;
@@ -41,7 +39,7 @@ public  class TwitterScreen extends CitiGuideListActivity {
 	private String rId;
 	private String id;
 	private String headerTxt;
-	private MerchantInfo mInfo;
+	//private MerchantInfo mInfo;
 	
 	private int total, page, results_per_page;
 	public static HashMap imageHash;
@@ -134,58 +132,58 @@ public  class TwitterScreen extends CitiGuideListActivity {
 	private void getJSON() {
 		try {
 			// read data
-			String queryText = mInfo.getTitle();
-			queryText = queryText.replaceAll(" ", "+");
-			String url = "http://search.twitter.com/search.json?callback=?&q="+queryText;//+"Billy+Bombers+American+Diner";//
-			String result = Util.getHttpData(url);
-			result = Util.toJSONString(result);
+			//String queryText = mInfo.getTitle();
+			//queryText = queryText.replaceAll(" ", "+");
+			//String url = "http://search.twitter.com/search.json?callback=?&q="+queryText;//+"Billy+Bombers+American+Diner";//
+			//String result = Util.getHttpData(url);
+			//result = Util.toJSONString(result);
 			
 //			System.out.println("result = " + result);
 
 			twList = new ArrayList<TwitterInfo>();
 
 			// JSONObject Parsing
-			JSONObject json = new JSONObject(result);
-			JSONArray nameArray = json.names();
-			JSONArray valArray = json.toJSONArray(nameArray);
-			for (int i = 0; i < valArray.length(); i++) {
-				if (nameArray.getString(i).equalsIgnoreCase("results")) {
-					try {
-						JSONArray jArray1 = valArray.getJSONArray(i);
-						for (int j = 0; j < jArray1.length(); j++) {
-							JSONObject jArray2 = jArray1.getJSONObject(j);
+			//JSONObject json = new JSONObject(result);
+			//JSONArray nameArray = json.names();
+			//JSONArray valArray = json.toJSONArray(nameArray);
+			//for (int i = 0; i < valArray.length(); i++) {
+			//	if (nameArray.getString(i).equalsIgnoreCase("results")) {
+			//		try {
+			//			JSONArray jArray1 = valArray.getJSONArray(i);
+			//			for (int j = 0; j < jArray1.length(); j++) {
+			//				JSONObject jArray2 = jArray1.getJSONObject(j);
 
-							// content info
-							String profile_image_url = "";
-							String created_at = "";
-							String from_user = "";
-							String text = "";
+			//				// content info
+			//				String profile_image_url = "";
+			//				String created_at = "";
+			//				String from_user = "";
+			//				String text = "";
 
-							profile_image_url = jArray2.getString("profile_image_url");
-							created_at = jArray2.getString("created_at");
-							from_user = jArray2.getString("from_user");
-							text = jArray2.getString("text");
-							created_at = created_at.substring(0, created_at.lastIndexOf(" "));
+			//				profile_image_url = jArray2.getString("profile_image_url");
+			//				created_at = jArray2.getString("created_at");
+			//				from_user = jArray2.getString("from_user");
+			//				text = jArray2.getString("text");
+			//				created_at = created_at.substring(0, created_at.lastIndexOf(" "));
 							
-							twList.add(new TwitterInfo(j+"", profile_image_url, created_at, from_user, text));
-						}
+			//				twList.add(new TwitterInfo(j+"", profile_image_url, created_at, from_user, text));
+			//			}
 
-					} catch (Exception e) {
-						// TODO: handle exception
-						e.printStackTrace();
-					}
-				}
+			//		} catch (Exception e) {
+			//			// TODO: handle exception
+			//			e.printStackTrace();
+			//		}
+			//	}
 
-				if (nameArray.getString(i).equalsIgnoreCase("total")) {
-					total = Integer.parseInt(valArray.getString(i));
-				}
-				if (nameArray.getString(i).equalsIgnoreCase("results_per_page")) {
-					results_per_page = Integer.parseInt(valArray.getString(i));
-				}
-				if (nameArray.getString(i).equalsIgnoreCase("page")) {
-					page = Integer.parseInt(valArray.getString(i));
-				}
-			}
+			//	if (nameArray.getString(i).equalsIgnoreCase("total")) {
+			//		total = Integer.parseInt(valArray.getString(i));
+			//	}
+			//	if (nameArray.getString(i).equalsIgnoreCase("results_per_page")) {
+			//		results_per_page = Integer.parseInt(valArray.getString(i));
+			//	}
+			//	if (nameArray.getString(i).equalsIgnoreCase("page")) {
+			//		page = Integer.parseInt(valArray.getString(i));
+			//	}
+			//}
 
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -5,8 +5,10 @@ import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -195,6 +197,8 @@ public class CuisineListing extends CitiGuideListActivity {
 	
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
-		
+		MerchantListingScreen.catID = cuisines.get(position).getId();
+		Intent gourmet = new Intent(instance, MerchantListingScreen.class);
+		instance.startActivityForResult(gourmet, 0);
 	}
 }
