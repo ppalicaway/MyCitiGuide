@@ -262,9 +262,9 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 				break;
 			case Constants.TYPE_GOURMET:
 				//WebScreen.URL = Constants.URL_BANK_GOURMET;
-				//Intent gourmet = new Intent(instance, WebScreen.class);
-				//((Activity) mContext).startActivityForResult(gourmet, 0);
-				//break;
+				Intent gourmet = new Intent(instance, CuisineListing.class);
+				((Activity) mContext).startActivityForResult(gourmet, 0);
+				break;
 			case Constants.TYPE_SHOPPING:
 			case Constants.TYPE_BARS:
 			case Constants.TYPE_HOTEL:
