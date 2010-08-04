@@ -112,7 +112,7 @@ public class CuisineListing extends CitiGuideListActivity {
 		result = Util.getHttpData(Constants.RESTAURANT_CUISINE_TYPES);
 		
 		if(result == null || result.equalsIgnoreCase("408") || result.equalsIgnoreCase("404")) {
-			Util.showAlert(instance, "ILoveDeals", "Please make sure Internet connection is available.", "OK", false);
+			Util.showAlert(instance, "f.y.i Singapore", "Please make sure Internet connection is available.", "OK", false);
 		}
 		else {
 			result = Util.toJSONString(result);

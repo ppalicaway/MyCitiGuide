@@ -125,7 +125,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 			String result = "";
 			result = Util.getHttpData(URL + page);
 			if(result == null || result.equalsIgnoreCase("408") || result.equalsIgnoreCase("404")) {
-				Util.showAlert(MainCitiGuideScreen.instance, "f.y.i. Singapore", "Please make sure Internet connection is available.", "OK", false);
+				Util.showAlert(instance, "f.y.i. Singapore", "Please make sure Internet connection is available.", "OK", false);
 				try {
 					if (progressDialog.isShowing()) {
 						progressDialog.dismiss();
@@ -183,7 +183,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 						}
 					}
 					catch(Exception e) {
-						Util.showAlert(MainCitiGuideScreen.instance, "f.y.i. Singapore", "No items found.", "OK", false);
+						Util.showAlert(instance, "f.y.i. Singapore", "No items found.", "OK", false);
 						try {
 							if (progressDialog.isShowing()) {
 								progressDialog.dismiss();
@@ -196,11 +196,11 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 					}
 				}
 				catch(Exception e) {
-					Util.showAlert(MainCitiGuideScreen.instance, "f.y.i. Singapore", "No items found.", "OK", false);
+					Util.showAlert(instance, "f.y.i. Singapore", "No items found.", "OK", false);
 					try {
 						if (progressDialog.isShowing()) {
 							progressDialog.dismiss();
-						}					
+						}
 					}
 					catch (Exception ex) {
 						ex.printStackTrace();
