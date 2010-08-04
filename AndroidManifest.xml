@@ -32,6 +32,7 @@
 		<activity android:name="WebScreen" android:label="WebScreen" android:screenOrientation="portrait" />
 		<activity android:name="CuisineListing" android:label="CuisineListing" android:screenOrientation="portrait" />
 		<activity android:name="MerchantListingScreen" android:label="MerchantListingScreen" android:screenOrientation="portrait" />
+		<activity android:name="NewDescriptionScreen" android:label="NewDescriptionScreen" android:screenOrientation="portrait" />
 		<activity android:name="Compass" android:label="Compass" android:screenOrientation="portrait">\
 			
 		</activity>

@@ -10,7 +10,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;

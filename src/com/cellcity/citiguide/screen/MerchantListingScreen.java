@@ -7,6 +7,7 @@ import org.json.JSONObject;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -355,6 +356,9 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 	
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
-		
+		NewDescriptionScreen.merchantInfo = merchantList.get(position);
+		NewDescriptionScreen.catID = merchantList.get(position).getId();
+		Intent intent = new Intent(instance, NewDescriptionScreen.class);
+		startActivityForResult(intent, 0);
 	}
 }
