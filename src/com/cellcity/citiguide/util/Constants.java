@@ -60,6 +60,7 @@ public class Constants {
 	public static final String RESTAURANT_CUISINE_TYPES = "http://singtel.dc2go.net/singtel/get_cuisine.php?a=b&bank=Citibank";
 	public static final String RESTAURANT_CUISINE_LISTING = "http://singtel.dc2go.net/singtel/get_restaurant_by_cuisine_type.php?resultsPerPage=10&bank=Citibank&cuisineTypeID=";
 	public static final String RESTAURANT_DETAIL = "http://singtel.dc2go.net/singtel/get_detail.php?id=";
+	public static final String RESTAURANT_LOCATION_PAGE="http://singtel.dc2go.net/singtel/get_restaurant_by_location.php?resultsPerPage=20&pageNum=1&bank=Citibank&latitude=";
 	
 	public static final String URL_ARSEARCH = "http://www.citiworldprivileges.com/mobile/?country=Singapore&city=Singapore&sort_by=distance&sort_order=desc&num_offers=10&current_lat=";
 }

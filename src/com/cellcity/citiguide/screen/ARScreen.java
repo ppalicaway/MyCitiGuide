@@ -24,6 +24,7 @@ import com.cellcity.citiguide.ar.GetJSON;
 import com.cellcity.citiguide.ar.ReturnRes;
 import com.cellcity.citiguide.ar.SeekBarLayout;
 import com.cellcity.citiguide.info.MerchantInfo1;
+import com.cellcity.citiguide.info.MerchantInfo2;
 import com.cellcity.citiguide.util.Util;
 
 public class ARScreen extends CitiGuideActivity {
@@ -40,7 +41,7 @@ public class ARScreen extends CitiGuideActivity {
     private Location location;
     public static String cats = "1,2,3";
     
-    public static ArrayList<MerchantInfo1> merchantList = null;
+    public static ArrayList<MerchantInfo2> merchantList = null;
 	public static ProgressDialog progressDialog = null;
 	//private Runnable initR;
 	public static int page = 1;
@@ -113,11 +114,11 @@ public class ARScreen extends CitiGuideActivity {
 		ARLayout.locationChanged = true;
 		
 		if(isMerchantList) {
-			merchantList = new ArrayList<MerchantInfo1>();
-			merchantList = ListingMerchantScreen.merchantLtd;
+			merchantList = new ArrayList<MerchantInfo2>();
+			merchantList = MerchantListingScreen.merchantList;
 			
 			for(int i = 0; i < merchantList.size(); i++) {
-				System.out.println("Merchant is: " + merchantList.get(i).getMerchantName());
+				System.out.println("Merchant is: " + merchantList.get(i).getRestaurantName());
 			}
 			Thread t = new Thread(new ReturnRes());
 			t.start();
@@ -146,15 +147,14 @@ public class ARScreen extends CitiGuideActivity {
 		
 		float height = 0;
 		for(int i = 0; i < merchantList.size(); i++){
-			MerchantInfo1 mInfo = merchantList.get(i);
-			if((mInfo.getLatitude() != null && !mInfo.getLatitude().equalsIgnoreCase("")) && 
-			   (mInfo.getLongitude() != null && !mInfo.getLongitude().equalsIgnoreCase(""))) {
+			MerchantInfo2 mInfo = merchantList.get(i);
+			if(mInfo.getLatitude() != 0.0 && mInfo.getLongitude() != 0.0) {
 				curVen = new FourSqareVenue(instance);
 				curVen.merchantInfo = mInfo;
 			
 				curVen.location = new Location("FourSqareApi");
-				curVen.location.setLatitude(Double.parseDouble(mInfo.getLatitude())); // 35.683333, 139.766667
-				curVen.location.setLongitude(Double.parseDouble(mInfo.getLongitude()));
+				curVen.location.setLatitude(mInfo.getLatitude()); // 35.683333, 139.766667
+				curVen.location.setLongitude(mInfo.getLongitude());
 				curVen.distance = myLocation.distanceTo(curVen.location);
 				curVen.inclination = -8 + height;
 				height += (4.3f);
@@ -166,7 +166,7 @@ public class ARScreen extends CitiGuideActivity {
 			Enumeration<FourSqareVenue> e = v.elements();
 			while (e.hasMoreElements()) {
 				FourSqareVenue fq = (FourSqareVenue) e.nextElement();
-				System.out.println("Got Venue ####################### : " + fq.merchantInfo.getMerchantName());
+				System.out.println("Got Venue ####################### : " + fq.merchantInfo.getRestaurantName());
 				ar.addARView(fq);
 			}
 		}

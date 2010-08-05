@@ -25,6 +25,7 @@ import android.view.View;
 
 import com.cellcity.citiguide.screen.ARScreen;
 import com.cellcity.citiguide.screen.DescriptionScreen;
+import com.cellcity.citiguide.screen.NewDescriptionScreen;
 import com.cellcity.citiguide.util.Constants;
 import com.cellcity.citiguide.util.Util;
 
@@ -428,8 +429,9 @@ public class ARLayout extends View implements LocationListener, SensorEventListe
 						SharedPreferences.Editor editor = preferences.edit();
 						editor.putString("name", "");//Controller.getIconName(context, fv.merchantInfo.getId()));
 
-						DescriptionScreen.merchantInfo = fv.merchantInfo;
-						Intent intent = new Intent(context, DescriptionScreen.class);
+						NewDescriptionScreen.merchantInfo = fv.merchantInfo;
+						NewDescriptionScreen.catID = fv.merchantInfo.getId();
+						Intent intent = new Intent(context, NewDescriptionScreen.class);
 						ARScreen.instance.startActivityForResult(intent, 0);
 						if (editor.commit()) {
 							ARScreen.instance.setResult(ARScreen.RESULT_OK);

@@ -11,6 +11,7 @@ import android.graphics.Typeface;
 import android.graphics.Paint.Style;
 
 import com.cellcity.citiguide.info.MerchantInfo1;
+import com.cellcity.citiguide.info.MerchantInfo2;
 import com.cellcity.citiguide.screen.R;
 
 public class FourSqareVenue extends ARSphericalView {
@@ -19,7 +20,7 @@ public class FourSqareVenue extends ARSphericalView {
 	private Bitmap bitmap;
 	private int bitmapW, bitmapH;
 	private Paint fontTop, fontMiddle, fontBottom, fontDistance;
-	public MerchantInfo1 merchantInfo;
+	public MerchantInfo2 merchantInfo;
 	private Context context;
 	
 	String address = "";
@@ -45,15 +46,15 @@ public class FourSqareVenue extends ARSphericalView {
 		p.setColor(Color.WHITE);
 		if (merchantInfo != null){
 			
-			address = merchantInfo.getPostalAddress();
+			address = merchantInfo.getAddress();
 			if(address.length() > 20){
 				address = address.substring(0, 20) + "...";
 			}
-			name = merchantInfo.getMerchantName();
+			name = merchantInfo.getRestaurantName();
 			if(name.length() > 19){
 				name = name.substring(0, 19) + "...";
 			}
-			String dist = Double.toString(merchantInfo.getDistance());
+			String dist = merchantInfo.getDistance();
 			
 			//=========================================================
 			int contentWidth = ARLayout.contentWidth;
@@ -86,7 +87,7 @@ public class FourSqareVenue extends ARSphericalView {
 			
 			y+= 20;
 			
-			String promoText = merchantInfo.getOfferDescription();
+			String promoText = merchantInfo.getAddress();
 			if(promoText.length() > 20) {
 				promoText = promoText.substring(0, 20) + "...";
 			}
