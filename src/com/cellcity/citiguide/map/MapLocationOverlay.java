@@ -92,8 +92,10 @@ public class MapLocationOverlay  extends Overlay {
 	private void nextScreen(){
 		NewDescriptionScreen.merchantInfo = selectedMapLocation.getMerchantInfo();
 		NewDescriptionScreen.catID = selectedMapLocation.getMerchantInfo().getId();
-		Intent intent = new Intent(context, NewDescriptionScreen.class);
-	    ((Activity) context).startActivityForResult(intent, 0);
+		if(selectedMapLocation.getMerchantInfo().getId() != -100) {
+			Intent intent = new Intent(context, NewDescriptionScreen.class);
+		    ((Activity) context).startActivityForResult(intent, 0);
+		}
 	}
 	
 	@Override

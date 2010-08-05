@@ -27,7 +27,6 @@ import android.widget.LinearLayout;
 import android.widget.ZoomControls;
 
 import com.cellcity.citiguide.adapter.Controller;
-import com.cellcity.citiguide.info.MerchantInfo1;
 import com.cellcity.citiguide.info.MerchantInfo2;
 import com.cellcity.citiguide.screen.MainCitiGuideScreen;
 import com.cellcity.citiguide.screen.R;
@@ -133,6 +132,10 @@ public class MapLocationViewer extends LinearLayout {
 			paddingTop = padding;
 			useCurrentGPS = gps;
 		}
+		
+		MerchantInfo2 myLocation = new MerchantInfo2(-100, "", "You are Here", "", 0, 0, MainCitiGuideScreen.lat, MainCitiGuideScreen.lng);
+		MapLocationInfo mapLocationInfo = new MapLocationInfo(myLocation.getRestaurantName(), myLocation.getAddress(), myLocation.getLatitude(), myLocation.getLongitude(), R.drawable.pin_violet, myLocation);
+		mapLocations.add(mapLocationInfo);
 	}
 
 	public MapView getMapView() {
