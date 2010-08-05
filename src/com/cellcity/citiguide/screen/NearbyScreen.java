@@ -155,10 +155,6 @@ public  class NearbyScreen extends CitiGuideListActivity implements OnClickListe
 			nearbyTV.setVisibility(TextView.VISIBLE);
 			nearbyET.setVisibility(EditText.GONE);
 			
-			//ACOS(SIN(lat1)*SIN(lat2)+COS(lat1)*COS(lat2)*COS(lon2-lon1))*6371
-			
-			//double dist = Math.acos((Math.sin(-6.2281259)) * (Math.sin(-6.2284259)) + (Math.cos(-6.2281259)) * (Math.cos(-6.2284259)) * (Math.cos(106.73782 - 106.79782)) ) * 6371;
-			
 			//nearbyText = dist + "";
 			
 			nearbyTV.setText(nearbyText);
@@ -334,7 +330,7 @@ public  class NearbyScreen extends CitiGuideListActivity implements OnClickListe
 			
 			System.out.println("lat lng : " + lat + " " + lng);
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 		
 		try {

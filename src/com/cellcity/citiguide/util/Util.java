@@ -55,8 +55,32 @@ import android.view.inputmethod.InputMethodManager;
 import com.cellcity.citiguide.info.MerchantInfo1;
 import com.cellcity.citiguide.parser.ParsedDataSet;
 import com.cellcity.citiguide.parser.XMLParserHandler;
+import com.cellcity.citiguide.screen.ARScreen;
+import com.cellcity.citiguide.screen.CategoryListScreen;
+import com.cellcity.citiguide.screen.CommentScreen;
+import com.cellcity.citiguide.screen.Compass;
+import com.cellcity.citiguide.screen.CuisineListing;
+import com.cellcity.citiguide.screen.DescriptionCategoryScreen;
+import com.cellcity.citiguide.screen.DescriptionScreen;
+import com.cellcity.citiguide.screen.DirectionInputScreen;
+import com.cellcity.citiguide.screen.FlightResultScreen;
+import com.cellcity.citiguide.screen.FlightScreen;
 import com.cellcity.citiguide.screen.ListingMerchantScreen;
+import com.cellcity.citiguide.screen.ListingScreen;
+import com.cellcity.citiguide.screen.ListingWeatherScreen;
+import com.cellcity.citiguide.screen.MainCitiGuideScreen;
+import com.cellcity.citiguide.screen.MapScreen;
+import com.cellcity.citiguide.screen.MerchantListingScreen;
+import com.cellcity.citiguide.screen.MovieResultScreen;
+import com.cellcity.citiguide.screen.MovieScreen;
+import com.cellcity.citiguide.screen.MyCitiGuide;
+import com.cellcity.citiguide.screen.NearbyScreen;
+import com.cellcity.citiguide.screen.NewDescriptionScreen;
 import com.cellcity.citiguide.screen.R;
+import com.cellcity.citiguide.screen.SearchScreen;
+import com.cellcity.citiguide.screen.TwitterScreen;
+import com.cellcity.citiguide.screen.WeatherScreen;
+import com.cellcity.citiguide.screen.WebScreen;
 
 public class Util {
 	public static void showAlert(Activity act,
@@ -408,5 +432,56 @@ public class Util {
 			e.printStackTrace();
 		}
 		return address;
+	}
+	
+	public static void closeAllInstance() {
+		if(MyCitiGuide.instance != null)
+			MyCitiGuide.instance.finish();
+		if(MainCitiGuideScreen.instance != null)
+			MainCitiGuideScreen.instance.finish();
+		if(SearchScreen.instance != null)
+			SearchScreen.instance.finish();
+		if(NearbyScreen.instance != null)
+			NearbyScreen.instance.finish();
+		if(WeatherScreen.instance != null)
+			WeatherScreen.instance.finish();
+		if(ListingWeatherScreen.instance != null)
+			ListingWeatherScreen.instance.finish();
+		if(ListingScreen.instance != null)
+			ListingScreen.instance.finish();
+		if(ListingMerchantScreen.instance != null)
+			ListingMerchantScreen.instance.finish();
+		if(DescriptionScreen.instance != null)
+			DescriptionScreen.instance.finish();
+		if(FlightScreen.instance != null)
+			FlightScreen.instance.finish();
+		if(FlightResultScreen.instance != null)
+			FlightResultScreen.instance.finish();
+		if(MovieScreen.instance != null)
+			MovieScreen.instance.finish();
+		if(MovieResultScreen.instance != null)
+			MovieResultScreen.instance.finish();
+		if(DirectionInputScreen.instance != null)
+			DirectionInputScreen.instance.finish();
+		if(CategoryListScreen.instance != null)
+			CategoryListScreen.instance.finish();
+		if(DescriptionCategoryScreen.instance != null)
+			DescriptionCategoryScreen.instance.finish();
+		if(MapScreen.instance != null)
+			MapScreen.instance.finish();
+		if(TwitterScreen.instance != null)
+			TwitterScreen.instance.finish();
+		if(CommentScreen.instance != null)
+			CommentScreen.instance.finish();
+		if(ARScreen.instance != null)
+			ARScreen.instance.finish();
+		if(WebScreen.instance != null)
+			WebScreen.instance.finish();
+		if(CuisineListing.instance != null)
+			CuisineListing.instance.finish();
+		if(MerchantListingScreen.instance != null)
+			MerchantListingScreen.instance.finish();
+		if(NewDescriptionScreen.instance != null)
+			NewDescriptionScreen.instance.finish();
 	}
 }

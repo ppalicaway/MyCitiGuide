@@ -27,103 +27,110 @@
 		android:layout_below="@id/headerImageLayout"
 		android:layout_above="@id/footerImageLayout">
 		
-		<LinearLayout 
-			xmlns:android="http://schemas.android.com/apk/res/android"
-			android:orientation="vertical" 
+		<ScrollView
 			android:layout_width="fill_parent"
-			android:layout_height="fill_parent" 
-			android:background="@drawable/bg">
-	
-			<LinearLayout
-				android:id="@+id/telDesc"
+			android:layout_height="wrap_content"
+			android:scrollbars="none"
+  			android:fadingEdge="none">
+		
+			<LinearLayout 
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
 				android:layout_width="fill_parent"
-				android:orientation="vertical"
-				android:layout_height="wrap_content" 
-				android:background="@drawable/descbg" 
-				android:layout_marginLeft="10dp" 
-				android:layout_marginRight="10dp" 
-				android:layout_marginTop="10dp">
-		
-				<TextView 
-					android:id="@+id/telNumber"
-					android:layout_width="fill_parent"
-					android:layout_height="wrap_content"
-					android:singleLine="true" 
-					android:text="Telephone" 
-					android:layout_marginLeft="65dp" 
-					android:textColor="@color/BLUE" android:layout_marginTop="7dp"/>
-		
-				<TextView 
-					android:id="@+id/address"
-					android:layout_width="fill_parent"
-					android:layout_height="wrap_content"
-					android:text="Address" 
-					android:layout_marginLeft="65dp" android:textColor="@color/BLACK"/>
-			</LinearLayout>
+				android:layout_height="fill_parent" 
+				android:background="@drawable/bg">
 	
-			<LinearLayout
-				android:layout_width="fill_parent"
-				android:orientation="vertical"
-				android:layout_height="wrap_content">
-			
-				<TextView 
+				<LinearLayout
+					android:id="@+id/telDesc"
 					android:layout_width="fill_parent"
-					android:layout_height="wrap_content"
-					android:text="Offers"
-					android:textColor="#ffff00"
-					android:textStyle="bold"
-					android:typeface="sans"
-					android:textSize="16dp"
-					android:singleLine="true" 
-					android:layout_marginTop="20dp" 
-					android:layout_marginLeft="25dp"/>
+					android:orientation="vertical"
+					android:layout_height="wrap_content" 
+					android:background="@drawable/descbg" 
+					android:layout_marginLeft="10dp" 
+					android:layout_marginRight="10dp" 
+					android:layout_marginTop="10dp">
 		
-				<TextView 
-					android:id="@+id/offerDesc"
-					android:layout_width="fill_parent"
-					android:layout_height="wrap_content"
-					android:textColor="#ffff00"
-					android:textStyle="bold"
-					android:typeface="sans"
-					android:textSize="14dp" 
-					android:layout_marginLeft="25dp" android:layout_marginRight="10dp"/>
-			</LinearLayout>
+					<TextView 
+						android:id="@+id/telNumber"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:singleLine="true" 
+						android:text="Telephone" 
+						android:layout_marginLeft="65dp" 
+						android:textColor="@color/BLUE" android:layout_marginTop="7dp"/>
+		
+					<TextView 
+						android:id="@+id/address"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:text="Address" 
+						android:layout_marginLeft="65dp" android:textColor="@color/BLACK"/>
+				</LinearLayout>
 	
-			<LinearLayout
-				android:orientation="horizontal"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content" 
-				android:gravity="center_vertical|center_horizontal" 
-				android:layout_marginTop="20dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
-		
-				<Button
-					android:id="@+id/coupon"
-					android:text="Coupon"
-					android:layout_height="wrap_content"
-					android:textColor="@color/WHITE"
-					android:textStyle="bold"
-					android:typeface="sans"
-					android:background="@drawable/button" android:layout_width="90dp"/>
+				<LinearLayout
+					android:layout_width="fill_parent"
+					android:orientation="vertical"
+					android:layout_height="wrap_content">
+				
+					<TextView 
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:text="Offers"
+						android:textColor="#ffff00"
+						android:textStyle="bold"
+						android:typeface="sans"
+						android:textSize="16dp"
+						android:singleLine="true" 
+						android:layout_marginTop="20dp" 
+						android:layout_marginLeft="25dp"/>
 			
-				<Button
-					android:id="@+id/mapButt"
-					android:text="Map"
-					android:layout_height="wrap_content"
-					android:textColor="@color/WHITE"
-					android:textStyle="bold"
-					android:typeface="sans"
-					android:background="@drawable/button" 
-					android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_width="90dp"/>
+					<TextView 
+						android:id="@+id/offerDesc"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:textColor="#ffff00"
+						android:textStyle="bold"
+						android:typeface="sans"
+						android:textSize="14dp" 
+						android:layout_marginLeft="25dp" android:layout_marginRight="10dp"/>
+				</LinearLayout>
+	
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:gravity="center_vertical|center_horizontal" 
+					android:layout_marginTop="20dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
 			
-				<Button
-					android:id="@+id/navigate"
-					android:text="Navigate"
-					android:layout_height="wrap_content"
-					android:textColor="@color/WHITE"
-					android:textStyle="bold"
-					android:typeface="sans"
-					android:background="@drawable/button" android:layout_width="90dp"/>
+					<Button
+						android:id="@+id/coupon"
+						android:text="Coupon"
+						android:layout_height="wrap_content"
+						android:textColor="@color/WHITE"
+						android:textStyle="bold"
+						android:typeface="sans"
+						android:background="@drawable/button" android:layout_width="90dp"/>
+				
+					<Button
+						android:id="@+id/mapButt"
+						android:text="Map"
+						android:layout_height="wrap_content"
+						android:textColor="@color/WHITE"
+						android:textStyle="bold"
+						android:typeface="sans"
+						android:background="@drawable/button" 
+						android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_width="90dp"/>
+			
+					<Button
+						android:id="@+id/navigate"
+						android:text="Navigate"
+						android:layout_height="wrap_content"
+						android:textColor="@color/WHITE"
+						android:textStyle="bold"
+						android:typeface="sans"
+						android:background="@drawable/button" android:layout_width="90dp"/>
+				</LinearLayout>
 			</LinearLayout>
-		</LinearLayout>
+		</ScrollView>
 	</RelativeLayout>
 </RelativeLayout>

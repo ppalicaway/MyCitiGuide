@@ -131,8 +131,7 @@ public class CitiGuideActivity extends Activity{
 			switch(v.getId()) {
 			case R.id.homeButton:
 				act.finish();
-				if(MainCitiGuideScreen.instance != null)
-					MainCitiGuideScreen.instance.finish();				
+				Util.closeAllInstance();
 				Intent main = new Intent(act, MainCitiGuideScreen.class);
 				startActivity(main);
 				break;

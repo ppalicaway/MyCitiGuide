@@ -24,7 +24,7 @@ public class GetJSON implements Runnable {
 	public void run() {
 		String result = "";
 		
-		result = Util.getHttpData(Constants.RESTAURANT_LOCATION_PAGE + MainCitiGuideScreen.lat +
+		result = Util.getHttpData(Constants.RESTAURANT_LOCATION_AR + MainCitiGuideScreen.lat +
 			      "&longitude=" + MainCitiGuideScreen.lng);
 		result = Util.toJSONString(result);
 		
