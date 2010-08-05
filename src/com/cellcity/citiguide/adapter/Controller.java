@@ -9,12 +9,15 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.cellcity.citiguide.info.MerchantInfo1;
+import com.cellcity.citiguide.info.MerchantInfo2;
 import com.cellcity.citiguide.map.MapLocationInfo;
 import com.cellcity.citiguide.map.MapLocationViewer;
 import com.cellcity.citiguide.screen.DescriptionScreen;
 import com.cellcity.citiguide.screen.ListingMerchantScreen;
 import com.cellcity.citiguide.screen.MainCitiGuideScreen;
 import com.cellcity.citiguide.screen.MapScreen;
+import com.cellcity.citiguide.screen.MerchantListingScreen;
+import com.cellcity.citiguide.screen.NewDescriptionScreen;
 import com.cellcity.citiguide.screen.R;
 import com.cellcity.citiguide.util.Constants;
 import com.cellcity.citiguide.util.Util;
@@ -92,14 +95,14 @@ public class Controller {
 		return rId;
 	}
 	public static void displayMapScreen(Context context){
-		if(context instanceof ListingMerchantScreen){
-			MapLocationViewer.setMapLocations(ListingMerchantScreen.merchantLtd, 0, false);
+		if(context instanceof MerchantListingScreen){
+			MapLocationViewer.setMapLocations(MerchantListingScreen.merchantList, 0, false);
 			Intent intent = new Intent(context, MapScreen.class);
 			context.startActivity(intent);
 		}
-		else if(context instanceof DescriptionScreen){
-			ArrayList<MerchantInfo1> mapList = new ArrayList<MerchantInfo1>();
-			mapList.add(DescriptionScreen.merchantInfo);
+		else if(context instanceof NewDescriptionScreen){
+			ArrayList<MerchantInfo2> mapList = new ArrayList<MerchantInfo2>();
+			mapList.add(NewDescriptionScreen.merchantInfo);
 			MapLocationViewer.setMapLocations(mapList, 0, false);
 			Intent intent = new Intent(context, MapScreen.class);
 			context.startActivity(intent);
@@ -113,7 +116,7 @@ public class Controller {
 			
 			Activity act = (Activity) context;
 			
-			MapLocationInfo mLocation = new MapLocationInfo(Util.getGPSAddress(act, lat, lng), "", "Latitude: " + latStr + " Longitude: " + lngStr, lat, lng, R.drawable.pin_violet, null);
+			MapLocationInfo mLocation = new MapLocationInfo(Util.getGPSAddress(act, lat, lng), "Latitude: " + latStr + " Longitude: " + lngStr, lat, lng, R.drawable.pin_violet, null);
 			mLocation.setCurrentPost(true);
 					
 			MapLocationViewer.setMapLocation(mLocation, 0, true);

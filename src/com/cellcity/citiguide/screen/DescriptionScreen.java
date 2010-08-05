@@ -238,25 +238,25 @@ public class DescriptionScreen extends CitiGuideActivity implements
 				Intent comment = new Intent(instance, CommentScreen.class);
 				startActivityForResult(comment, 0);
 				break;
-			case TYPE_MAP:
+			//case TYPE_MAP:
 				//Get the current location in start-up
-				double lat = Double.parseDouble(merchantInfo.getLatitude());
-				double lng = Double.parseDouble(merchantInfo.getLongitude());
+			//	double lat = Double.parseDouble(merchantInfo.getLatitude());
+			//	double lng = Double.parseDouble(merchantInfo.getLongitude());
 				
-				MapLocationInfo mLocation = new MapLocationInfo(merchantInfo.getMerchantName(), 
-						merchantInfo.getOfferDescription(), merchantInfo.getPostalAddress(), 
-						lat, lng, R.drawable.pin_violet, null);
+			//	MapLocationInfo mLocation = new MapLocationInfo(merchantInfo.getMerchantName(), 
+			//			merchantInfo.getOfferDescription(), merchantInfo.getPostalAddress(), 
+			//			lat, lng, R.drawable.pin_violet, null);
 				
-				Bitmap bitmap = Util.getBitmap(Constants.URL_IMAGE + merchantInfo.getThumbImageName());
-				mLocation.setBitmap(bitmap);
-				mLocation.setCurrentPost(true);
+			//	Bitmap bitmap = Util.getBitmap(Constants.URL_IMAGE + merchantInfo.getThumbImageName());
+			//	mLocation.setBitmap(bitmap);
+			//	mLocation.setCurrentPost(true);
 				
-				MapLocationViewer.setMapLocation(mLocation, 0, false);
+			//	MapLocationViewer.setMapLocation(mLocation, 0, false);
 				
 				//	MapScreen.showTab = false;
-				Intent map = new Intent(instance, MapScreen.class);
-				startActivityForResult(map, 0);
-				break;
+			//	Intent map = new Intent(instance, MapScreen.class);
+			//	startActivityForResult(map, 0);
+			//	break;
 			case TYPE_DIRECTION:
 				DirectionInputScreen.merchantInfo = merchantInfo;
 				Intent direction = new Intent(instance, DirectionInputScreen.class);

@@ -28,6 +28,7 @@ import android.widget.ZoomControls;
 
 import com.cellcity.citiguide.adapter.Controller;
 import com.cellcity.citiguide.info.MerchantInfo1;
+import com.cellcity.citiguide.info.MerchantInfo2;
 import com.cellcity.citiguide.screen.MainCitiGuideScreen;
 import com.cellcity.citiguide.screen.R;
 import com.cellcity.citiguide.util.Constants;
@@ -102,29 +103,29 @@ public class MapLocationViewer extends LinearLayout {
 		useCurrentGPS = gps;
 	}
 	
-	public static void setMapLocations(ArrayList<MerchantInfo1> merchantList, int padding, boolean gps){
+	public static void setMapLocations(ArrayList<MerchantInfo2> merchantList, int padding, boolean gps){
 		mapLocations = new ArrayList<MapLocationInfo>();
 		System.out.println("Size is: " + merchantList.size());
 		for(int i = 0; i < merchantList.size(); i++){
-			MerchantInfo1 cInfo = merchantList.get(i);
+			MerchantInfo2 cInfo = merchantList.get(i);
 			System.out.println(cInfo.getLatitude() + " " + cInfo.getLongitude());// + " " + cInfo.getgType() + " " + cInfo.getId());
 			
 			double lat = 0;
 			double lng = 0;
 			
 			try {
-				lat = Double.parseDouble(cInfo.getLatitude());
+				lat = cInfo.getLatitude();
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
 
 			try {
-				lng = Double.parseDouble(cInfo.getLongitude());
+				lng = cInfo.getLongitude();
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
 			
-			MapLocationInfo mInfo = new MapLocationInfo(cInfo.getMerchantName(), cInfo.getOfferDescription(), cInfo.getPostalAddress(), lat, lng, Controller.getResourcePin(i + 1), cInfo);
+			MapLocationInfo mInfo = new MapLocationInfo(cInfo.getRestaurantName(), cInfo.getAddress(), lat, lng, Controller.getResourcePin(i + 1), cInfo);
 			Bitmap bitmap = BitmapFactory.decodeResource(MainCitiGuideScreen.instance.getResources(), R.drawable.icon_map);
 			mInfo.setBitmap(bitmap);
 			mapLocations.add(mInfo);

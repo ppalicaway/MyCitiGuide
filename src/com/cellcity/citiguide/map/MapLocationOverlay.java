@@ -20,6 +20,7 @@ import android.graphics.Paint.Style;
 
 import com.cellcity.citiguide.screen.DescriptionScreen;
 import com.cellcity.citiguide.screen.MainCitiGuideScreen;
+import com.cellcity.citiguide.screen.NewDescriptionScreen;
 import com.cellcity.citiguide.screen.R;
 import com.cellcity.citiguide.util.Util;
 import com.google.android.maps.GeoPoint;
@@ -89,8 +90,9 @@ public class MapLocationOverlay  extends Overlay {
 	}
 	
 	private void nextScreen(){
-		DescriptionScreen.merchantInfo = selectedMapLocation.getMerchantInfo();
-		Intent intent = new Intent(context, DescriptionScreen.class);
+		NewDescriptionScreen.merchantInfo = selectedMapLocation.getMerchantInfo();
+		NewDescriptionScreen.catID = selectedMapLocation.getMerchantInfo().getId();
+		Intent intent = new Intent(context, NewDescriptionScreen.class);
 	    ((Activity) context).startActivityForResult(intent, 0);
 	}
 	

@@ -43,7 +43,7 @@ public class GPSLocationListener implements LocationListener {
 			
 			Activity act = (Activity) MainCitiGuideScreen.instance;
 			
-			MapLocationInfo mLocation = new MapLocationInfo(Util.getGPSAddress(act, lat, lng), "", "Latitude: " + latStr + " Longitude: " + lngStr, lat, lng, R.drawable.pin_violet, null);
+			MapLocationInfo mLocation = new MapLocationInfo(Util.getGPSAddress(act, lat, lng), "Latitude: " + latStr + " Longitude: " + lngStr, lat, lng, R.drawable.pin_violet, null);
 			
 			//MapLocationInfo mLocation = new MapLocationInfo(MainCitiGuideScreen.instance.getString(R.string.map_text), 
 			//		"", "Latitude: " + latStr + " Longitude: " + lngStr, lat, lng, R.drawable.pin_violet, null);
