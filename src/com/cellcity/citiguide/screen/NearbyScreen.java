@@ -187,7 +187,6 @@ public  class NearbyScreen extends CitiGuideListActivity implements OnClickListe
 			super(context, textViewResourceId, items);
 			this.items = items;
 			layoutResourceId = textViewResourceId;
-			
 		}
 		
 		@Override

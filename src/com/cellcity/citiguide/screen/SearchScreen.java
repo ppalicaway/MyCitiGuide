@@ -95,8 +95,11 @@ public  class SearchScreen extends CitiGuideActivity implements OnClickListener 
 			SharedPreferences.Editor editor = preferences.edit();
 			editor.putString("name", getString(R.string.search));
 			
-			ListingMerchantScreen.querySearch = searchText.getText().toString();
-			Intent intent = new Intent(instance, ListingMerchantScreen.class);
+			String keyword = searchText.getText().toString();
+			keyword = keyword.replaceAll(" ", "%20");
+			
+			MerchantListingScreen.querySearch = keyword;
+			Intent intent = new Intent(instance, MerchantListingScreen.class);
 			startActivityForResult(intent, 0);
 			if (editor.commit()) {
 				setResult(RESULT_OK);

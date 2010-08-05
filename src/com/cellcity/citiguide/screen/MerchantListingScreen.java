@@ -300,6 +300,9 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 		if(headerTxt.equalsIgnoreCase(getString(R.string.dining))) {
 			URL = Constants.RESTAURANT_CUISINE_LISTING + catID + "&pageNum=";
 		}
+		if(headerTxt.equalsIgnoreCase(getString(R.string.search))) {
+			URL = Constants.RESTAURANT_SEARCH + querySearch + "&pageNum=";
+		}
 	}
 	
 	private class ListViewAdapter extends ArrayAdapter<MerchantInfo2> {

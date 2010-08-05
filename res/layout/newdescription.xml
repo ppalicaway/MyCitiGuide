@@ -50,9 +50,8 @@
 					android:layout_height="wrap_content"
 					android:singleLine="true" 
 					android:text="Telephone" 
-					android:layout_marginTop="10dp" 
 					android:layout_marginLeft="65dp" 
-					android:layout_marginBottom="5dp" android:textColor="@color/BLUE"/>
+					android:textColor="@color/BLUE" android:layout_marginTop="7dp"/>
 		
 				<TextView 
 					android:id="@+id/address"
@@ -87,7 +86,7 @@
 					android:textStyle="bold"
 					android:typeface="sans"
 					android:textSize="14dp" 
-					android:layout_marginLeft="25dp"/>
+					android:layout_marginLeft="25dp" android:layout_marginRight="10dp"/>
 			</LinearLayout>
 	
 			<LinearLayout

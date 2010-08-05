@@ -122,6 +122,20 @@ public class NewDescriptionScreen extends CitiGuideActivity implements OnClickLi
 			
 			TextView telNumber = (TextView)findViewById(R.id.telNumber);
 			telNumber.setText("Tel: " + phone);
+			
+			String message = "Merchant Name:\n";
+			message += merchantDetails.getTitle();
+			message += "\nAddress:\n";
+			message += merchantDetails.getAddress();
+			message += "\nOffer:\n";
+			message += merchantDetails.getOffer();
+			
+			String subject = merchantDetails.getTitle();
+			
+			CitiGuideListActivity.message = message;
+			CitiGuideActivity.message = message;
+			CitiGuideListActivity.subject = subject;
+			CitiGuideActivity.subject = subject;
 		}
 	};
 
