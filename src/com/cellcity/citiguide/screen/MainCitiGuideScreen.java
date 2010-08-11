@@ -131,26 +131,26 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 		IconButtonInfo dine3 = new IconButtonInfo(Constants.TYPE_PROMOTION, R.drawable.pic11, R.drawable.pic11, getString(R.string.promo));
 		IconButtonInfo dine4 = new IconButtonInfo(Constants.TYPE_PROMOTION, R.drawable.pic12, R.drawable.pic12, getString(R.string.promo));
 		IconButtonInfo none5 = new IconButtonInfo(Constants.TYPE_AR, R.drawable.pic13, R.drawable.pic13, "");
-		IconButtonInfo shop3 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic14, R.drawable.pic14, getString(R.string.shopping));
-		IconButtonInfo shop4 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic15, R.drawable.pic15, getString(R.string.shopping));
+		IconButtonInfo shop3 = new IconButtonInfo(Constants.TYPE_BARS, R.drawable.pic14, R.drawable.pic14, getString(R.string.pubs));
+		IconButtonInfo shop4 = new IconButtonInfo(Constants.TYPE_BARS, R.drawable.pic15, R.drawable.pic15, getString(R.string.pubs));
 		
 		IconButtonInfo promo1 = new IconButtonInfo(Constants.TYPE_PROMOTION, R.drawable.pic16, R.drawable.pic16, getString(R.string.promo));
 		IconButtonInfo promo2 = new IconButtonInfo(Constants.TYPE_PROMOTION, R.drawable.pic17, R.drawable.pic17, getString(R.string.promo));
 		IconButtonInfo ar1 = new IconButtonInfo(Constants.TYPE_AR, R.drawable.pic18, R.drawable.pic18, "");
-		IconButtonInfo movie1 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic19, R.drawable.pic19, getString(R.string.shopping));
-		IconButtonInfo movie2 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic20, R.drawable.pic20, getString(R.string.shopping));
+		IconButtonInfo movie1 = new IconButtonInfo(Constants.TYPE_BARS, R.drawable.pic19, R.drawable.pic19, getString(R.string.pubs));
+		IconButtonInfo movie2 = new IconButtonInfo(Constants.TYPE_BARS, R.drawable.pic20, R.drawable.pic20, getString(R.string.pubs));
 		
-		IconButtonInfo promo3 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic21, R.drawable.pic21, "");
-		IconButtonInfo hotel1 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic22, R.drawable.pic22, "");
-		IconButtonInfo none6 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic23, R.drawable.pic23, getString(R.string.bank));
-		IconButtonInfo bank1 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic24, R.drawable.pic24, "");
-		IconButtonInfo movie3 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic25, R.drawable.pic25, "");
+		IconButtonInfo promo3 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic21, R.drawable.pic21, getString(R.string.bank));
+		IconButtonInfo hotel1 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic22, R.drawable.pic22, getString(R.string.bank));
+		IconButtonInfo none6 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic23, R.drawable.pic23, "");
+		IconButtonInfo bank1 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic24, R.drawable.pic24, getString(R.string.shopping));
+		IconButtonInfo movie3 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic25, R.drawable.pic25, getString(R.string.shopping));
 		
-		IconButtonInfo none7 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic26, R.drawable.pic26, "");
-		IconButtonInfo hotel2 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic27, R.drawable.pic27, "");
-		IconButtonInfo none8 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic28, R.drawable.pic28, getString(R.string.bank));
-		IconButtonInfo bank2 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic29, R.drawable.pic29, "");
-		IconButtonInfo none9 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic30, R.drawable.pic30, "");
+		IconButtonInfo none7 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic26, R.drawable.pic26, getString(R.string.bank));
+		IconButtonInfo hotel2 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic27, R.drawable.pic27, getString(R.string.bank));
+		IconButtonInfo none8 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic28, R.drawable.pic28, "");
+		IconButtonInfo bank2 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic29, R.drawable.pic29, getString(R.string.shopping));
+		IconButtonInfo none9 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic30, R.drawable.pic30, getString(R.string.shopping));
 		
 		iconList.add(none1);
 		iconList.add(none2);
@@ -204,6 +204,7 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 		Button map = (Button)findViewById(R.id.map_Button);
 		map.setOnClickListener(new MenuListener());
 	}
+	
 	private class IconAdapter extends BaseAdapter {
 		private Context mContext;
 		private ArrayList<IconButtonInfo> iconAdapList;
@@ -265,7 +266,7 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 				((Activity) mContext).startActivityForResult(gourmet, 0);
 				break;
 			case Constants.TYPE_SHOPPING:
-			case Constants.TYPE_BARS:
+			//case Constants.TYPE_BARS:
 			case Constants.TYPE_HOTEL:
 				Intent intent = new Intent(instance, ListingMerchantScreen.class);
 				((Activity) mContext).startActivityForResult(intent, 0);
@@ -282,10 +283,11 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 				Intent movie = new Intent(instance,MovieScreen.class);
 				startActivityForResult(movie,0);
 				break;
-			//case Constants.TYPE_BARS:
-			//	Intent shopping = new Intent(instance,ListingScreen.class);
-			//	startActivityForResult(shopping,0);
-			//	break;
+			case Constants.TYPE_BARS:
+				MerchantListingScreen.catID = 25;
+				Intent shopping = new Intent(instance, MerchantListingScreen.class);
+				startActivityForResult(shopping,0);
+				break;
 			case Constants.TYPE_NONE:
 				break;
 			case Constants.TYPE_AR:

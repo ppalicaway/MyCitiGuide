@@ -59,5 +59,6 @@
 		android:horizontalSpacing="-7dp"
 		android:numColumns="5"
 		android:layout_below="@id/headerImageLayout"
-		android:layout_above="@id/footerImageLayout" android:layout_marginTop="-20dp"/>
+		android:layout_above="@id/footerImageLayout" 
+		android:layout_marginTop="-20dp" />
 </RelativeLayout>

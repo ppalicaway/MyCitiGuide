@@ -3,9 +3,6 @@ package com.cellcity.citiguide.screen;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -50,7 +47,6 @@ public  class TwitterScreen extends CitiGuideListActivity {
 		setTheme(android.R.style.Theme_Black_NoTitleBar);
 		getWindow().requestFeature(Window.FEATURE_NO_TITLE); 
 		setContentView(R.layout.listing);
-		
 		instance = this;
 		
 		initActivity(instance, getText(R.string.search).toString());

@@ -143,11 +143,13 @@ public class CuisineListing extends CitiGuideListActivity {
 			if (cuisines != null && cuisines.size() > 0) {
 				m_adapter.notifyDataSetChanged();
 				for (int i = 0; i < cuisines.size(); i++) {
-					m_adapter.add(cuisines.get(i));
+					if(cuisines.get(i).getId() != 25) {
+						m_adapter.add(cuisines.get(i));
+					}
 				}
 			}
 			else {
-				//TODO
+				
 			}
 			
 			try {

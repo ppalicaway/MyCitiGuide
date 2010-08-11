@@ -126,7 +126,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 			String result = "";
 			result = Util.getHttpData(URL + page);
 			if(result == null || result.equalsIgnoreCase("408") || result.equalsIgnoreCase("404")) {
-				Util.showAlert(instance, "f.y.i. Singapore", "Please make sure Internet connection is available.", "OK", false);
+				Util.showAlert(instance, "f.y.i. Singapore", "Please make sure Internet connection is available.", "OK", true);
 				try {
 					if (progressDialog.isShowing()) {
 						progressDialog.dismiss();
@@ -184,7 +184,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 						}
 					}
 					catch(Exception e) {
-						Util.showAlert(instance, "f.y.i. Singapore", "No items found.", "OK", false);
+						Util.showAlert(instance, "f.y.i. Singapore", "No items found.", "OK", true);
 						try {
 							if (progressDialog.isShowing()) {
 								progressDialog.dismiss();
@@ -197,7 +197,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 					}
 				}
 				catch(Exception e) {
-					Util.showAlert(instance, "f.y.i. Singapore", "No items found.", "OK", false);
+					Util.showAlert(instance, "f.y.i. Singapore", "No items found.", "OK", true);
 					try {
 						if (progressDialog.isShowing()) {
 							progressDialog.dismiss();
@@ -297,7 +297,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 	}
 
 	private void determineURL(String headerTxt) {
-		if(headerTxt.equalsIgnoreCase(getString(R.string.dining))) {
+		if(headerTxt.equalsIgnoreCase(getString(R.string.dining)) || headerTxt.equalsIgnoreCase(getString(R.string.pubs))) {
 			URL = Constants.RESTAURANT_CUISINE_LISTING + catID + "&pageNum=";
 		}
 		if(headerTxt.equalsIgnoreCase(getString(R.string.search))) {

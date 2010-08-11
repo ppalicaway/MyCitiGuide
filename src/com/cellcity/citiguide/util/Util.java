@@ -24,9 +24,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
-import org.xml.sax.DTDHandler;
 import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
 import android.app.Activity;
@@ -58,7 +56,6 @@ import com.cellcity.citiguide.parser.XMLParserHandler;
 import com.cellcity.citiguide.screen.ARScreen;
 import com.cellcity.citiguide.screen.CategoryListScreen;
 import com.cellcity.citiguide.screen.CommentScreen;
-import com.cellcity.citiguide.screen.Compass;
 import com.cellcity.citiguide.screen.CuisineListing;
 import com.cellcity.citiguide.screen.DescriptionCategoryScreen;
 import com.cellcity.citiguide.screen.DescriptionScreen;

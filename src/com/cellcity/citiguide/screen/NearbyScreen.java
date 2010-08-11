@@ -380,4 +380,3 @@ public  class NearbyScreen extends CitiGuideListActivity implements OnClickListe
 		super.onPause();
 	}
 }
-

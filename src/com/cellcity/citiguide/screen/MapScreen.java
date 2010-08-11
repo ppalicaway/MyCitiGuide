@@ -1,16 +1,21 @@
 package com.cellcity.citiguide.screen;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.View;
 import android.view.Window;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.cellcity.citiguide.map.GPSLocationListener;
+import com.cellcity.citiguide.screen.CitiGuideListActivity.MenuListener;
 import com.cellcity.citiguide.util.Constants;
+import com.cellcity.citiguide.util.Util;
 import com.google.android.maps.MapActivity;
 
 public class MapScreen extends MapActivity {
@@ -51,6 +56,17 @@ public class MapScreen extends MapActivity {
 		Button ar = (Button)findViewById(R.id.arButton);
 		map.setVisibility(Button.GONE);
 		ar.setVisibility(Button.GONE);
+		
+		Button homeButton = (Button)findViewById(R.id.homeButton);
+		homeButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Util.closeAllInstance();			
+				Intent main = new Intent(instance, MainCitiGuideScreen.class);
+				startActivity(main);
+			}
+		});
 		
 		LinearLayout linearLayout = (LinearLayout)findViewById(R.id.widget35);
 		linearLayout.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.CENTER_VERTICAL);
