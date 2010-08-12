@@ -55,13 +55,14 @@ public class Constants {
 	//public static final String URL_BAR = "http://www.citiworldprivileges.com/mobile/?country=Singapore&offer_type=Dining&keywords=bar";
 	
 	public static final String URL_BANK_HOME = "https://mobile.citibank.com.sg/";
+	public static final String URL_ATM_LOCATOR = "http://findmyciti.com/mobile/sg";
 	public static final String URL_BANK_PROMO = "http://www.citibank.com.sg/mbol/promo/index.htm";
 	public static final String URL_BANK_GOURMET = "http://www.citibank.com.sg/mbol/gp/index.htm";
 	public static final String RESTAURANT_CUISINE_TYPES = "http://singtel.dc2go.net/singtel/get_cuisine.php?a=b&bank=Citibank";
 	public static final String RESTAURANT_CUISINE_LISTING = "http://singtel.dc2go.net/singtel/get_restaurant_by_cuisine_type.php?resultsPerPage=10&bank=Citibank&cuisineTypeID=";
 	public static final String RESTAURANT_DETAIL = "http://singtel.dc2go.net/singtel/get_detail.php?id=";
 	public static final String RESTAURANT_LOCATION_PAGE="http://singtel.dc2go.net/singtel/get_restaurant_by_location.php?resultsPerPage=20&pageNum=1&bank=Citibank&latitude=";
-	public static final String RESTAURANT_LOCATION_AR="http://singtel.dc2go.net/singtel/get_restaurant_by_location.php?resultsPerPage=15&pageNum=1&bank=Citibank&latitude=";
+	public static final String RESTAURANT_LOCATION_AR = "http://singtel.dc2go.net/singtel/get_restaurant_by_location.php?resultsPerPage=15&pageNum=1&bank=Citibank&latitude=";
 	public static final String RESTAURANT_SEARCH = "http://singtel.dc2go.net/singtel/search.php?bank=Citibank&resultsPerPage=10&keyword=";
 	
 	public static final String URL_ARSEARCH = "http://www.citiworldprivileges.com/mobile/?country=Singapore&city=Singapore&sort_by=distance&sort_order=desc&num_offers=10&current_lat=";

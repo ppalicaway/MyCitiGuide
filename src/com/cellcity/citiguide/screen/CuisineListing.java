@@ -128,7 +128,10 @@ public class CuisineListing extends CitiGuideListActivity {
 					String name = jsonObject2.getString("CuisineType");
 					
 					Cuisine cuisineItem = new Cuisine(id, name);
-					cuisines.add(cuisineItem);
+					
+					if(cuisineItem.getId() != 25) {
+						cuisines.add(cuisineItem);
+					}
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -143,9 +146,7 @@ public class CuisineListing extends CitiGuideListActivity {
 			if (cuisines != null && cuisines.size() > 0) {
 				m_adapter.notifyDataSetChanged();
 				for (int i = 0; i < cuisines.size(); i++) {
-					if(cuisines.get(i).getId() != 25) {
-						m_adapter.add(cuisines.get(i));
-					}
+					m_adapter.add(cuisines.get(i));
 				}
 			}
 			else {
