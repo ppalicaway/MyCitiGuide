@@ -23,6 +23,7 @@ public class Constants {
 	public static final int TYPE_WEATHER = 102;
 	public static final int TYPE_NONE = -1;
 	public static final int TYPE_AR = 7;
+	public static final int TYPE_ATM = 9;
 	
 	public static final double SINGAPORE_LATITUDE = 1.3667;
 	public static final double SINGAPORE_LONGITUDE = 103.8;

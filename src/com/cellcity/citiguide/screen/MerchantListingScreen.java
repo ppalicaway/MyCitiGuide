@@ -217,7 +217,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 
 	protected void settingNextBackButton() {
 		TextView result = (TextView) findViewById(R.id.tabText);
-		result.setText("Results (" + startItem + "-" + endItem + ") of "
+		result.setText("Results (" + startItem + " - " + endItem + ") of "
 				+ totalItems);
 
 		ImageView tabBack = (ImageView) findViewById(R.id.tabBack);

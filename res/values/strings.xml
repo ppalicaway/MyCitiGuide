@@ -39,10 +39,11 @@
 <string name="menu_ar">AR</string>
 <string name="can_not_get_location">Can not get current location. Make sure you enable GPS.‎</string>
 <string name="pubs">Pubs \'n Clubs</string>
-<string name="dining">Dining</string>
+<string name="dining">Gourmet Pleasures</string>
 <string name="shopping">Shopping</string>
 <string name="promo">Promotions</string>
 <string name="movies">Movies</string>
 <string name="hotels">Hotels</string>
-<string name="bank">Bank</string>
+<string name="bank">Citi Mobile</string>
+<string name="atm">ATM Locator</string>
 </resources>
