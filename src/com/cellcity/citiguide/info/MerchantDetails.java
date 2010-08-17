@@ -17,6 +17,7 @@ public class MerchantDetails {
 	private String description;
 	private String branches = "";
 	private String offer = "";
+	private String tnc = "";
 	
 	public void setId(int id) {
 		this.id = id;
@@ -128,5 +129,13 @@ public class MerchantDetails {
 
 	public String getOffer() {
 		return offer;
+	}
+
+	public void setTnc(String tnc) {
+		this.tnc = tnc;
+	}
+
+	public String getTnc() {
+		return tnc;
 	}
 }

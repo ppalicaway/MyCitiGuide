@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.cellcity.citiguide.map.GPSLocationListener;
-import com.cellcity.citiguide.screen.CitiGuideListActivity.MenuListener;
 import com.cellcity.citiguide.util.Constants;
 import com.cellcity.citiguide.util.Util;
 import com.google.android.maps.MapActivity;

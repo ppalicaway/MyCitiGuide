@@ -93,6 +93,7 @@ public class NewDescriptionScreen extends CitiGuideActivity implements OnClickLi
 	
 	private Runnable populateData = new Runnable() {
 		
+		@SuppressWarnings("null")
 		@Override
 		public void run() {
 			TextView titleTView = (TextView)findViewById(R.id.templateTopTitleTView);
@@ -103,6 +104,9 @@ public class NewDescriptionScreen extends CitiGuideActivity implements OnClickLi
 			
 			TextView offerDesc = (TextView)findViewById(R.id.offerDesc);
 			offerDesc.setText(merchantDetails.getOffer());
+			
+			TextView tncDesc = (TextView)findViewById(R.id.tncDesc);
+			tncDesc.setText(merchantDetails.getTnc());
 			
 			String phone = merchantDetails.getPhone();
 			if(phone != null || !phone.equalsIgnoreCase("")) {
@@ -144,7 +148,7 @@ public class NewDescriptionScreen extends CitiGuideActivity implements OnClickLi
 		result = Util.getHttpData(Constants.RESTAURANT_DETAIL + catID);
 		
 		if(result == null || result.equalsIgnoreCase("408") || result.equalsIgnoreCase("404")) {
-			//TODO
+			Util.showAlert(instance, "f.y.i Singapore", "Please make sure Internet connection is available.", "OK", true);
 		}
 		else {
 			result = Util.toJSONString(result);
@@ -189,10 +193,12 @@ public class NewDescriptionScreen extends CitiGuideActivity implements OnClickLi
 				for(int i = 0; i < bankInfo.length(); i++) {
 					JSONObject jsonObject3 = bankInfo.getJSONObject(i);
 					String bankname = jsonObject3.getString("bank");
+					String tnc = jsonObject3.getString("tnc");
 					
 					if(bankname.equalsIgnoreCase("Citibank")) {
 						String offer = jsonObject3.getString("offer");
 						merchantDetails.setOffer(offer);
+						merchantDetails.setTnc(tnc);
 					}
 				}
 			}

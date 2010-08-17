@@ -20,6 +20,7 @@ import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -110,7 +111,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 			try {
 				if (progressDialog.isShowing()) {
 					progressDialog.dismiss();
-				}					
+				}
 			}
 			catch (Exception e) {
 				e.printStackTrace();
@@ -290,6 +291,9 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 		footerMap.setOnClickListener(new MenuListener());
 		Button homeButton = (Button)findViewById(R.id.homeButton);
 		homeButton.setOnClickListener(new MenuListener());
+		
+		HorizontalScrollView scrollView = (HorizontalScrollView)findViewById(R.id.scrollView);
+		scrollView.setVisibility(HorizontalScrollView.GONE);
 		
 		merchantList = new ArrayList<MerchantInfo2>();
 		m_adapter = new ListViewAdapter(instance, R.layout.row_list, merchantList);

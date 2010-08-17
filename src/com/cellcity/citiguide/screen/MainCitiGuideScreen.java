@@ -15,6 +15,7 @@ import android.view.Window;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 
 import com.cellcity.citiguide.adapter.Controller;
@@ -203,6 +204,9 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 		share.setOnClickListener(new MenuListener());
 		Button map = (Button)findViewById(R.id.map_Button);
 		map.setOnClickListener(new MenuListener());
+		
+		HorizontalScrollView scrollView = (HorizontalScrollView)findViewById(R.id.scrollView);
+		scrollView.setVisibility(HorizontalScrollView.GONE);
 	}
 	
 	private class IconAdapter extends BaseAdapter {

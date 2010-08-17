@@ -11,6 +11,7 @@ import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 
 import com.cellcity.citiguide.map.GPSLocationListener;
@@ -55,7 +56,6 @@ public  class SearchScreen extends CitiGuideActivity implements OnClickListener 
 	
 	public void init(){
 		
-		
 		LinearLayout linearLayout = (LinearLayout)findViewById(R.id.widget35);
 		linearLayout.setVisibility(LinearLayout.GONE);
 		
@@ -80,6 +80,9 @@ public  class SearchScreen extends CitiGuideActivity implements OnClickListener 
 		footerMap.setOnClickListener(new MenuListener());
 		Button homeButton = (Button)findViewById(R.id.homeButton);
 		homeButton.setOnClickListener(new MenuListener());
+		
+		HorizontalScrollView scrollView = (HorizontalScrollView)findViewById(R.id.scrollView);
+		scrollView.setVisibility(HorizontalScrollView.GONE);
 	}
 
 	@Override

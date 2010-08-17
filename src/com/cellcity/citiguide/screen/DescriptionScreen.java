@@ -139,6 +139,11 @@ public class DescriptionScreen extends CitiGuideActivity implements
 		TextView offerDesc = (TextView)findViewById(R.id.offerDesc);
 		offerDesc.setText(merchantInfo.getOfferDescription());
 		
+		TextView tncDesc = (TextView)findViewById(R.id.tncDesc);
+		tncDesc.setVisibility(TextView.GONE);
+		TextView tncTitle = (TextView)findViewById(R.id.tncTitle);
+		tncTitle.setVisibility(TextView.GONE);
+		
 		Button map = (Button)findViewById(R.id.mapButton);
 		Button ar = (Button)findViewById(R.id.arButton);
 		map.setVisibility(Button.GONE);
