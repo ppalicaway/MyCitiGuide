@@ -87,7 +87,7 @@ public class MapLocationViewer extends LinearLayout {
 		mapView.displayZoomControls(true);
 		
 //		mapView.setBuiltInZoomControls(true);
-		mapView.getController().setZoom(16);
+		mapView.getController().setZoom(15);
 		mapView.getController().setCenter(getMapLocations().get(0).getPoint());
 	}
 	

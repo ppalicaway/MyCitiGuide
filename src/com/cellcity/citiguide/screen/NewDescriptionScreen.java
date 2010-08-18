@@ -161,46 +161,34 @@ public class NewDescriptionScreen extends CitiGuideActivity implements OnClickLi
 				JSONObject jsonObject2 = valArray.getJSONObject(0);
 				
 				int id = Integer.parseInt(jsonObject2.getString("id"));
-				String image = jsonObject2.getString("img");
+				String title = jsonObject2.getString("outletname");
+				String category = jsonObject2.getString("category");
+				String subCategory = jsonObject2.getString("subcategory");
+				String description = jsonObject2.getString("description");
 				String thumbnail = jsonObject2.getString("thumb");
-				String title = jsonObject2.getString("title");
-				String type = jsonObject2.getString("type");
-				double rating = Double.parseDouble(jsonObject2.getString("rating"));
-				int reviews = Integer.parseInt(jsonObject2.getString("reviews"));
+				String image = jsonObject2.getString("img");
 				String address = jsonObject2.getString("address");
 				String phone = jsonObject2.getString("phone");
 				double latitude = Double.parseDouble(jsonObject2.getString("latitude"));
 				double longitude = Double.parseDouble(jsonObject2.getString("longitude"));
-				String description = jsonObject2.getString("description");
+				String offer = jsonObject2.getString("offer").replaceAll("\r", "");
+				String tnc = jsonObject2.getString("tnc");
 				
 				merchantDetails.setId(id);
-				merchantDetails.setImage(image);
-				merchantDetails.setThumbnail(thumbnail);
 				merchantDetails.setTitle(title);
-				merchantDetails.setType(type);
-				merchantDetails.setRating(rating);
-				merchantDetails.setReviews(reviews);
+				merchantDetails.setCategory(category);
+				merchantDetails.setSubCategory(subCategory);
+				merchantDetails.setDescription(description);
+				merchantDetails.setThumbnail(thumbnail);
+				merchantDetails.setImage(image);
 				merchantDetails.setAddress(address);
 				merchantDetails.setPhone(phone);
 				merchantDetails.setLatitude(latitude);
 				merchantInfo.setLatitude(latitude);
 				merchantDetails.setLongitude(longitude);
 				merchantInfo.setLongitude(longitude);
-				merchantDetails.setDescription(description);
-				
-				JSONArray bankInfo = jsonObject2.getJSONArray("offers");
-				
-				for(int i = 0; i < bankInfo.length(); i++) {
-					JSONObject jsonObject3 = bankInfo.getJSONObject(i);
-					String bankname = jsonObject3.getString("bank");
-					String tnc = jsonObject3.getString("tnc");
-					
-					if(bankname.equalsIgnoreCase("Citibank")) {
-						String offer = jsonObject3.getString("offer");
-						merchantDetails.setOffer(offer);
-						merchantDetails.setTnc(tnc);
-					}
-				}
+				merchantDetails.setOffer(offer);
+				merchantDetails.setTnc(tnc);
 			}
 			catch(Exception e) {
 				e.printStackTrace();

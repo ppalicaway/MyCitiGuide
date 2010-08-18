@@ -91,6 +91,36 @@ public class Controller {
 		case 10:
 			rId = R.drawable.pin_10;
 			break;
+		case 11:
+			rId = R.drawable.pin_11;
+			break;
+		case 12:
+			rId = R.drawable.pin_12;
+			break;
+		case 13:
+			rId = R.drawable.pin_13;
+			break;
+		case 14:
+			rId = R.drawable.pin_14;
+			break;
+		case 15:
+			rId = R.drawable.pin_15;
+			break;
+		case 16:
+			rId = R.drawable.pin_16;
+			break;
+		case 17:
+			rId = R.drawable.pin_17;
+			break;
+		case 18:
+			rId = R.drawable.pin_18;
+			break;
+		case 19:
+			rId = R.drawable.pin_19;
+			break;
+		case 20:
+			rId = R.drawable.pin_20;
+			break;
 		}
 		return rId;
 	}

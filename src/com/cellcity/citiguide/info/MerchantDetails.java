@@ -4,18 +4,16 @@ package com.cellcity.citiguide.info;
 public class MerchantDetails {
 
 	private int id;
-	private String image;
-	private String thumbnail;
 	private String title;
-	private String type;
-	private double rating;
-	private int reviews;
+	private String category;
+	private String subCategory;
+	private String description;
+	private String thumbnail;
+	private String image;
 	private String address;
 	private String phone;
 	private double latitude;
 	private double longitude;
-	private String description;
-	private String branches = "";
 	private String offer = "";
 	private String tnc = "";
 	
@@ -49,30 +47,6 @@ public class MerchantDetails {
 
 	public String getTitle() {
 		return title;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setRating(double rating) {
-		this.rating = rating;
-	}
-
-	public double getRating() {
-		return rating;
-	}
-
-	public void setReviews(int reviews) {
-		this.reviews = reviews;
-	}
-
-	public int getReviews() {
-		return reviews;
 	}
 
 	public void setAddress(String address) {
@@ -115,14 +89,6 @@ public class MerchantDetails {
 		return description;
 	}
 
-	public void setBranches(String branches) {
-		this.branches = branches;
-	}
-
-	public String getBranches() {
-		return branches;
-	}
-
 	public void setOffer(String offer) {
 		this.offer = offer;
 	}
@@ -137,5 +103,21 @@ public class MerchantDetails {
 
 	public String getTnc() {
 		return tnc;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setSubCategory(String subCategory) {
+		this.subCategory = subCategory;
+	}
+
+	public String getSubCategory() {
+		return subCategory;
 	}
 }
