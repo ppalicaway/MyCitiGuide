@@ -148,12 +148,18 @@ public class CitiGuideActivity extends Activity{
 			    		//.setIcon(R.drawable.alert_dialog_icon)
 			    		.setTitle(R.string.sharTitle)
 			            .setPositiveButton(R.string.sms, new DialogInterface.OnClickListener() {
-			                public void onClick(DialogInterface dialog, int whichButton) {
+			            	public void onClick(DialogInterface dialog, int whichButton) {
+			            		if(!message.equalsIgnoreCase("")) {
+			            			message = "Check out this Citibank Credit Card exclusive privilege:\n\n" + message;
+			            		}
 								Util.sendMessage(act, "", message);
 			                }
 			            })
 			            .setNegativeButton(R.string.email, new DialogInterface.OnClickListener() {
 			                public void onClick(DialogInterface dialog, int whichButton) {
+			                	if(!message.equalsIgnoreCase("")) {
+			            			message = "Your friend would like to recommend the following Citibank Credit Card exclusive privilege to you.\n\n" + message;
+			            		}
 								Util.sendEmail(act, "", "", subject, message);
 			                }
 			            })

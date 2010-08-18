@@ -134,7 +134,7 @@ public class NewDescriptionScreen extends CitiGuideActivity implements OnClickLi
 			message += "\nOffer:\n";
 			message += merchantDetails.getOffer();
 			
-			String subject = merchantDetails.getTitle();
+			String subject = "Recommended Citibank Credit Card exclusive privilege.";
 			
 			CitiGuideListActivity.message = message;
 			CitiGuideActivity.message = message;

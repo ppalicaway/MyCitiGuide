@@ -62,7 +62,7 @@ public class DescriptionScreen extends CitiGuideActivity implements
 		message += "\nOffer:\n";
 		message += merchantInfo.getOfferDescription();
 		
-		String subject = merchantInfo.getMerchantName();
+		String subject = "Recommended Citibank Credit Card exclusive privilege.";
 		
 		CitiGuideListActivity.message = message;
 		CitiGuideActivity.message = message;
