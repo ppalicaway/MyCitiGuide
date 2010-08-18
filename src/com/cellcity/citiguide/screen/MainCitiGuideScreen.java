@@ -6,6 +6,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -17,11 +19,13 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.cellcity.citiguide.adapter.Controller;
 import com.cellcity.citiguide.info.IconButtonInfo;
 import com.cellcity.citiguide.map.GPSLocationListener;
 import com.cellcity.citiguide.util.Constants;
+import com.cellcity.citiguide.util.Util;
 
 public class MainCitiGuideScreen extends CitiGuideActivity{
 	public static MainCitiGuideScreen instance;
@@ -47,6 +51,19 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 //		if(instance != null)
 //			instance.finish();
 		instance = this;
+		
+		try {
+        	ImageView splashImage = (ImageView)findViewById(R.id.background);
+        	Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.bg);
+        	int newWidth = Util.getScreenWidth(instance) + 18;
+        	int newHeight = Util.getScreenHeight(instance) + 10;
+        	image = Util.resizeImage(image, newWidth, newHeight);
+        	splashImage.setImageBitmap(image);
+        }
+        catch(Exception e) {
+        	e.printStackTrace();
+        }
+        
 		initActivity(instance, getText(R.string.search).toString());
 		
 		init();
@@ -119,39 +136,39 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 		
 		IconButtonInfo none1 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic1, R.drawable.pic1, "");
 		IconButtonInfo none2 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic2, R.drawable.pic2, "");
-		IconButtonInfo pub1 = new IconButtonInfo(Constants.TYPE_ATM, R.drawable.pic3, R.drawable.pic3, getString(R.string.atm));
+		IconButtonInfo pub1 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic3, R.drawable.pic3, "");
 		IconButtonInfo none3 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic4, R.drawable.pic4, "");		
 		IconButtonInfo none4 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic5, R.drawable.pic5, "");
 		
-		IconButtonInfo dine1 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic6, R.drawable.pic6, getString(R.string.bank));
-		IconButtonInfo dine2 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic7, R.drawable.pic7, getString(R.string.bank));
-		IconButtonInfo pub2 = new IconButtonInfo(Constants.TYPE_ATM, R.drawable.pic8, R.drawable.pic8, getString(R.string.atm));
-		IconButtonInfo shop1 = new IconButtonInfo(Constants.TYPE_BARS, R.drawable.pic9, R.drawable.pic9, getString(R.string.pubs));
-		IconButtonInfo shop2 = new IconButtonInfo(Constants.TYPE_BARS, R.drawable.pic10, R.drawable.pic10, getString(R.string.pubs));
+		IconButtonInfo dine1 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic6, R.drawable.pic6, "");
+		IconButtonInfo dine2 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic7, R.drawable.pic7, "");
+		IconButtonInfo pub2 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic8, R.drawable.pic8, "");
+		IconButtonInfo shop1 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic9, R.drawable.pic9, "");
+		IconButtonInfo shop2 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic10, R.drawable.pic10, "");
 		
 		IconButtonInfo dine3 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic11, R.drawable.pic11, getString(R.string.bank));
 		IconButtonInfo dine4 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic12, R.drawable.pic12, getString(R.string.bank));
-		IconButtonInfo none5 = new IconButtonInfo(Constants.TYPE_AR, R.drawable.pic13, R.drawable.pic13, "");
-		IconButtonInfo shop3 = new IconButtonInfo(Constants.TYPE_AR, R.drawable.pic14, R.drawable.pic14, "");
+		IconButtonInfo none5 = new IconButtonInfo(Constants.TYPE_ATM, R.drawable.pic13, R.drawable.pic13, getString(R.string.atm));
+		IconButtonInfo shop3 = new IconButtonInfo(Constants.TYPE_ATM, R.drawable.pic14, R.drawable.pic14, getString(R.string.atm));
 		IconButtonInfo shop4 = new IconButtonInfo(Constants.TYPE_BARS, R.drawable.pic15, R.drawable.pic15, getString(R.string.pubs));
 		
-		IconButtonInfo promo1 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic16, R.drawable.pic16, getString(R.string.dining));
-		IconButtonInfo promo2 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic17, R.drawable.pic17, getString(R.string.dining));
+		IconButtonInfo promo1 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic16, R.drawable.pic16, getString(R.string.bank));
+		IconButtonInfo promo2 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic17, R.drawable.pic17, getString(R.string.bank));
 		IconButtonInfo ar1 = new IconButtonInfo(Constants.TYPE_AR, R.drawable.pic18, R.drawable.pic18, "");
-		IconButtonInfo movie1 = new IconButtonInfo(Constants.TYPE_AR, R.drawable.pic19, R.drawable.pic19, "");
-		IconButtonInfo movie2 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic20, R.drawable.pic20, getString(R.string.shopping));
+		IconButtonInfo movie1 = new IconButtonInfo(Constants.TYPE_BARS, R.drawable.pic19, R.drawable.pic19, getString(R.string.pubs));
+		IconButtonInfo movie2 = new IconButtonInfo(Constants.TYPE_BARS, R.drawable.pic20, R.drawable.pic20, getString(R.string.pubs));
 		
-		IconButtonInfo promo3 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic21, R.drawable.pic21, "");
-		IconButtonInfo hotel1 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic22, R.drawable.pic22, "");
-		IconButtonInfo none6 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic23, R.drawable.pic23, "");
-		IconButtonInfo bank1 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic24, R.drawable.pic24, "");
-		IconButtonInfo movie3 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic25, R.drawable.pic25, "");
+		IconButtonInfo promo3 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic21, R.drawable.pic21, getString(R.string.dining));
+		IconButtonInfo hotel1 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic22, R.drawable.pic22, getString(R.string.dining));
+		IconButtonInfo none6 = new IconButtonInfo(Constants.TYPE_AR, R.drawable.pic23, R.drawable.pic23, "");
+		IconButtonInfo bank1 = new IconButtonInfo(Constants.TYPE_AR, R.drawable.pic24, R.drawable.pic24, "");
+		IconButtonInfo movie3 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic25, R.drawable.pic25, getString(R.string.shopping));
 		
-		//IconButtonInfo none7 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic26, R.drawable.pic26, getString(R.string.bank));
-		//IconButtonInfo hotel2 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic27, R.drawable.pic27, getString(R.string.bank));
-		//IconButtonInfo none8 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic28, R.drawable.pic28, "");
-		//IconButtonInfo bank2 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic29, R.drawable.pic29, getString(R.string.shopping));
-		//IconButtonInfo none9 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic30, R.drawable.pic30, getString(R.string.shopping));
+		IconButtonInfo none7 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic26, R.drawable.pic26, getString(R.string.dining));
+		IconButtonInfo hotel2 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic27, R.drawable.pic27, getString(R.string.dining));
+		IconButtonInfo none8 = new IconButtonInfo(Constants.TYPE_AR, R.drawable.pic28, R.drawable.pic28, "");
+		IconButtonInfo bank2 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic29, R.drawable.pic29, getString(R.string.shopping));
+		IconButtonInfo none9 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic30, R.drawable.pic30, getString(R.string.shopping));
 		
 		iconList.add(none1);
 		iconList.add(none2);
@@ -183,16 +200,16 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 		iconList.add(bank1);
 		iconList.add(movie3);
 		
-		//iconList.add(none7);
-		//iconList.add(hotel2);
-		//iconList.add(none8);
-		//iconList.add(bank2);
-		//iconList.add(none9);
+		iconList.add(none7);
+		iconList.add(hotel2);
+		iconList.add(none8);
+		iconList.add(bank2);
+		iconList.add(none9);
 		
 		GridView g = (GridView) findViewById(R.id.myGrid);
-		g.setPadding(0, 33, 0, 0);
-		g.setHorizontalSpacing(-7);
-		g.setVerticalSpacing(-28);
+		//g.setPadding(0, 0, 33, 0);
+		//g.setHorizontalSpacing(-7);
+		//g.setVerticalSpacing(-28);
 		g.setFocusable(false);
 		g.setAdapter(new IconAdapter(this, iconList));
 
@@ -291,7 +308,7 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 				startActivityForResult(movie,0);
 				break;
 			case Constants.TYPE_BARS:
-				MerchantListingScreen.catID = 25;
+				MerchantListingScreen.catKeyword = "Bars%20&%20Pubs";
 				Intent shopping = new Intent(instance, MerchantListingScreen.class);
 				startActivityForResult(shopping,0);
 				break;

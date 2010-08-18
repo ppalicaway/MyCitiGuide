@@ -202,7 +202,7 @@ public class CuisineListing extends CitiGuideListActivity {
 	
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
-		MerchantListingScreen.catID = cuisines.get(position).getId();
+		MerchantListingScreen.catKeyword = cuisines.get(position).getName().replaceAll(" ", "%20");
 		Intent gourmet = new Intent(instance, MerchantListingScreen.class);
 		instance.startActivityForResult(gourmet, 0);
 	}

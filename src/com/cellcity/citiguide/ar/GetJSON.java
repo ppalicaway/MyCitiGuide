@@ -43,8 +43,6 @@ public class GetJSON implements Runnable {
 					String image = "";
 					String restaurantName = "";
 					String address = "";
-					float rating = 0;
-					int reviews = 0;
 					double latitude = 0;
 					double longitude = 0;
 					String distance = "";
@@ -53,13 +51,11 @@ public class GetJSON implements Runnable {
 					image = jsonObject2.getString("Image");
 					restaurantName = jsonObject2.getString("RestaurantName");
 					address = jsonObject2.getString("Address");
-					rating = Float.parseFloat(jsonObject2.getString("Rating"));
-					reviews = Integer.parseInt(jsonObject2.getString("Reviews"));
 					latitude = Double.parseDouble(jsonObject2.getString("Latitude"));
 					longitude = Double.parseDouble(jsonObject2.getString("Longitude"));
 					distance = jsonObject2.getString("Distance");
 					
-					MerchantInfo2 mInfo = new MerchantInfo2(id, image, restaurantName, address, rating, reviews, latitude, longitude);
+					MerchantInfo2 mInfo = new MerchantInfo2(id, image, restaurantName, address, latitude, longitude);
 					mInfo.setDistance(distance);
 					
 					if(!merchantHash.containsKey(id)) {

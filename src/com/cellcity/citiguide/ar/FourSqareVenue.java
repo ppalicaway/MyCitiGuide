@@ -50,7 +50,7 @@ public class FourSqareVenue extends ARSphericalView {
 			if(address.length() > 20){
 				address = address.substring(0, 20) + "...";
 			}
-			name = merchantInfo.getRestaurantName();
+			name = merchantInfo.getOutletName();
 			if(name.length() > 19){
 				name = name.substring(0, 19) + "...";
 			}

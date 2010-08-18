@@ -118,7 +118,7 @@ public class ARScreen extends CitiGuideActivity {
 			merchantList = MerchantListingScreen.merchantList;
 			
 			for(int i = 0; i < merchantList.size(); i++) {
-				System.out.println("Merchant is: " + merchantList.get(i).getRestaurantName());
+				System.out.println("Merchant is: " + merchantList.get(i).getOutletName());
 			}
 			Thread t = new Thread(new ReturnRes());
 			t.start();
@@ -166,7 +166,7 @@ public class ARScreen extends CitiGuideActivity {
 			Enumeration<FourSqareVenue> e = v.elements();
 			while (e.hasMoreElements()) {
 				FourSqareVenue fq = (FourSqareVenue) e.nextElement();
-				System.out.println("Got Venue ####################### : " + fq.merchantInfo.getRestaurantName());
+				System.out.println("Got Venue ####################### : " + fq.merchantInfo.getOutletName());
 				ar.addARView(fq);
 			}
 		}

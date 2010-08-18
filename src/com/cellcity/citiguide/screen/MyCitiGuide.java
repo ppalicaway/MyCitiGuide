@@ -2,10 +2,14 @@ package com.cellcity.citiguide.screen;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Window;
+import android.widget.ImageView;
 
 import com.cellcity.citiguide.util.Constants;
+import com.cellcity.citiguide.util.Util;
 
 public class MyCitiGuide extends Activity {
 	public static MyCitiGuide instance;
@@ -20,6 +24,19 @@ public class MyCitiGuide extends Activity {
         setContentView(R.layout.splash);
         
         instance = this;
+        
+        try {
+        	ImageView splashImage = (ImageView)findViewById(R.id.splashImgView);
+        	Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.splash);
+        	int newWidth = Util.getScreenWidth(instance) + 18;
+        	int newHeight = Util.getScreenHeight(instance) + 10;
+        	image = Util.resizeImage(image, newWidth, newHeight);
+        	splashImage.setImageBitmap(image);
+        }
+        catch(Exception e) {
+        	e.printStackTrace();
+        }
+        
         splashThread.start();
     }
     

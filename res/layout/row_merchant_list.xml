@@ -10,18 +10,14 @@
 		android:layout_width="fill_parent" android:layout_height="fill_parent"
 		android:gravity="center_vertical" android:paddingLeft="10dp" android:layout_marginRight="35dp" >
 		<TextView android:id="@+id/topTView" android:layout_width="wrap_content"
-			android:layout_height="wrap_content" android:text="Top : " android:ellipsize="marquee"
-			android:textColor="@color/BLACK" android:singleLine="true"
-			android:textStyle="bold" android:textSize="18dp" />
+			android:layout_height="wrap_content" android:text="Top : " android:textColor="@color/BLACK" android:textStyle="bold" android:textSize="15dp" android:singleLine="true" android:ellipsize="end" android:typeface="sans"/>
 		<TextView android:layout_width="wrap_content" android:text="Middle : "
-			android:id="@+id/middleTView" android:singleLine="true"
-			android:textColor="@color/BLACK" android:ellipsize="marquee"
-			android:gravity="top" android:textStyle="bold" 
-			android:layout_height="wrap_content" />
+			android:id="@+id/middleTView" android:textColor="@color/BLACK" android:ellipsize="marquee"
+			android:gravity="top" android:layout_height="wrap_content" android:textSize="13dp" android:singleLine="false" android:typeface="sans"/>
 		<TextView android:layout_width="wrap_content" android:text="Bottom : "
 			android:id="@+id/bottomTView" android:singleLine="true" 
 			android:textColor="@color/COLOR_ORANGE" android:ellipsize="marquee"
-			android:gravity="top" android:layout_height="wrap_content" />
+			android:gravity="top" android:layout_height="wrap_content" android:textSize="13dp" android:typeface="sans"/>
 	</LinearLayout>
 <!--	<ImageView android:id="@+id/rowlistPinView"-->
 <!--		android:layout_width="wrap_content" android:layout_height="fill_parent"-->

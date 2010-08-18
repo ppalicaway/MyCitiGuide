@@ -124,7 +124,7 @@ public class MapLocationViewer extends LinearLayout {
 				// TODO: handle exception
 			}
 			
-			MapLocationInfo mInfo = new MapLocationInfo(cInfo.getRestaurantName(), cInfo.getAddress(), lat, lng, Controller.getResourcePin(i + 1), cInfo);
+			MapLocationInfo mInfo = new MapLocationInfo(cInfo.getOutletName(), cInfo.getAddress(), lat, lng, Controller.getResourcePin(i + 1), cInfo);
 			Bitmap bitmap = BitmapFactory.decodeResource(MainCitiGuideScreen.instance.getResources(), R.drawable.icon_map);
 			mInfo.setBitmap(bitmap);
 			mapLocations.add(mInfo);
@@ -133,8 +133,8 @@ public class MapLocationViewer extends LinearLayout {
 			useCurrentGPS = gps;
 		}
 		
-		MerchantInfo2 myLocation = new MerchantInfo2(-100, "", "You are Here", "", 0, 0, MainCitiGuideScreen.lat, MainCitiGuideScreen.lng);
-		MapLocationInfo mapLocationInfo = new MapLocationInfo(myLocation.getRestaurantName(), myLocation.getAddress(), myLocation.getLatitude(), myLocation.getLongitude(), R.drawable.pin_violet, myLocation);
+		MerchantInfo2 myLocation = new MerchantInfo2(-100, "", "You are Here", "", MainCitiGuideScreen.lat, MainCitiGuideScreen.lng);
+		MapLocationInfo mapLocationInfo = new MapLocationInfo(myLocation.getOutletName(), myLocation.getAddress(), myLocation.getLatitude(), myLocation.getLongitude(), R.drawable.pin_violet, myLocation);
 		mapLocations.add(mapLocationInfo);
 	}
 

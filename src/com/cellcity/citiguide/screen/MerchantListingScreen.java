@@ -35,7 +35,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 
 	public static MerchantListingScreen instance;
 	public static ArrayList<MerchantInfo2> merchantList = null;
-	public static int catID;
+	public static String catKeyword = "";
 	private ProgressDialog progressDialog = null;
 	private Runnable initR;
 	
@@ -151,23 +151,19 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 							
 							int id = 0;
 							String image = "";
-							String restaurantName = "";
+							String outletName = "";
 							String address = "";
-							float rating = 0;
-							int reviews = 0;
 							double latitude = 0;
 							double longitude = 0;
 							
 							id = Integer.parseInt(jsonObject2.getString("ID"));
 							image = jsonObject2.getString("Image");
-							restaurantName = jsonObject2.getString("RestaurantName");
+							outletName = jsonObject2.getString("OutletName");
 							address = jsonObject2.getString("Address");
-							rating = Float.parseFloat(jsonObject2.getString("Rating"));
-							reviews = Integer.parseInt(jsonObject2.getString("Reviews"));
 							latitude = Double.parseDouble(jsonObject2.getString("Latitude"));
 							longitude = Double.parseDouble(jsonObject2.getString("Longitude"));
 							
-							MerchantInfo2 mInfo = new MerchantInfo2(id, image, restaurantName, address, rating, reviews, latitude, longitude);
+							MerchantInfo2 mInfo = new MerchantInfo2(id, image, outletName, address, latitude, longitude);
 							merchantList.add(mInfo);
 						}
 						
@@ -177,8 +173,8 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 							totalPage += 1;
 						}
 						
-						startItem = (page * 10) - 9;
-						endItem = page * 10;
+						startItem = (page * 20) - 19;
+						endItem = page * 20;
 						
 						if(endItem > totalItems) {
 							endItem = totalItems;
@@ -302,7 +298,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 
 	private void determineURL(String headerTxt) {
 		if(headerTxt.equalsIgnoreCase(getString(R.string.dining)) || headerTxt.equalsIgnoreCase(getString(R.string.pubs))) {
-			URL = Constants.RESTAURANT_CUISINE_LISTING + catID + "&pageNum=";
+			URL = Constants.RESTAURANT_CUISINE_LISTING + catKeyword + "&pageNum=";
 		}
 		if(headerTxt.equalsIgnoreCase(getString(R.string.search))) {
 			URL = Constants.RESTAURANT_SEARCH + querySearch + "&pageNum=";
@@ -348,7 +344,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 				TextView mTView = (TextView) v.findViewById(R.id.middleTView);
 				TextView bTView = (TextView) v.findViewById(R.id.bottomTView);
 				if (tTView != null) {
-					tTView.setText(info.getRestaurantName());
+					tTView.setText(info.getOutletName());
 				}
 				if (mTView != null) {
 					mTView.setText(info.getAddress());
@@ -356,6 +352,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 				if (bTView != null) {
 					bTView.setText("");
 				}
+				bTView.setVisibility(TextView.GONE);
 			}
 			return v;
 		}
