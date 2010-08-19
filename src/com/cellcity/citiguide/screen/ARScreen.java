@@ -23,7 +23,6 @@ import com.cellcity.citiguide.ar.FourSqareVenue;
 import com.cellcity.citiguide.ar.GetJSON;
 import com.cellcity.citiguide.ar.ReturnRes;
 import com.cellcity.citiguide.ar.SeekBarLayout;
-import com.cellcity.citiguide.info.MerchantInfo1;
 import com.cellcity.citiguide.info.MerchantInfo2;
 import com.cellcity.citiguide.util.Util;
 
@@ -107,8 +106,27 @@ public class ARScreen extends CitiGuideActivity {
 					getString(R.string.ok), true);
 			return;
         }
+        
 		System.out.println("################# onLocationChanged 0 : lat = "+myLocation.getLatitude()); 
-		System.out.println("################# onLocationChanged 0 : lng = "+myLocation.getLongitude()); 
+		System.out.println("################# onLocationChanged 0 : lng = "+myLocation.getLongitude());
+		
+		String ipAddress = null;
+        try {
+        	ipAddress = Util.getLocalIpAddress();
+        }
+        catch(Exception e) {
+        	e.printStackTrace();
+        }
+        
+        if(ipAddress == null) {
+        	Util.showAlert(instance, "f.y.i. Singapore", "Please make sure Internet connection is available.", getString(R.string.ok), true);
+			return;
+        }
+        
+        if(myLocation == null) {
+        	Util.showAlert(instance, "f.y.i. Singapore", "Please enable your GPS or Network Service.", getString(R.string.ok), true);
+			return;
+        }
 		
 		ARLayout.curLocation = myLocation;
 		ARLayout.locationChanged = true;
