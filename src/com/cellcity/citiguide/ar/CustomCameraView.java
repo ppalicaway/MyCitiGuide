@@ -28,7 +28,7 @@ public class CustomCameraView extends SurfaceView {
 		public void surfaceChanged(SurfaceHolder surfaceHolder, int format, int w, int h) {
 
 			Camera.Parameters parameters = camera.getParameters();
-			parameters.setPreviewSize(w, h);
+			//parameters.setPreviewSize(w, h);
 			camera.setParameters(parameters);
 			camera.startPreview();
 		}
