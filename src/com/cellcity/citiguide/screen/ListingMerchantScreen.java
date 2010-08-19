@@ -93,7 +93,9 @@ public class ListingMerchantScreen extends CitiGuideListActivity {
 			@Override
 			public void run() {
 				getJSON();
-				runOnUiThread(returnRes);
+				if(merchantList != null) {
+					runOnUiThread(returnRes);
+				}
 			}
 		};
 		Thread thread = new Thread(null, initR, "initR");
@@ -271,63 +273,77 @@ public class ListingMerchantScreen extends CitiGuideListActivity {
 				//URL = "http://www.citiworldprivileges.com/mobile/?country=Singapore&city=Singapore&offer_type=Dining&sort_by=distance&sort_order=asc&num_offers=10&current_lat=1.33665909&current_long=103.8482263&radius=10&page_no=4";
 				merchantList = Util.getMerchants(URL);
 			//}
-			
-			for(int i=0; i < merchantList.size(); i++) {
-				double lat1;
-				double lng1;
 				
+			if(Util.status.equalsIgnoreCase("408")) {
+				Util.showAlert(instance, "f.y.i. Singapore", "Please make sure Internet connection is available.", "OK", true);
 				try {
-					lat1 = Double.parseDouble(merchantList.get(i).getLatitude());
-					lng1 = Double.parseDouble(merchantList.get(i).getLongitude());
+					if (progressDialog.isShowing()) {
+						progressDialog.dismiss();
+					}					
 				}
 				catch (Exception e) {
 					e.printStackTrace();
-					lat1 = Constants.SINGAPORE_LATITUDE;
-					lng1 = Constants.SINGAPORE_LONGITUDE;
 				}
-				merchantList.get(i).setDistance(Util.convertLatLongToDist(lat, lng, lat1, lng1));
+				Util.status = "";
 			}
-			
-			//Server API will sort this one already.
-			//sortByDistance();
-			
-			totalItems = merchantList.size();
-			
-			startItem = (page * 10) - 9;
-			endItem = page * 10;
-			
-			if(endItem > totalItems) {
-				endItem = totalItems;
+			else {
+				for(int i=0; i < merchantList.size(); i++) {
+					double lat1;
+					double lng1;
+					
+					try {
+						lat1 = Double.parseDouble(merchantList.get(i).getLatitude());
+						lng1 = Double.parseDouble(merchantList.get(i).getLongitude());
+					}
+					catch (Exception e) {
+						e.printStackTrace();
+						lat1 = Constants.SINGAPORE_LATITUDE;
+						lng1 = Constants.SINGAPORE_LONGITUDE;
+					}
+					merchantList.get(i).setDistance(Util.convertLatLongToDist(lat, lng, lat1, lng1));
+				}
+				
+				//Server API will sort this one already.
+				//sortByDistance();
+				
+				totalItems = merchantList.size();
+				
+				startItem = (page * 10) - 9;
+				endItem = page * 10;
+				
+				if(endItem > totalItems) {
+					endItem = totalItems;
+				}
+				
+				merchantLtd = new ArrayList<MerchantInfo1>();
+				merchantLtd = Util.getMerchantList(merchantList, page, merchantList.size());
+				
+				String message = "";
+				
+				int size = 10;
+				
+				if(merchantLtd.size() < 10) {
+					size = merchantLtd.size();
+				}
+				
+				for(int ctr = 0; ctr < size; ctr++) {
+					message += "Merchant Name:\n";
+					message += merchantLtd.get(ctr).getMerchantName();
+					message += "\n";
+					message += "Merchant Address:\n";
+					message += merchantLtd.get(ctr).getPostalAddress();
+					message += "\n\n";
+				}
+				
+				CitiGuideListActivity.message = message;
+				CitiGuideActivity.message = message;
+				CitiGuideListActivity.subject = headerTxt;
+				CitiGuideActivity.subject = headerTxt;
 			}
-			
-			merchantLtd = new ArrayList<MerchantInfo1>();
-			merchantLtd = Util.getMerchantList(merchantList, page, merchantList.size());
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		String message = "";
-		
-		int size = 10;
-		
-		if(merchantLtd.size() < 10) {
-			size = merchantLtd.size();
-		}
-		
-		for(int ctr = 0; ctr < size; ctr++) {
-			message += "Merchant Name:\n";
-			message += merchantLtd.get(ctr).getMerchantName();
-			message += "\n";
-			message += "Merchant Address:\n";
-			message += merchantLtd.get(ctr).getPostalAddress();
-			message += "\n\n";
-		}
-		
-		CitiGuideListActivity.message = message;
-		CitiGuideActivity.message = message;
-		CitiGuideListActivity.subject = headerTxt;
-		CitiGuideActivity.subject = headerTxt;
 		
 		//try {
 			// read data

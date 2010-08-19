@@ -80,6 +80,9 @@ import com.cellcity.citiguide.screen.WeatherScreen;
 import com.cellcity.citiguide.screen.WebScreen;
 
 public class Util {
+	
+	public static String status = "";
+	
 	public static void showAlert(Activity act,
 			final String title, final String msg, final String buttontext,
 			final boolean finishScreen) {
@@ -272,6 +275,7 @@ public class Util {
 		}
 		catch (Exception e) {
 			e.printStackTrace();
+			status = "408";
 		}
 		
 		return merchants;

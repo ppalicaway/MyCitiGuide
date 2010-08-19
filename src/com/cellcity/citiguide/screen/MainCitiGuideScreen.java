@@ -142,31 +142,31 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 		
 		IconButtonInfo dine1 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic6, R.drawable.pic6, "");
 		IconButtonInfo dine2 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic7, R.drawable.pic7, "");
-		IconButtonInfo pub2 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic8, R.drawable.pic8, "");
-		IconButtonInfo shop1 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic9, R.drawable.pic9, "");
+		IconButtonInfo pub2 = new IconButtonInfo(Constants.TYPE_ATM, R.drawable.pic8, R.drawable.pic8, getString(R.string.atm));
+		IconButtonInfo shop1 = new IconButtonInfo(Constants.TYPE_ATM, R.drawable.pic9, R.drawable.pic9, getString(R.string.atm));
 		IconButtonInfo shop2 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic10, R.drawable.pic10, "");
 		
-		IconButtonInfo dine3 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic11, R.drawable.pic11, getString(R.string.bank));
-		IconButtonInfo dine4 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic12, R.drawable.pic12, getString(R.string.bank));
+		IconButtonInfo dine3 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic11, R.drawable.pic11, "");
+		IconButtonInfo dine4 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic12, R.drawable.pic12, "");
 		IconButtonInfo none5 = new IconButtonInfo(Constants.TYPE_ATM, R.drawable.pic13, R.drawable.pic13, getString(R.string.atm));
-		IconButtonInfo shop3 = new IconButtonInfo(Constants.TYPE_ATM, R.drawable.pic14, R.drawable.pic14, getString(R.string.atm));
-		IconButtonInfo shop4 = new IconButtonInfo(Constants.TYPE_BARS, R.drawable.pic15, R.drawable.pic15, getString(R.string.pubs));
+		IconButtonInfo shop3 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic14, R.drawable.pic14, "");
+		IconButtonInfo shop4 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic15, R.drawable.pic15, "");
 		
 		IconButtonInfo promo1 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic16, R.drawable.pic16, getString(R.string.bank));
 		IconButtonInfo promo2 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic17, R.drawable.pic17, getString(R.string.bank));
 		IconButtonInfo ar1 = new IconButtonInfo(Constants.TYPE_AR, R.drawable.pic18, R.drawable.pic18, "");
-		IconButtonInfo movie1 = new IconButtonInfo(Constants.TYPE_BARS, R.drawable.pic19, R.drawable.pic19, getString(R.string.pubs));
+		IconButtonInfo movie1 = new IconButtonInfo(Constants.TYPE_AR, R.drawable.pic19, R.drawable.pic19, "");
 		IconButtonInfo movie2 = new IconButtonInfo(Constants.TYPE_BARS, R.drawable.pic20, R.drawable.pic20, getString(R.string.pubs));
 		
 		IconButtonInfo promo3 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic21, R.drawable.pic21, getString(R.string.dining));
 		IconButtonInfo hotel1 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic22, R.drawable.pic22, getString(R.string.dining));
 		IconButtonInfo none6 = new IconButtonInfo(Constants.TYPE_AR, R.drawable.pic23, R.drawable.pic23, "");
-		IconButtonInfo bank1 = new IconButtonInfo(Constants.TYPE_AR, R.drawable.pic24, R.drawable.pic24, "");
+		IconButtonInfo bank1 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic24, R.drawable.pic24, getString(R.string.shopping));
 		IconButtonInfo movie3 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic25, R.drawable.pic25, getString(R.string.shopping));
 		
 		IconButtonInfo none7 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic26, R.drawable.pic26, getString(R.string.dining));
 		IconButtonInfo hotel2 = new IconButtonInfo(Constants.TYPE_GOURMET, R.drawable.pic27, R.drawable.pic27, getString(R.string.dining));
-		IconButtonInfo none8 = new IconButtonInfo(Constants.TYPE_AR, R.drawable.pic28, R.drawable.pic28, "");
+		IconButtonInfo none8 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic28, R.drawable.pic28, "");
 		IconButtonInfo bank2 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic29, R.drawable.pic29, getString(R.string.shopping));
 		IconButtonInfo none9 = new IconButtonInfo(Constants.TYPE_SHOPPING, R.drawable.pic30, R.drawable.pic30, getString(R.string.shopping));
 		
