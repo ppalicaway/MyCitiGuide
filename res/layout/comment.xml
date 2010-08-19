@@ -16,7 +16,7 @@
 			android:layout_width="fill_parent" android:layout_height="wrap_content"
 			android:background="@color/LIGHT_BLUE" android:orientation="horizontal">
 			<TextView android:id="@+id/descTitleTView"
-				android:paddingLeft="5dp" android:layout_gravity="center_vertical"
+				android:paddingLeft="5px" android:layout_gravity="center_vertical"
 				android:layout_width="fill_parent" android:layout_height="wrap_content"
 				android:text="@string/comment" android:textStyle="bold"
 				android:gravity="center" android:background="@drawable/bg_navigation_2_bar"
@@ -26,9 +26,9 @@
 
 		<LinearLayout android:id="@+id/widget38"
 			android:layout_width="fill_parent" android:layout_height="wrap_content"
-			android:paddingTop="5dp" android:paddingBottom="0dp"
+			android:paddingTop="5px" android:paddingBottom="0px"
 			android:background="@color/LIGHT_BLUE" android:gravity="center_horizontal">
-			<EditText android:id="@+id/searchEText" android:width="300dp"
+			<EditText android:id="@+id/searchEText" android:width="300px"
 				android:lines="2" android:layout_width="wrap_content"
 				android:layout_height="wrap_content"></EditText>
 		</LinearLayout>
@@ -36,15 +36,15 @@
 			android:layout_width="fill_parent" android:layout_height="wrap_content"
 			android:orientation="horizontal" android:background="@color/LIGHT_BLUE"
 			android:gravity="center_horizontal|center_vertical"
-			android:paddingTop="0dp" android:paddingBottom="5dp"
+			android:paddingTop="0px" android:paddingBottom="5px"
 			android:layout_gravity="center_horizontal|center_vertical">
 			<Button android:id="@+id/buttonComment" android:text="@string/submit"
 				android:layout_height="wrap_content" android:layout_width="wrap_content"
-				android:width="100dp" android:textColor="@color/COLOR_FONT_BUTTON"
+				android:width="100px" android:textColor="@color/COLOR_FONT_BUTTON"
 				android:background="@drawable/button_cust1" />
 			<Button android:id="@+id/buttonCancel" android:text="Cancel"
 				android:textColor="@color/COLOR_FONT_BUTTON" android:layout_height="wrap_content"
-				android:layout_width="wrap_content" android:width="100dp"
+				android:layout_width="wrap_content" android:width="100px"
 				android:background="@drawable/button_cust1" />
 		</LinearLayout>
 	</LinearLayout>

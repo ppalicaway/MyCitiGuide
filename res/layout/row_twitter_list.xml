@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent" android:layout_height="?android:attr/listPreferredItemHeight"
-	android:paddingTop="10dp" android:paddingBottom="10dp" android:gravity="center_vertical"	
+	android:paddingTop="10px" android:paddingBottom="10px" android:gravity="center_vertical"	
 	android:background="#E6F2F8">
 	<ImageView android:id="@+id/rowlistIconIView"
 		android:layout_width="wrap_content" android:layout_height="fill_parent"
-		android:layout_marginRight="5dp" android:src="@drawable/icon"
+		android:layout_marginRight="5px" android:src="@drawable/icon"
 		android:layout_gravity="center_vertical" android:paddingLeft="@dimen/list_padding_left" />
 	<LinearLayout android:orientation="vertical"
 		android:layout_width="fill_parent" android:layout_height="fill_parent"
-		android:gravity="center_vertical" android:paddingLeft="10dp" android:layout_marginRight="5dp" >
+		android:gravity="center_vertical" android:paddingLeft="10px" android:layout_marginRight="5px" >
 		<TextView android:id="@+id/topTView" android:layout_width="wrap_content"
 			android:layout_height="wrap_content" android:text="Top : "
 			android:textColor="#0099FF"

@@ -12,21 +12,21 @@
 		android:orientation="vertical" android:background="@drawable/bg">
 		<Button android:id="@+id/buttonToday" android:text="Today's Weather"
 			android:layout_height="wrap_content" android:layout_width="wrap_content"
-			android:width="220dp" android:background="@drawable/button_cust1"
-			android:textSize="20dp" android:textStyle="bold" android:textColor="@color/COLOR_FONT_DESC" />
+			android:width="220px" android:background="@drawable/button_cust1"
+			android:textSize="20px" android:textStyle="bold" android:textColor="@color/COLOR_FONT_DESC" />
 		<TextView android:id="@+id/text1" android:layout_width="fill_parent"
-			android:layout_height="10dp" android:textColor="@color/COLOR_FONT_DESC"
+			android:layout_height="10px" android:textColor="@color/COLOR_FONT_DESC"
 			android:textStyle="bold" android:textSize="16sp" android:text=""
 			android:gravity="center"></TextView>
 		<Button android:id="@+id/buttonForecast" android:text="7 Days Forecast"
 			android:layout_height="wrap_content" android:layout_width="wrap_content"
-			android:width="220dp" android:background="@drawable/button_cust1"
-			android:textSize="20dp" android:textStyle="bold" android:textColor="@color/COLOR_FONT_DESC" />
+			android:width="220px" android:background="@drawable/button_cust1"
+			android:textSize="20px" android:textStyle="bold" android:textColor="@color/COLOR_FONT_DESC" />
 		<TextView android:id="@+id/text1" android:layout_width="fill_parent"
-			android:paddingLeft="10dp" android:layout_height="30dp"
+			android:paddingLeft="10px" android:layout_height="30px"
 			android:textColor="@color/COLOR_FONT_DESC" android:textStyle="bold"
 			android:textSize="12sp" android:text="Powered by CustomWeather"
-			android:paddingTop="10dp" android:gravity="center"></TextView>
+			android:paddingTop="10px" android:gravity="center"></TextView>
 	</LinearLayout>
 
 </LinearLayout>

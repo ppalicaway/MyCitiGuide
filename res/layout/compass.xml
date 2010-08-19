@@ -10,7 +10,7 @@
   		android:layout_width="fill_parent"
     	android:text="@string/hello" 
     	android:textSize="24sp"
-    	android:layout_margin="30dp" 
+    	android:layout_margin="30px" 
     	android:layout_height="wrap_content"/>
     	
   	<TextView 
@@ -18,6 +18,6 @@
   		android:layout_width="fill_parent"
     	android:text="@string/hello" 
     	android:textSize="14sp"
-    	android:layout_margin="30dp" 
+    	android:layout_margin="30px" 
     	android:layout_height="wrap_content"/>
 </LinearLayout>

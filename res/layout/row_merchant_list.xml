@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent" android:layout_height="?android:attr/listPreferredItemHeight"
-	android:paddingTop="10dp" android:paddingBottom="10dp" android:gravity="center_vertical" android:background="@drawable/merchantlistbg1">
+	android:paddingTop="10px" android:paddingBottom="10px" android:gravity="center_vertical" android:background="@drawable/merchantlistbg1">
 	<ImageView android:id="@+id/rowlistIconIView"
 		android:layout_width="wrap_content" android:layout_height="fill_parent"
-		android:layout_marginRight="5dp" android:src="@drawable/icon"
+		android:layout_marginRight="5px" android:src="@drawable/icon"
 		android:layout_gravity="center_vertical" android:paddingLeft="@dimen/list_padding_left" />
 	<LinearLayout android:orientation="vertical"
 		android:layout_width="fill_parent" android:layout_height="fill_parent"
-		android:gravity="center_vertical" android:paddingLeft="10dp" android:layout_marginRight="35dp" >
+		android:gravity="center_vertical" android:paddingLeft="10px" android:layout_marginRight="35px" >
 		<TextView android:id="@+id/topTView" android:layout_width="wrap_content"
-			android:layout_height="wrap_content" android:text="Top : " android:textColor="@color/BLACK" android:textStyle="bold" android:textSize="15dp" android:singleLine="true" android:ellipsize="end" android:typeface="sans"/>
+			android:layout_height="wrap_content" android:text="Top : " android:textColor="@color/BLACK" android:textStyle="bold" android:textSize="15px" android:singleLine="true" android:ellipsize="end" android:typeface="sans"/>
 		<TextView android:layout_width="wrap_content" android:text="Middle : "
 			android:id="@+id/middleTView" android:textColor="@color/BLACK" android:ellipsize="marquee"
-			android:gravity="top" android:layout_height="wrap_content" android:textSize="13dp" android:singleLine="false" android:typeface="sans"/>
+			android:gravity="top" android:layout_height="wrap_content" android:textSize="13px" android:singleLine="false" android:typeface="sans"/>
 		<TextView android:layout_width="wrap_content" android:text="Bottom : "
 			android:id="@+id/bottomTView" android:singleLine="true" 
 			android:textColor="@color/COLOR_ORANGE" android:ellipsize="marquee"
-			android:gravity="top" android:layout_height="wrap_content" android:textSize="13dp" android:typeface="sans"/>
+			android:gravity="top" android:layout_height="wrap_content" android:textSize="13px" android:typeface="sans"/>
 	</LinearLayout>
 <!--	<ImageView android:id="@+id/rowlistPinView"-->
 <!--		android:layout_width="wrap_content" android:layout_height="fill_parent"-->
-<!--		android:layout_marginLeft="-35dp" android:src="@drawable/pin_1"-->
+<!--		android:layout_marginLeft="-35px" android:src="@drawable/pin_1"-->
 <!--		android:layout_gravity="center_vertical" android:paddingLeft="@dimen/list_padding_left" />-->
 </LinearLayout>

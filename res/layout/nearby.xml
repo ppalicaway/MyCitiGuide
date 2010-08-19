@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout 
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical" 
+	android:orientation="vertical"
+	android:background="@drawable/bg1"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent">
 
@@ -25,7 +26,6 @@
 			android:id="@+id/widget30"
 			android:layout_width="fill_parent" 
 			android:layout_height="fill_parent"
-			android:background="@drawable/bg1" 
 			android:orientation="vertical"
 			xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -43,12 +43,12 @@
 					android:layout_height="wrap_content"
 					android:src="@drawable/icon_down" 
 					android:layout_gravity="center_vertical"
-					android:paddingLeft="5dp">
+					android:paddingLeft="5px">
 				</ImageView>
 				
 				<TextView 
 					android:id="@+id/descTitleTView"
-					android:paddingLeft="5dp" 
+					android:paddingLeft="5px" 
 					android:layout_gravity="center_vertical"
 					android:layout_width="fill_parent" 
 					android:layout_height="wrap_content"
@@ -75,15 +75,15 @@
 					<ListView 
 						android:id="@+id/android:list" 
 						android:divider="@drawable/transparent" 
-						android:dividerHeight="0dp"
+						android:dividerHeight="0px"
 						android:scrollbars="none" 
 						android:layout_width="fill_parent"
-						android:layout_height="269dp"
+						android:layout_height="269px"
 						android:background="#00000000" 
 						android:cacheColorHint="#00000000"
 						android:fadingEdge="none"
-						android:paddingTop="5dp"
-						android:paddingBottom="5dp">
+						android:paddingTop="5px"
+						android:paddingBottom="5px">
 					</ListView>
 				</LinearLayout>
 
@@ -101,12 +101,12 @@
 						android:layout_height="wrap_content"
 						android:src="@drawable/icon_down" 
 						android:layout_gravity="center_vertical"
-						android:paddingLeft="5dp">
+						android:paddingLeft="5px">
 					</ImageView>
 					
 					<TextView 
 						android:id="@+id/descTitleTView"
-						android:paddingLeft="5dp" 
+						android:paddingLeft="5px" 
 						android:layout_gravity="center_vertical"
 						android:layout_width="fill_parent" 
 						android:layout_height="wrap_content"
@@ -126,19 +126,19 @@
 					
 					<TextView 
 						android:id="@+id/nearbyDesc"
-						android:paddingLeft="20dp" 
-						android:paddingRight="20dp"
+						android:paddingLeft="20px" 
+						android:paddingRight="20px"
 						android:layout_width="fill_parent" 
 						android:layout_height="wrap_content"
-						android:text="Your E-mail and More On-the-Go. Get Windows Live Hotmail Free. Sign up now. " android:paddingTop="15dp" android:paddingBottom="15dp">
+						android:text="Your E-mail and More On-the-Go. Get Windows Live Hotmail Free. Sign up now. " android:paddingTop="15px" android:paddingBottom="15px" android:typeface="sans" android:textColor="@color/COLOR_BLUE" android:textStyle="bold">
 					</TextView>
 					<EditText 
 						android:id="@+id/searchEText" 
 						android:gravity="center"
 						android:layout_gravity="center"
 						android:singleLine="true" 
-						android:layout_width="250dp"
-						android:layout_height="wrap_content" android:paddingBottom="14dp" android:paddingTop="14dp">
+						android:layout_width="250px"
+						android:layout_height="wrap_content" android:paddingBottom="14px" android:paddingTop="14px">
 					</EditText>
 				</LinearLayout>
 				
@@ -150,15 +150,15 @@
 					android:background="@color/BLUE"
 					android:gravity="center_horizontal|center_vertical"
 					android:layout_gravity="center_vertical" 
-					android:paddingTop="10dp"
-					android:paddingBottom="10dp">
+					android:paddingTop="10px"
+					android:paddingBottom="10px">
 					
 					<Button 
 						android:id="@+id/buttonChange" 
 						android:text="Change"
 						android:layout_height="wrap_content" 
 						android:layout_width="wrap_content"
-						android:width="100dp" 
+						android:width="100px" 
 						android:background="@drawable/button_cust1" />
 					
 					<Button 
@@ -166,7 +166,7 @@
 						android:text="Search"
 						android:layout_height="wrap_content" 
 						android:layout_width="wrap_content"
-						android:width="100dp" 
+						android:width="100px" 
 						android:background="@drawable/button_cust1" />
 					
 					<Button 
@@ -174,7 +174,7 @@
 						android:text="Cancel"
 						android:layout_height="wrap_content" 
 						android:layout_width="wrap_content"
-						android:width="100dp" 
+						android:width="100px" 
 						android:background="@drawable/button_cust1" />
 				</LinearLayout>
 			</LinearLayout>

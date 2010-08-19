@@ -11,6 +11,7 @@ import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -20,6 +21,7 @@ import android.widget.GridView;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.cellcity.citiguide.adapter.Controller;
 import com.cellcity.citiguide.info.IconButtonInfo;
@@ -35,6 +37,7 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 	
 	public static double lat;
 	public static double lng;
+	private int dpi;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,13 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 //		if(instance != null)
 //			instance.finish();
 		instance = this;
+		
+		DisplayMetrics dm = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(dm);
+		dpi = dm.densityDpi;
+		System.out.println(dm.densityDpi + " dpi");
+		System.out.println(dm.xdpi + " x " + dm.ydpi);
+		System.out.println(dm.widthPixels + " x " + dm.heightPixels);
 		
 		try {
         	ImageView splashImage = (ImageView)findViewById(R.id.background);
@@ -208,8 +218,14 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 		
 		GridView g = (GridView) findViewById(R.id.myGrid);
 		//g.setPadding(0, 0, 33, 0);
-		//g.setHorizontalSpacing(-7);
-		//g.setVerticalSpacing(-28);
+		if(dpi == DisplayMetrics.DENSITY_HIGH) {
+			g.setHorizontalSpacing(-66);
+			g.setVerticalSpacing(-13);
+			
+			RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+			params.setMargins(10, 10, 0, 0);
+			g.setLayoutParams(params);
+		}
 		g.setFocusable(false);
 		g.setAdapter(new IconAdapter(this, iconList));
 

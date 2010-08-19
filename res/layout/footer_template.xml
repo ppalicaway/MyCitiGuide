@@ -5,7 +5,7 @@
 	android:layout_height="wrap_content"
 	android:orientation="vertical"
 	android:gravity="center_horizontal"
-	android:padding="0dp">
+	android:padding="0px">
 	<!-- android:background="#00000000" -->	
 	
 	<HorizontalScrollView
@@ -17,7 +17,7 @@
        	android:clipChildren="true" 
        	android:fadingEdge="none" 
        	android:clipToPadding="true"
-       	android:background="#ffffff" android:paddingBottom="2dp" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp">
+       	android:background="#ffffff" android:paddingBottom="2px" android:paddingLeft="5px" android:paddingRight="5px" android:paddingTop="2px">
        	
        	<ImageView 
 		android:src="@drawable/cc_image"

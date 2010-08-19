@@ -3,8 +3,8 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
-	android:background="@drawable/bg"
-	android:padding="0dp">
+	android:background="@drawable/bg1"
+	android:padding="0px">
 	
 	<include 
 		layout="@layout/template_top" 
@@ -45,9 +45,9 @@
 					android:orientation="vertical"
 					android:layout_height="wrap_content" 
 					android:background="@drawable/descbg" 
-					android:layout_marginLeft="10dp" 
-					android:layout_marginRight="10dp" 
-					android:layout_marginTop="10dp">
+					android:layout_marginLeft="10px" 
+					android:layout_marginRight="10px" 
+					android:layout_marginTop="10px">
 		
 					<TextView 
 						android:id="@+id/telNumber"
@@ -55,9 +55,9 @@
 						android:layout_height="wrap_content"
 						android:singleLine="true" 
 						android:text="Telephone" 
-						android:layout_marginLeft="65dp" 
+						android:layout_marginLeft="65px" 
 						android:textColor="@color/BLUE" 
-						android:layout_marginTop="7dp" 
+						android:layout_marginTop="7px" 
 						android:typeface="sans"/>
 		
 					<TextView 
@@ -66,8 +66,8 @@
 						android:layout_height="wrap_content"
 						android:text="Address" 
 						android:textColor="@color/BLACK" 
-						android:layout_marginLeft="65dp" 
-						android:layout_marginRight="5dp" 
+						android:layout_marginLeft="65px" 
+						android:layout_marginRight="5px" 
 						android:typeface="sans"/>
 				</LinearLayout>
 	
@@ -82,10 +82,10 @@
 						android:text="Offer:"
 						android:textStyle="bold"
 						android:typeface="sans"
-						android:textSize="16dp"
+						android:textSize="16px"
 						android:singleLine="true" 
-						android:layout_marginTop="20dp" 
-						android:layout_marginLeft="25dp" 
+						android:layout_marginTop="20px" 
+						android:layout_marginLeft="25px" 
 						android:textColor="@color/BLACK"/>
 			
 					<TextView 
@@ -93,9 +93,9 @@
 						android:layout_width="fill_parent"
 						android:layout_height="wrap_content"
 						android:typeface="sans"
-						android:textSize="14dp" 
-						android:layout_marginLeft="25dp" 
-						android:layout_marginRight="10dp" 
+						android:textSize="14px" 
+						android:layout_marginLeft="25px" 
+						android:layout_marginRight="10px" 
 						android:textColor="@color/BLACK"/>
 				</LinearLayout>
 				
@@ -111,10 +111,10 @@
 						android:text="Terms and Condition:"
 						android:textStyle="bold"
 						android:typeface="sans"
-						android:textSize="16dp"
+						android:textSize="16px"
 						android:singleLine="true" 
-						android:layout_marginTop="20dp" 
-						android:layout_marginLeft="25dp" 
+						android:layout_marginTop="20px" 
+						android:layout_marginLeft="25px" 
 						android:textColor="@color/BLACK"/>
 			
 					<TextView 
@@ -122,9 +122,9 @@
 						android:layout_width="fill_parent"
 						android:layout_height="wrap_content"
 						android:typeface="sans"
-						android:textSize="14dp" 
-						android:layout_marginLeft="25dp" 
-						android:layout_marginRight="10dp" 
+						android:textSize="14px" 
+						android:layout_marginLeft="25px" 
+						android:layout_marginRight="10px" 
 						android:textColor="@color/BLACK"/>
 				</LinearLayout>
 	
@@ -133,10 +133,10 @@
 					android:layout_width="fill_parent"
 					android:layout_height="wrap_content" 
 					android:gravity="center_vertical|center_horizontal" 
-					android:layout_marginTop="20dp" 
-					android:layout_marginLeft="10dp" 
-					android:layout_marginRight="10dp"
-					android:paddingBottom="10dp">
+					android:layout_marginTop="20px" 
+					android:layout_marginLeft="10px" 
+					android:layout_marginRight="10px"
+					android:paddingBottom="10px">
 			
 					<Button
 						android:id="@+id/coupon"
@@ -146,7 +146,7 @@
 						android:textStyle="bold"
 						android:typeface="sans"
 						android:background="@drawable/button" 
-						android:layout_width="90dp"/>
+						android:layout_width="90px"/>
 				
 					<Button
 						android:id="@+id/mapButt"
@@ -156,9 +156,9 @@
 						android:textStyle="bold"
 						android:typeface="sans"
 						android:background="@drawable/button" 
-						android:layout_marginLeft="5dp" 
-						android:layout_marginRight="5dp" 
-						android:layout_width="90dp"/>
+						android:layout_marginLeft="5px" 
+						android:layout_marginRight="5px" 
+						android:layout_width="90px"/>
 			
 					<Button
 						android:id="@+id/navigate"
@@ -168,7 +168,7 @@
 						android:textStyle="bold"
 						android:typeface="sans"
 						android:background="@drawable/button" 
-						android:layout_width="90dp"/>
+						android:layout_width="90px"/>
 				</LinearLayout>
 			</LinearLayout>
 		</ScrollView>
