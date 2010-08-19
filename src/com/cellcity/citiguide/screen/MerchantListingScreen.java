@@ -208,6 +208,14 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 			}
 		}
 		catch(Exception e) {
+			try {
+				if (progressDialog.isShowing()) {
+					progressDialog.dismiss();
+				}					
+			}
+			catch (Exception ex) {
+				ex.printStackTrace();
+			}
 			e.printStackTrace();
 		}
 	}
