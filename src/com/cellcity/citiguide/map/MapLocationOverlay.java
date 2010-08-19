@@ -275,7 +275,11 @@ public class MapLocationOverlay  extends Overlay {
 				Bitmap bm = BitmapFactory.decodeResource(MainCitiGuideScreen.instance.getResources(), R.drawable.bubble);
 				canvas.drawBitmap(bm, infoWindowOffsetX-34, infoWindowOffsetY-20, null);
 				
-				canvas.drawText(selectedMapLocation.getTitle(),infoWindowOffsetX+TEXT_OFFSET_X,infoWindowOffsetY+TEXT_OFFSET_Y,getTextPaint());
+				String title = selectedMapLocation.getTitle();
+				if(title.length() > 21) {
+					title = selectedMapLocation.getTitle().substring(0, 21) + "...";
+				}
+				canvas.drawText(title,infoWindowOffsetX+TEXT_OFFSET_X,infoWindowOffsetY+TEXT_OFFSET_Y,getTextPaint());
 				
 				//  Draw the MapLocation's name
 				//int TEXT_OFFSET_X = 10;

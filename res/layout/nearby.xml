@@ -130,7 +130,7 @@
 						android:paddingRight="20px"
 						android:layout_width="fill_parent" 
 						android:layout_height="wrap_content"
-						android:text="Your E-mail and More On-the-Go. Get Windows Live Hotmail Free. Sign up now. " android:paddingTop="15px" android:paddingBottom="15px" android:typeface="sans" android:textColor="@color/COLOR_BLUE" android:textStyle="bold">
+						android:text="Your E-mail and More On-the-Go. Get Windows Live Hotmail Free. Sign up now. " android:paddingTop="15px" android:paddingBottom="15px" android:typeface="sans" android:textStyle="bold" android:textColor="@color/BLACK">
 					</TextView>
 					<EditText 
 						android:id="@+id/searchEText" 
