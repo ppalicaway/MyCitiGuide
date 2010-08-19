@@ -7,6 +7,7 @@ import org.json.JSONObject;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -89,7 +90,13 @@ public class CuisineListing extends CitiGuideListActivity {
 		setListAdapter(m_adapter);
 		
 		try {
-			progressDialog = ProgressDialog.show(this, "", "Retrieving data...", true);
+			progressDialog = ProgressDialog.show(this, "", "Retrieving data...", true, true, new DialogInterface.OnCancelListener() {
+				
+				@Override
+				public void onCancel(DialogInterface dialog) {
+					instance.finish();
+				}
+			});
 		}
 		catch(Exception e) {
 			e.printStackTrace();

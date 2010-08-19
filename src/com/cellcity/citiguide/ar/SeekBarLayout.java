@@ -4,6 +4,7 @@ import java.text.DecimalFormat;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.view.Display;
@@ -91,7 +92,13 @@ public class SeekBarLayout extends FrameLayout implements SeekBar.OnSeekBarChang
 	public void onStopTrackingTouch(SeekBar seekBar) {
 		ARScreen.radius = (float) prog;
 		try {
-			ARScreen.progressDialog = ProgressDialog.show(context, "", context.getResources().getString(R.string.retrieving_data), true);
+			ARScreen.progressDialog = ProgressDialog.show(context, "", context.getResources().getString(R.string.retrieving_data), true, true, new DialogInterface.OnCancelListener() {
+				
+				@Override
+				public void onCancel(DialogInterface dialog) {
+					ARScreen.instance.finish();
+				}
+			});
 		}
 		catch(Exception e) {
 			e.printStackTrace();

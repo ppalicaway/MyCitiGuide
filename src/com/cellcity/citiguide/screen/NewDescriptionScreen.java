@@ -4,10 +4,12 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
@@ -45,7 +47,13 @@ public class NewDescriptionScreen extends CitiGuideActivity implements OnClickLi
 
 	private void init() {
 		try {
-			progressDialog = ProgressDialog.show(this, "", "Retrieving data...", true);
+			progressDialog = ProgressDialog.show(this, "", "Retrieving data...", true, true, new DialogInterface.OnCancelListener() {
+				
+				@Override
+				public void onCancel(DialogInterface dialog) {
+					instance.finish();
+				}
+			});
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -215,5 +223,16 @@ public class NewDescriptionScreen extends CitiGuideActivity implements OnClickLi
             startActivity(navigation);
 			break;
 		}
+	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if(keyCode == KeyEvent.KEYCODE_BACK) {
+			if(progressDialog.isShowing()) {
+				instance.finish();
+				return true;
+			}
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 }

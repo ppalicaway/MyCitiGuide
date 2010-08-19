@@ -52,7 +52,7 @@
 					android:layout_gravity="center_vertical"
 					android:layout_width="fill_parent" 
 					android:layout_height="wrap_content"
-					android:text="Show me" 
+					android:text="Show Me" 
 					android:textStyle="bold" 
 					android:textColor="@color/BLACK">
 				</TextView>

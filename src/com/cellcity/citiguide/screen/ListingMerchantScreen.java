@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -82,7 +83,13 @@ public class ListingMerchantScreen extends CitiGuideListActivity {
 
 		// display progress dialog
 		try {
-			progressDialog = ProgressDialog.show(this, "", getString(R.string.retrieving_data), true);
+			progressDialog = ProgressDialog.show(this, "", getString(R.string.retrieving_data), true, true, new DialogInterface.OnCancelListener() {
+				
+				@Override
+				public void onCancel(DialogInterface dialog) {
+					instance.finish();
+				}
+			});
 		}
 		catch(Exception e) {
 			e.printStackTrace();

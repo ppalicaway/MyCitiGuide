@@ -7,12 +7,14 @@ import org.json.JSONObject;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,6 +48,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 	public static int page = 1;
 	public static int totalPage = 1;
 	private int startItem, endItem, totalItems;
+	private ArrayList<Bitmap> processedBitmaps;
 
 	// share data
 	private String headerTxt;
@@ -77,7 +80,13 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 
 		// display progress dialog
 		try {
-			progressDialog = ProgressDialog.show(this, "", getString(R.string.retrieving_data), true);
+			progressDialog = ProgressDialog.show(this, "", getString(R.string.retrieving_data), true, true, new DialogInterface.OnCancelListener() {
+				
+				@Override
+				public void onCancel(DialogInterface dialog) {
+					instance.finish();
+				}
+			});
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -120,6 +129,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 		}
 	};
 
+	@SuppressWarnings("static-access")
 	protected void getJSON() {
 		System.out.println(URL);
 		
@@ -140,6 +150,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 			else {
 				result = Util.toJSONString(result);
 				merchantList = new ArrayList<MerchantInfo2>();
+				processedBitmaps = new ArrayList<Bitmap>();
 				
 				try {
 					JSONObject jsonObject1 = new JSONObject(result);
@@ -162,6 +173,23 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 							address = jsonObject2.getString("Address");
 							latitude = Double.parseDouble(jsonObject2.getString("Latitude"));
 							longitude = Double.parseDouble(jsonObject2.getString("Longitude"));
+							
+							Bitmap bitmap;
+							try {
+								bitmap = Util.getBitmap(image);
+								if(bitmap == null) {
+									bitmap = new BitmapFactory().decodeResource(MainCitiGuideScreen.instance.getResources(), R.drawable.listicon);
+								}
+								//bitmap = Util.resizeImage(bitmap, 60, 60);
+								bitmap = Util.getRoundedCornerBitmap(bitmap);
+							}
+							catch(Exception e) {
+								bitmap = new BitmapFactory().decodeResource(MainCitiGuideScreen.instance.getResources(), R.drawable.listicon);
+								bitmap = Util.resizeImage(bitmap, 60, 60);
+								bitmap = Util.getRoundedCornerBitmap(bitmap);
+							}
+							
+							processedBitmaps.add(bitmap);
 							
 							MerchantInfo2 mInfo = new MerchantInfo2(id, image, outletName, address, latitude, longitude);
 							merchantList.add(mInfo);
@@ -336,12 +364,13 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 				final ImageView imView = (ImageView) v.findViewById(R.id.rowlistIconIView);
 
 				try {
-					Bitmap bitmap = Util.getBitmap(info.getImage());
-					if(bitmap == null) {
-						bitmap = new BitmapFactory().decodeResource(MainCitiGuideScreen.instance.getResources(), R.drawable.listicon);
-					}
-					bitmap = Util.resizeImage(bitmap, 60, 60);
-					bmp = Util.getRoundedCornerBitmap(bitmap);
+					//Bitmap bitmap = Util.getBitmap(info.getImage());
+					//if(bitmap == null) {
+					//	bitmap = new BitmapFactory().decodeResource(MainCitiGuideScreen.instance.getResources(), R.drawable.listicon);
+					//}
+					//bitmap = Util.resizeImage(bitmap, 60, 60);
+					//bmp = Util.getRoundedCornerBitmap(bitmap);
+					bmp = processedBitmaps.get(position);
 					imView.setImageBitmap(bmp);
 				}
 				catch(Exception ex) {
