@@ -9,15 +9,43 @@
 	<LinearLayout android:orientation="vertical"
 		android:layout_width="fill_parent" android:layout_height="fill_parent"
 		android:gravity="center_vertical" android:paddingLeft="10px" android:layout_marginRight="35px" >
-		<TextView android:id="@+id/topTView" android:layout_width="wrap_content"
-			android:layout_height="wrap_content" android:text="Top : " android:textColor="@color/BLACK" android:textStyle="bold" android:textSize="15px" android:singleLine="true" android:ellipsize="end" android:typeface="sans"/>
-		<TextView android:layout_width="wrap_content" android:text="Middle : "
-			android:id="@+id/middleTView" android:textColor="@color/BLACK" android:ellipsize="marquee"
-			android:gravity="top" android:layout_height="wrap_content" android:textSize="13px" android:singleLine="false" android:typeface="sans"/>
-		<TextView android:layout_width="wrap_content" android:text="Bottom : "
-			android:id="@+id/bottomTView" android:singleLine="true" 
-			android:textColor="@color/COLOR_ORANGE" android:ellipsize="marquee"
-			android:gravity="top" android:layout_height="wrap_content" android:textSize="13px" android:typeface="sans"/>
+		<TextView 
+			android:id="@+id/topTView"
+			android:layout_height="wrap_content"
+			android:gravity="right|center_vertical" 
+			android:textSize="10px" 
+			android:textStyle="bold" 
+			android:typeface="sans"
+			android:textColor="#000000"
+			android:text="1.1 km" 
+			android:layout_marginRight="0px" 
+			android:layout_width="fill_parent"/>
+		<TextView
+			android:id="@+id/middleTView"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="left|center_vertical"
+			android:textSize="12px" 
+			android:textStyle="bold" 
+			android:typeface="sans"
+			android:textColor="#000000"
+			android:text="Shaw Cinema" 
+			android:ellipsize="end" 
+			android:maxLines="2"
+			android:layout_marginRight="0px"/>
+		<TextView 
+			android:id="@+id/bottomTView"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="left|center_vertical"
+			android:textSize="10px" 
+			android:textStyle="bold" 
+			android:typeface="sans"
+			android:textColor="#4f5969"
+			android:text="360 Balistier Road, Shaw Plaza, #0..." 
+			android:ellipsize="end" 
+			android:layout_marginRight="0px" 
+			android:paddingBottom="5px"/>
 	</LinearLayout>
 <!--	<ImageView android:id="@+id/rowlistPinView"-->
 <!--		android:layout_width="wrap_content" android:layout_height="fill_parent"-->

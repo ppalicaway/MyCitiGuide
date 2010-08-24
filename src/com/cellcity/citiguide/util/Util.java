@@ -1,8 +1,11 @@
 package com.cellcity.citiguide.util;
 
 import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.InetAddress;
 import java.net.MalformedURLException;
@@ -11,6 +14,7 @@ import java.net.SocketTimeoutException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
@@ -49,6 +53,8 @@ import android.graphics.PorterDuff.Mode;
 import android.location.Address;
 import android.location.Geocoder;
 import android.net.Uri;
+import android.telephony.TelephonyManager;
+import android.telephony.gsm.GsmCellLocation;
 import android.view.Display;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
@@ -505,4 +511,78 @@ public class Util {
 	    }
 	    return null;
 	}
+	
+	public static double[] queryLatLong(Context context) {
+		double latLong[] = new double[2];
+		
+		TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+		GsmCellLocation location = (GsmCellLocation) tm.getCellLocation();
+		
+		int cellID = location.getCid();
+		int lac = location.getLac();
+		
+		try {
+			URL url = new URL(Constants.GOOGLE_MAP_API);
+			URLConnection conn = url.openConnection();
+			HttpURLConnection httpCon = (HttpURLConnection)conn;
+			httpCon.setRequestMethod("POST");
+			httpCon.setDoOutput(true);
+			httpCon.setDoInput(true);
+			httpCon.connect();
+			
+			OutputStream outputStream = httpCon.getOutputStream();
+			WriteData(outputStream, cellID, lac);
+			
+			InputStream inputStream = httpCon.getInputStream();  
+	        DataInputStream dataInputStream = new DataInputStream(inputStream);
+	        
+	        dataInputStream.readShort();
+	        dataInputStream.readByte();
+	        int code = dataInputStream.readInt();
+
+	        if(code == 0) {
+	        	double lat = (double) dataInputStream.readInt() / 1000000D;
+	            double lng = (double) dataInputStream.readInt() / 1000000D;
+	            dataInputStream.readInt();
+	            dataInputStream.readInt();
+	            dataInputStream.readUTF();
+	            
+	            latLong[0] = lat;
+	            latLong[1] = lng;
+	            
+	            System.out.println("Latitude: " + lat);
+	            System.out.println("Longitude: " + lng);
+	        }
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return latLong;
+	}
+	
+	private static void WriteData(OutputStream out, int cellID, int lac) 
+    throws IOException
+    {    	
+        DataOutputStream dataOutputStream = new DataOutputStream(out);
+        dataOutputStream.writeShort(21);
+        dataOutputStream.writeLong(0);
+        dataOutputStream.writeUTF("en");
+        dataOutputStream.writeUTF("Android");
+        dataOutputStream.writeUTF("1.0");
+        dataOutputStream.writeUTF("Web");
+        dataOutputStream.writeByte(27);
+        dataOutputStream.writeInt(0);
+        dataOutputStream.writeInt(0);
+        dataOutputStream.writeInt(3);
+        dataOutputStream.writeUTF("");
+
+        dataOutputStream.writeInt(cellID);  
+        dataOutputStream.writeInt(lac);     
+
+        dataOutputStream.writeInt(0);
+        dataOutputStream.writeInt(0);
+        dataOutputStream.writeInt(0);
+        dataOutputStream.writeInt(0);
+        dataOutputStream.flush();    	
+    }
 }

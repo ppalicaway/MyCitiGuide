@@ -84,6 +84,10 @@ public class NewDescriptionScreen extends CitiGuideActivity implements OnClickLi
 		map.setVisibility(Button.GONE);
 		ar.setVisibility(Button.GONE);
 		
+		TextView titleView = (TextView)findViewById(R.id.templateTopTitleTView);
+		titleView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+		titleView.setSingleLine(false);
+		
 		LinearLayout linearLayout = (LinearLayout)findViewById(R.id.widget35);
 		linearLayout.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.CENTER_VERTICAL);
 

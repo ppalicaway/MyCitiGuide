@@ -210,6 +210,10 @@ public class CuisineListing extends CitiGuideListActivity {
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		MerchantListingScreen.catKeyword = cuisines.get(position).getName().replaceAll(" ", "%20");
+		SharedPreferences shared = getSharedPreferences(Constants.DEFAUL_SHARE_DATA, 0);
+		SharedPreferences.Editor edit = shared.edit();
+		edit.putString("name", cuisines.get(position).getName());
+		edit.commit();
 		Intent gourmet = new Intent(instance, MerchantListingScreen.class);
 		instance.startActivityForResult(gourmet, 0);
 	}

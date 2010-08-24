@@ -67,4 +67,6 @@ public class Constants {
 	public static final String RESTAURANT_SEARCH = "http://174.143.169.53/citibank/search.php?keyword=";
 	
 	public static final String URL_ARSEARCH = "http://www.citiworldprivileges.com/mobile/?country=Singapore&city=Singapore&sort_by=distance&sort_order=desc&num_offers=10&current_lat=";
+	
+	public static final String GOOGLE_MAP_API = "http://www.google.com/glm/mmap";
 }

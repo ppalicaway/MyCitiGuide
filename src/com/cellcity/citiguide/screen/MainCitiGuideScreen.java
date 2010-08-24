@@ -33,6 +33,7 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 	public static MainCitiGuideScreen instance;
 	private ArrayList<IconButtonInfo> iconList;
 	public static LocationManager locationManager;
+	private Location location;
 	public static GPSLocationListener locationListener;
 	
 	public static double lat;
@@ -55,12 +56,18 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 //			instance.finish();
 		instance = this;
 		
-		DisplayMetrics dm = new DisplayMetrics();
-		getWindowManager().getDefaultDisplay().getMetrics(dm);
-		dpi = dm.densityDpi;
-		System.out.println(dm.densityDpi + " dpi");
-		System.out.println(dm.xdpi + " x " + dm.ydpi);
-		System.out.println(dm.widthPixels + " x " + dm.heightPixels);
+		try {
+			DisplayMetrics dm = new DisplayMetrics();
+			getWindowManager().getDefaultDisplay().getMetrics(dm);
+			dpi = dm.densityDpi;
+			System.out.println(dm.densityDpi + " dpi");
+			System.out.println(dm.xdpi + " x " + dm.ydpi);
+			System.out.println(dm.widthPixels + " x " + dm.heightPixels);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			Util.showAlert(instance, "f.y.i. Singapore", "This application only supports Android Firmware Version 1.6 and later.", "OK", true);
+		}
 		
 		try {
         	ImageView splashImage = (ImageView)findViewById(R.id.background);
@@ -85,8 +92,6 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 		if(locationListener == null)
 			locationListener = new GPSLocationListener();
 		
-		Location location;
-		
 		if(locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
 			locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 100, 300, locationListener);
 			location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
@@ -104,6 +109,9 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 			lng = location.getLongitude();
 		}
 		catch(Exception ex) {
+			double[] latLong = Util.queryLatLong(instance);
+			lat = latLong[0];
+			lng = latLong[1];
 			ex.printStackTrace();
 		}
 			
@@ -151,15 +159,15 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 		IconButtonInfo none4 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic5, R.drawable.pic5, "");
 		
 		IconButtonInfo dine1 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic6, R.drawable.pic6, "");
-		IconButtonInfo dine2 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic7, R.drawable.pic7, "");
+		IconButtonInfo dine2 = new IconButtonInfo(Constants.TYPE_ATM, R.drawable.pic7, R.drawable.pic7, getString(R.string.atm));
 		IconButtonInfo pub2 = new IconButtonInfo(Constants.TYPE_ATM, R.drawable.pic8, R.drawable.pic8, getString(R.string.atm));
 		IconButtonInfo shop1 = new IconButtonInfo(Constants.TYPE_ATM, R.drawable.pic9, R.drawable.pic9, getString(R.string.atm));
 		IconButtonInfo shop2 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic10, R.drawable.pic10, "");
 		
 		IconButtonInfo dine3 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic11, R.drawable.pic11, "");
-		IconButtonInfo dine4 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic12, R.drawable.pic12, "");
+		IconButtonInfo dine4 = new IconButtonInfo(Constants.TYPE_ATM, R.drawable.pic12, R.drawable.pic12, getString(R.string.atm));
 		IconButtonInfo none5 = new IconButtonInfo(Constants.TYPE_ATM, R.drawable.pic13, R.drawable.pic13, getString(R.string.atm));
-		IconButtonInfo shop3 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic14, R.drawable.pic14, "");
+		IconButtonInfo shop3 = new IconButtonInfo(Constants.TYPE_ATM, R.drawable.pic14, R.drawable.pic14, getString(R.string.atm));
 		IconButtonInfo shop4 = new IconButtonInfo(Constants.TYPE_NONE, R.drawable.pic15, R.drawable.pic15, "");
 		
 		IconButtonInfo promo1 = new IconButtonInfo(Constants.TYPE_BANK, R.drawable.pic16, R.drawable.pic16, getString(R.string.bank));
@@ -357,10 +365,24 @@ public class MainCitiGuideScreen extends CitiGuideActivity{
 	protected void onResume() {
 		if(locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
 			locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 300, locationListener);
+			location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 		}
 		else {
 			locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 300, locationListener);
+			location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
 		}
+		
+		try {
+			lat = location.getLatitude();
+			lng = location.getLongitude();
+		}
+		catch(Exception ex) {
+			double[] latLong = Util.queryLatLong(instance);
+			lat = latLong[0];
+			lng = latLong[1];
+			ex.printStackTrace();
+		}
+		
 		ARScreen.isMerchantList = false;
 		CitiGuideActivity.message = "";
 		CitiGuideListActivity.message = "";

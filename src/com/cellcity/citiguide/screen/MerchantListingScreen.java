@@ -14,7 +14,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -166,6 +165,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 							String address = "";
 							double latitude = 0;
 							double longitude = 0;
+							String distance = "";
 							
 							id = Integer.parseInt(jsonObject2.getString("ID"));
 							image = jsonObject2.getString("Image");
@@ -173,6 +173,11 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 							address = jsonObject2.getString("Address");
 							latitude = Double.parseDouble(jsonObject2.getString("Latitude"));
 							longitude = Double.parseDouble(jsonObject2.getString("Longitude"));
+							distance = jsonObject2.getString("Distance");
+							
+							if(distance.length() > 4) {
+								distance = distance.substring(0, 4);
+							}
 							
 							Bitmap bitmap;
 							try {
@@ -192,6 +197,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 							processedBitmaps.add(bitmap);
 							
 							MerchantInfo2 mInfo = new MerchantInfo2(id, image, outletName, address, latitude, longitude);
+							mInfo.setDistance(distance);
 							merchantList.add(mInfo);
 						}
 						
@@ -333,11 +339,15 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 	}
 
 	private void determineURL(String headerTxt) {
-		if(headerTxt.equalsIgnoreCase(getString(R.string.dining)) || headerTxt.equalsIgnoreCase(getString(R.string.pubs))) {
-			URL = Constants.RESTAURANT_CUISINE_LISTING + catKeyword + "&pageNum=";
-		}
+		//if(headerTxt.equalsIgnoreCase(getString(R.string.dining)) || headerTxt.equalsIgnoreCase(getString(R.string.pubs))) {
+			URL = Constants.RESTAURANT_CUISINE_LISTING + catKeyword + 
+			      "&latitude=" + MainCitiGuideScreen.lat + 
+			      "&longitude=" + MainCitiGuideScreen.lng + "&pageNum=";
+		//}
 		if(headerTxt.equalsIgnoreCase(getString(R.string.search))) {
-			URL = Constants.RESTAURANT_SEARCH + querySearch + "&pageNum=";
+			URL = Constants.RESTAURANT_SEARCH + querySearch + 
+				  "&latitude=" + MainCitiGuideScreen.lat + 
+		          "&longitude=" + MainCitiGuideScreen.lng + "&pageNum=";
 		}
 	}
 	
@@ -350,7 +360,6 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 			this.items = items;
 		}
 		
-		@SuppressWarnings("static-access")
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			View v = convertView;
@@ -377,19 +386,19 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 					ex.printStackTrace();
 				}
 				
-				TextView tTView = (TextView) v.findViewById(R.id.topTView);
+				TextView tTView = (TextView) v.findViewById(R.id.topTView);				
 				TextView mTView = (TextView) v.findViewById(R.id.middleTView);
 				TextView bTView = (TextView) v.findViewById(R.id.bottomTView);
 				if (tTView != null) {
-					tTView.setText(info.getOutletName());
+					tTView.setText(info.getDistance() + " km");
 				}
 				if (mTView != null) {
-					mTView.setText(info.getAddress());
+					mTView.setText(info.getOutletName());
 				}
 				if (bTView != null) {
-					bTView.setText("");
+					bTView.setText(info.getAddress());
 				}
-				bTView.setVisibility(TextView.GONE);
+				//bTView.setVisibility(TextView.GONE);
 			}
 			return v;
 		}
