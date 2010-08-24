@@ -323,6 +323,7 @@ public  class NearbyScreen extends CitiGuideListActivity implements OnClickListe
 		//Get the current location in start-up
 		lat = Constants.SINGAPORE_LATITUDE;
 		lng = Constants.SINGAPORE_LONGITUDE;
+		
 		try {
 			System.out.println("lat lng : " + lat + " " + lng);
 			
@@ -335,7 +336,18 @@ public  class NearbyScreen extends CitiGuideListActivity implements OnClickListe
 				lng = MainCitiGuideScreen.locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER).getLongitude();
 			}
 			
-			System.out.println("lat lng : " + lat + " " + lng);
+			try {
+				if((lat == Constants.SINGAPORE_LATITUDE && lng == Constants.SINGAPORE_LONGITUDE)) {
+					double[] latLong = Util.queryLatLong(instance);
+					lat = latLong[0];
+					lng = latLong[1];
+				}
+			}
+			catch(Exception ex) {
+				ex.printStackTrace();
+			}
+			
+			System.out.println("lat lng : " + lat + "," + lng);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

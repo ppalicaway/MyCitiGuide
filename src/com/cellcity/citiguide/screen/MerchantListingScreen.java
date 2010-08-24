@@ -393,7 +393,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 					tTView.setText(info.getDistance() + " km");
 				}
 				if (mTView != null) {
-					mTView.setText(info.getOutletName());
+					mTView.setText(info.getOutletName().replaceAll("\u0092", "'"));
 				}
 				if (bTView != null) {
 					bTView.setText(info.getAddress());
