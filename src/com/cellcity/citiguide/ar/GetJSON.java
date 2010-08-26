@@ -24,8 +24,9 @@ public class GetJSON implements Runnable {
 	public void run() {
 		String result = "";
 		
-		result = Util.getHttpData(Constants.RESTAURANT_LOCATION_AR + MainCitiGuideScreen.lat +
-			      "&longitude=" + MainCitiGuideScreen.lng);
+		result = Util.getHttpData(Constants.RESTAURANT_LOCATION_AR + ARScreen.cats + 
+					"&latitude=" + MainCitiGuideScreen.lat +
+					"&longitude=" + MainCitiGuideScreen.lng);
 		result = Util.toJSONString(result);
 		
 		ARScreen.merchantList = new ArrayList<MerchantInfo2>();
@@ -49,7 +50,7 @@ public class GetJSON implements Runnable {
 					
 					id = Integer.parseInt(jsonObject2.getString("ID"));
 					image = jsonObject2.getString("Image");
-					restaurantName = jsonObject2.getString("RestaurantName");
+					restaurantName = jsonObject2.getString("OutletName");
 					address = jsonObject2.getString("Address");
 					latitude = Double.parseDouble(jsonObject2.getString("Latitude"));
 					longitude = Double.parseDouble(jsonObject2.getString("Longitude"));

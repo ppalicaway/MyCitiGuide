@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:orientation="vertical" >
+	
+	<LinearLayout 
+		android:layout_width="300px"
+		android:orientation="vertical"
+		android:layout_height="240px"
+		android:layout_gravity="center_vertical|center_horizontal"
+		android:background="@drawable/ar_menu_l" android:gravity="top|center_horizontal">
+		
+		<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="30px">
+			
+			<CheckBox 
+				android:id="@+id/cbDining"
+				android:layout_width="wrap_content"
+				android:button="@drawable/checkbox"
+				android:layout_marginLeft="230px"
+				android:height="20px"
+				android:layout_height="25px" 
+				android:layout_marginTop="27px"/>
+				
+			<CheckBox 
+				android:id="@+id/cbPubs"
+				android:layout_below="@id/cbDining"
+				android:layout_width="wrap_content"
+				android:button="@drawable/checkbox"
+				android:layout_marginLeft="230px"
+				android:layout_height="25px"
+				android:layout_marginTop="22px"/>
+			
+			<CheckBox 
+				android:id="@+id/cbShopping"
+				android:layout_below="@id/cbPubs"
+				android:layout_width="wrap_content"
+				android:button="@drawable/checkbox"
+				android:layout_marginLeft="230px"
+				android:layout_height="25px" 
+				android:layout_marginTop="23px"/>
+		</RelativeLayout>
+		
+		<Button
+			android:id="@+id/btnCategoryFilter"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:width="100px"
+			android:background="@drawable/but_free" android:layout_marginTop="14px"/>
+	</LinearLayout>
+</LinearLayout>

@@ -46,4 +46,5 @@
 <string name="hotels">Hotels</string>
 <string name="bank">Citi Mobile</string>
 <string name="atm">ATM Locator</string>
+<string name="catfilter_title">Please select the categories</string>
 </resources>

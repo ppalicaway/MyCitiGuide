@@ -27,7 +27,7 @@ import com.cellcity.citiguide.ar.SeekBarLayout;
 import com.cellcity.citiguide.info.MerchantInfo2;
 import com.cellcity.citiguide.util.Util;
 
-public class ARScreen extends CitiGuideActivity {
+public class ARScreen extends CitiguideARActivity {
 
 	public static ARScreen instance;
 	/** Called when the activity is first created. */
@@ -39,7 +39,7 @@ public class ARScreen extends CitiGuideActivity {
     public static Location myLocation;
     //private HashMap<String, String> merchantHash;
     private Location location;
-    public static String cats = "1,2,3";
+    public static String cats = "Dining,Pubs,Shopping";
     
     public static ArrayList<MerchantInfo2> merchantList = null;
 	public static ProgressDialog progressDialog = null;
@@ -203,12 +203,10 @@ public class ARScreen extends CitiGuideActivity {
     
 	public void onDestroy() {
 		super.onDestroy();
-		ARScreen.cats="1,2,3";
+		ARScreen.cats="Dining,Pubs,Shopping";
 		ARScreen.radius = (float) 1;
 		cv.closeCamera();
 		ar.close();
-		// cl.close();
-		// cv.closeCamera();
 	}
 	
 	/**

@@ -190,7 +190,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 							}
 							catch(Exception e) {
 								bitmap = new BitmapFactory().decodeResource(MainCitiGuideScreen.instance.getResources(), R.drawable.listicon);
-								bitmap = Util.resizeImage(bitmap, 60, 60);
+								//bitmap = Util.resizeImage(bitmap, 60, 60);
 								bitmap = Util.getRoundedCornerBitmap(bitmap);
 							}
 							
@@ -349,6 +349,12 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 				  "&latitude=" + MainCitiGuideScreen.lat + 
 		          "&longitude=" + MainCitiGuideScreen.lng + "&pageNum=";
 		}
+		
+		if(headerTxt.equalsIgnoreCase(getString(R.string.pubs))) {
+			URL = Constants.PUBS_LISTING + 
+				  "&latitude=" + MainCitiGuideScreen.lat +
+				  "&longitude=" + MainCitiGuideScreen.lng + "&pageNum=";
+		}
 	}
 	
 	private class ListViewAdapter extends ArrayAdapter<MerchantInfo2> {
@@ -398,7 +404,6 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 				if (bTView != null) {
 					bTView.setText(info.getAddress());
 				}
-				//bTView.setVisibility(TextView.GONE);
 			}
 			return v;
 		}

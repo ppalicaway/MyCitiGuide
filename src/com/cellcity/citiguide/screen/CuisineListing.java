@@ -36,6 +36,7 @@ public class CuisineListing extends CitiGuideListActivity {
 	private Runnable queryThread;
 	private ProgressDialog progressDialog = null;
 	private String headerTxt;
+	private String URL = "";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,8 @@ public class CuisineListing extends CitiGuideListActivity {
 		TextView titleView = (TextView) findViewById(R.id.templateTopTitleTView);
 		titleView.setText(headerTxt);
 		
+		determineURL();
+		
 		Button mapButton = (Button)findViewById(R.id.mapButton);
 		mapButton.setVisibility(Button.GONE);
 		Button arButton = (Button)findViewById(R.id.arButton);
@@ -82,6 +85,15 @@ public class CuisineListing extends CitiGuideListActivity {
 		
 		HorizontalScrollView scrollView = (HorizontalScrollView)findViewById(R.id.scrollView);
 		scrollView.setVisibility(HorizontalScrollView.GONE);
+	}
+
+	private void determineURL() {
+		if(headerTxt.equalsIgnoreCase(getString(R.string.dining))) {
+			URL = Constants.RESTAURANT_CUISINE_TYPES;
+		}
+		else {
+			URL = Constants.SHOPPING_TYPES;
+		}
 	}
 
 	private void init() {
@@ -118,7 +130,7 @@ public class CuisineListing extends CitiGuideListActivity {
 	protected void getData() {
 		String result = "";
 		
-		result = Util.getHttpData(Constants.RESTAURANT_CUISINE_TYPES);
+		result = Util.getHttpData(URL);
 		
 		if(result == null || result.equalsIgnoreCase("408") || result.equalsIgnoreCase("404")) {
 			Util.showAlert(instance, "f.y.i Singapore", "Please make sure Internet connection is available.", "OK", true);
@@ -136,7 +148,14 @@ public class CuisineListing extends CitiGuideListActivity {
 					JSONObject jsonObject2 = nameArray.getJSONObject(i);
 					
 					int id = Integer.parseInt(jsonObject2.getString("ID"));
-					String name = jsonObject2.getString("CuisineType");
+					String name;
+					
+					if(headerTxt.equalsIgnoreCase(getString(R.string.dining))) {
+						name = jsonObject2.getString("CuisineType");
+					}
+					else {
+						name = jsonObject2.getString("ShoppingType");
+					}
 					
 					Cuisine cuisineItem = new Cuisine(id, name);
 					

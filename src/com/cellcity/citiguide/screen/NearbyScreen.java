@@ -290,7 +290,6 @@ public  class NearbyScreen extends CitiGuideListActivity implements OnClickListe
 			}else if(nearbyTV.isShown()){
 				ListingMerchantScreen.querySearch = "&opType=search&cats="+catId+"&p="+lat+","+lng;
 			}
-	
 			
 			Intent intent = new Intent(instance, ListingMerchantScreen.class);
 			startActivityForResult(intent, 0);
@@ -305,7 +304,6 @@ public  class NearbyScreen extends CitiGuideListActivity implements OnClickListe
 		case R.id.buttonCancel:
 			getAddress();
 			settingLayout();
-//			instance.finish();
 			break;
 		}
 	}
