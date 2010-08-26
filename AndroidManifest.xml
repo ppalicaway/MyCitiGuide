@@ -12,7 +12,8 @@
 		</activity>		
 		<activity android:name="MainCitiGuideScreen" android:label="MainCitiGuideScreen" android:screenOrientation="portrait" />
 		<activity android:name="SearchScreen" android:label="SearchScreen" android:screenOrientation="portrait" />
-		<activity android:name="NearbyScreen" android:label="NearbyScreen" android:screenOrientation="portrait" />		
+		<activity android:name="NearbyScreen" android:label="NearbyScreen" android:screenOrientation="portrait" />
+		<activity android:name="NewNearbyScreen" android:label="NewNearbyScreen" android:screenOrientation="portrait" />
 		<activity android:name="WeatherScreen" android:label="WeatherScreen" android:screenOrientation="portrait" />
 		<activity android:name="ListingWeatherScreen" android:label="ListingWeatherScreen" android:screenOrientation="portrait" />
 		<activity android:name="ListingScreen" android:label="ListingScreen" android:screenOrientation="portrait" />

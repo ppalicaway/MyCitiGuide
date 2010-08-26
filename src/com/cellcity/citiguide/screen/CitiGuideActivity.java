@@ -140,7 +140,7 @@ public class CitiGuideActivity extends Activity{
 				startActivity(search);
 				break;
 			case R.id.nearbyButton:
-				Intent nearby = new Intent(act,NearbyScreen.class);
+				Intent nearby = new Intent(act,NewNearbyScreen.class);
 				startActivity(nearby);
 				break;
 			case R.id.shareButton:
