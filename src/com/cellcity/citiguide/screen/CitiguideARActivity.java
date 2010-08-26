@@ -8,8 +8,9 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.cellcity.citiguide.ar.GetJSON;
+import com.cellcity.citiguide.util.Util;
 
-public class CitiguideARActivity extends Activity {
+public class CitiGuideARActivity extends Activity {
 
 	private Activity act;
 	protected int menuId;
@@ -20,7 +21,7 @@ public class CitiguideARActivity extends Activity {
 	public static String message = "";
 	public static String subject = "";
 	
-	CitiguideARActivity this_obj;
+	CitiGuideARActivity this_obj;
 	private CategoriesPopup catDialog;
 	private Menu mMenu;
 	
@@ -74,19 +75,29 @@ public class CitiguideARActivity extends Activity {
     					temp += "Shopping";
     				}
 					
-					if(temp.charAt(temp.length()-1) == ',') {
-	    				temp = temp.substring(0, temp.length()-1);
-	    			}
+					try {
+						if(temp.charAt(temp.length()-1) == ',') {
+							temp = temp.substring(0, temp.length()-1);
+						}
+					}
+					catch(Exception e) {
+						e.printStackTrace();
+					}
 					
 					ARScreen.cats = temp;
 					
 					if(!ARScreen.cats.equalsIgnoreCase("")) {
-	    				ARScreen.progressDialog = ProgressDialog.show(ARScreen.instance, "", ARScreen.instance.getResources().getString(R.string.retrieving_data), true);
-	        			Thread t = new Thread(null, new GetJSON(), "initR");
-	        			t.start();
-	    			}
+						if(!ARScreen.cats.equalsIgnoreCase("")) {
+		    				ARScreen.progressDialog = ProgressDialog.show(ARScreen.instance, "", ARScreen.instance.getResources().getString(R.string.retrieving_data), true);
+		        			Thread t = new Thread(null, new GetJSON(), "initR");
+		        			t.start();
+		    			}
+		    			catDialog.dismiss();
+					}
+					else {
+						Util.showAlert(act, "f.y.i. Singapore", "Please select at least one category.", "OK", false);
+					}
 					
-	    			catDialog.dismiss();
 					break;
 				case R.id.cbDining:
 					if(!isDining && CategoriesPopup.dining.isChecked()) {

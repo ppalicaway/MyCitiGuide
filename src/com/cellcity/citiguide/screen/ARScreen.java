@@ -27,7 +27,7 @@ import com.cellcity.citiguide.ar.SeekBarLayout;
 import com.cellcity.citiguide.info.MerchantInfo2;
 import com.cellcity.citiguide.util.Util;
 
-public class ARScreen extends CitiguideARActivity {
+public class ARScreen extends CitiGuideARActivity {
 
 	public static ARScreen instance;
 	/** Called when the activity is first created. */
