@@ -26,7 +26,7 @@ public class GetJSON implements Runnable {
 		
 		result = Util.getHttpData(Constants.RESTAURANT_LOCATION_AR + ARScreen.cats + 
 					"&latitude=" + MainCitiGuideScreen.lat +
-					"&longitude=" + MainCitiGuideScreen.lng);
+					"&longitude=" + MainCitiGuideScreen.lng) + "&pageNum=1";
 		result = Util.toJSONString(result);
 		
 		ARScreen.merchantList = new ArrayList<MerchantInfo2>();

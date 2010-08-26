@@ -267,7 +267,7 @@ public class ARLayout extends View implements LocationListener, SensorEventListe
 			int yOffset = 32;
 			int xValue = 0;
 			
-			int maxRow = 4;
+			int maxRow = 5;
 
 			while(e.hasMoreElements()) {
 				//If we have a location, and the view has one, update it's data
@@ -275,10 +275,18 @@ public class ARLayout extends View implements LocationListener, SensorEventListe
 					ARSphericalView view = e.nextElement();
 					if(l != null && view.location != null) {
 						view.azimuth = l.bearingTo(view.location);
-						if(view.azimuth < 0)
-							view.azimuth = 360+view.azimuth;
-						if(view.azimuth > 360)
+						
+						if (view.azimuth < 0) {
+							view.azimuth = 270 + view.azimuth;
+						}
+						else {
+							view.azimuth = view.azimuth + 265;
+						}
+						
+						if(view.azimuth > 360) {
 							view.azimuth = view.azimuth - 360;
+						}
+						
 						if(l.hasAltitude() && view.location.hasAltitude()) {
 							view.inclination = (float) Math.atan(((view.location.getAltitude() - l.getAltitude()) / l.distanceTo(view.location)));
 						}
@@ -292,15 +300,20 @@ public class ARLayout extends View implements LocationListener, SensorEventListe
 										
 					//if( (x>=-(contentWidth) && x<=screenWidth) && (y>=-(contentHeight) && y<=screenHeight)){
 						view.visible = true;
+						
 						if(countElement < maxRow) {
 							xValue = (int)calcXvalue(leftArm, rightArm, view.azimuth);
 						}
-						else if (countElement < (maxRow*2)){
+						else if (countElement < (maxRow * 2)) {
 							xValue = (int)calcXvalue(leftArm, rightArm, view.azimuth) + 15 + contentWidth;
 						}
-						else {
-							xValue = (int)calcXvalue(leftArm, rightArm, view.azimuth) + 30 + (contentWidth*2);
+						else if (countElement < (maxRow * 3)) {
+							xValue = (int)calcXvalue(leftArm, rightArm, view.azimuth) + 30 + (contentWidth * 2);
 						}
+						else {
+							xValue = (int)calcXvalue(leftArm, rightArm, view.azimuth) + 45 + (contentWidth * 3);
+						}
+						
 						view.layout(xValue, yOffset, view.getBottom(), view.getRight());
 						count++;
 						countElement++;
