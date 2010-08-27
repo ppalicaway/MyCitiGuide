@@ -6,9 +6,9 @@ public class Constants {
 	public static final String DEFAUL_SHARE_DATA = "DEFAUL_SHARE_DATA";
 	public static final String SHARE_ID = "ID";
 	//Debug
-	public static final String KEY_MAP = "0o_1qZVZbZZh-5KqNtCjZdddrt5sJKMQZqMxZYQ";
+	//public static final String KEY_MAP = "0o_1qZVZbZZh-5KqNtCjZdddrt5sJKMQZqMxZYQ";
 	//Release
-	//public static final String KEY_MAP = "0o_1qZVZbZZiKr2Z1YiMtpheACJKvtndHOFP70A";
+	public static final String KEY_MAP = "0o_1qZVZbZZiKr2Z1YiMtpheACJKvtndHOFP70A";
 
 	// groovy type
 
@@ -67,6 +67,7 @@ public class Constants {
 	public static final String RESTAURANT_SEARCH = "http://174.143.169.53/citibank/search.php?keyword=";
 	public static final String SHOPPING_TYPES = "http://174.143.169.53/citibank/get_shopping.php";
 	public static final String PUBS_LISTING = "http://174.143.169.53/citibank/search.php?category=Pubs";
+	public static final String NEARBY_LOCATION = "http://174.143.169.53/citibank/search.php?resultsPerPage=20&category=";
 	
 	public static final String URL_ARSEARCH = "http://www.citiworldprivileges.com/mobile/?country=Singapore&city=Singapore&sort_by=distance&sort_order=desc&num_offers=10&current_lat=";
 	

@@ -438,7 +438,8 @@ public class Util {
 		try {
 			address = geocoder.getFromLocationName(locationName, 1);
 			System.out.println(locationName + " " + address.get(0).getLatitude() + "," + address.get(0).getLongitude());
-		} catch (IOException e) {
+		} catch (Exception e) {
+			address = null;
 			e.printStackTrace();
 		}
 		return address;

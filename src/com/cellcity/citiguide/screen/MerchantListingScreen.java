@@ -54,7 +54,7 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 	public static MerchantInfo1 merchantInfo;
 	public static String querySearch = null;
 	
-	private String URL = "";
+	public static String URL = "";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -339,11 +339,6 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 	}
 
 	private void determineURL(String headerTxt) {
-		//if(headerTxt.equalsIgnoreCase(getString(R.string.dining)) || headerTxt.equalsIgnoreCase(getString(R.string.pubs))) {
-			URL = Constants.RESTAURANT_CUISINE_LISTING + catKeyword + 
-			      "&latitude=" + MainCitiGuideScreen.lat + 
-			      "&longitude=" + MainCitiGuideScreen.lng + "&pageNum=";
-		//}
 		if(headerTxt.equalsIgnoreCase(getString(R.string.search))) {
 			URL = Constants.RESTAURANT_SEARCH + querySearch + 
 				  "&latitude=" + MainCitiGuideScreen.lat + 
@@ -354,6 +349,14 @@ public class MerchantListingScreen extends CitiGuideListActivity {
 			URL = Constants.PUBS_LISTING + 
 				  "&latitude=" + MainCitiGuideScreen.lat +
 				  "&longitude=" + MainCitiGuideScreen.lng + "&pageNum=";
+		}
+		
+		if(!headerTxt.equalsIgnoreCase(getString(R.string.nearby)) &&
+		   !headerTxt.equalsIgnoreCase(getString(R.string.pubs)) &&
+		   !headerTxt.equalsIgnoreCase(getString(R.string.search))) {
+			URL = Constants.RESTAURANT_CUISINE_LISTING + catKeyword + 
+		      	"&latitude=" + MainCitiGuideScreen.lat + 
+		      	"&longitude=" + MainCitiGuideScreen.lng + "&pageNum=";
 		}
 	}
 	
